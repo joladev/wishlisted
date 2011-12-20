@@ -11,6 +11,7 @@
   (sql/with-connection db
     (sql/create-table :wishlist
     	              [:id :serial "PRIMARY KEY"]
+    	              [:code :varchar "NOT NULL"]
 	                  [:title :varchar "NOT NULL"]
 	                  [:created_at :timestamp "NOT NULL" "DEFAULT CURRENT_TIMESTAMP"])))
 
