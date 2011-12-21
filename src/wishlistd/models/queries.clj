@@ -25,3 +25,7 @@
 	(sql/with-query-results results
       ["select * from wishlist where code=?" code]
       (into [] results))))
+
+(defn insert-row-wishlist [wishlist]
+  (sql/with-connection db
+	(sql/insert-records :wishlist wishlist)))
