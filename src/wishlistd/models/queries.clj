@@ -9,7 +9,7 @@
 ;wishlist
 ;[:id :serial "PRIMARY KEY"]
 ;[:title :varchar "NOT NULL"]
-;[:code :varchar "NOT NULL"]
+;[:code :varchar :unique "NOT NULL"]
 ;[:created_at :timestamp "NOT NULL" "DEFAULT CURRENT_TIMESTAMP"])))
 
 ;wish
@@ -26,6 +26,14 @@
       ["select * from wishlist where code=?" code]
       (into [] results))))
 
-(defn insert-row-wishlist [wishlist]
+(defn insert-wishlist [wishlist]
   (sql/with-connection db
 	(sql/insert-records :wishlist wishlist)))
+
+(defn delete-wishlist [code]
+  (sql/with-connection db
+    (sql/delete-rows :wishlist ["code=?" code])))
+
+(defn insert-wish [wish code]
+  (sql/with-connection db
+    (sql/insert-records :wish (assoc wish :code code))))
