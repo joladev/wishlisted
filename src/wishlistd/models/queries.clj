@@ -20,7 +20,7 @@
 ;[:wishlist :int]
 ;["constraint fk_wish_wishlist foreign key(wishlist) references Wishlist(id)"])))
 
-(defn get-wishlist [code]
+(defn get-wishlist [{:keys [code]}]
   (sql/with-connection db
 	(sql/with-query-results results
       ["select * from wishlist where code=?" code]
@@ -34,6 +34,12 @@
   (sql/with-connection db
     (sql/delete-rows :wishlist ["code=?" code])))
 
-(defn insert-wish [wish code]
+(defn get-wishes-for-wishlist [id]; untested
   (sql/with-connection db
-    (sql/insert-records :wish (assoc wish :code code))))
+    (sql/with-query-results results
+	  ["select * from wish where wishlist=?" id]
+	  (into [] results))))
+
+(defn insert-wish [wish id]; untested
+  (sql/with-connection db
+    (sql/insert-records :wish (assoc wish :wishlist id))))
