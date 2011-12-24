@@ -34,6 +34,11 @@
   (sql/with-connection db
     (sql/delete-rows :wishlist ["code=?" code])))
 
+(defn update-wishlist [wishlist]
+  (let [{:keys [id]} wishlist]
+    (sql/with-connection db
+	  (sql/update-values :wishlist ["id=?" id] wishlist))))
+
 (defn get-wishes-for-wishlist [{:keys [id]}]
   (sql/with-connection db
     (sql/with-query-results results
@@ -47,3 +52,8 @@
 (defn delete-wish [{:keys [id]}]
   (sql/with-connection db
     (sql/delete-rows :wish ["id=?" id])))
+
+(defn update-wishlist [wish]
+  (let [{:keys [id]} wish]
+    (sql/with-connection db
+	  (sql/update-values :wish ["id=?" id] wish))))
