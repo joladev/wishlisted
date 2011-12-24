@@ -38,7 +38,7 @@
   (sql/with-connection db
     (sql/with-query-results results
 	  ["select * from wish where wishlist=?" id]
-	  (first (into [] results)))))
+	  (into [] results))))
 
 (defn insert-wish [wish {:keys [id]}]
   (sql/with-connection db
@@ -46,4 +46,4 @@
 
 (defn delete-wish [{:keys [id]}]
   (sql/with-connection db
-    (sql/delete-rows :wishlist ["id=?" id])))
+    (sql/delete-rows :wish ["id=?" id])))
