@@ -34,12 +34,12 @@
   (sql/with-connection db
     (sql/delete-rows :wishlist ["code=?" code])))
 
-(defn get-wishes-for-wishlist [id]; untested
+(defn get-wishes-for-wishlist [id]
   (sql/with-connection db
     (sql/with-query-results results
 	  ["select * from wish where wishlist=?" id]
 	  (into [] results))))
 
-(defn insert-wish [wish id]; untested
+(defn insert-wish [wish id]
   (sql/with-connection db
     (sql/insert-records :wish (assoc wish :wishlist id))))
