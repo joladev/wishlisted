@@ -20,7 +20,7 @@
 ;[:wishlist :int]
 ;["constraint fk_wish_wishlist foreign key(wishlist) references Wishlist(id) on delete cascade"])))
 
-(defn get-wishlist [{:keys [code]}]
+(defn get-wishlist [{:keys [code]}] ; code is unique not null
   (sql/with-connection db
 	(sql/with-query-results results
       ["select * from wishlist where code=?" code]
@@ -30,7 +30,7 @@
   (sql/with-connection db
 	(sql/insert-records :wishlist wishlist)))
 
-(defn delete-wishlist [{:keys [code]}]
+(defn delete-wishlist [{:keys [code]}] ; code is unique not null
   (sql/with-connection db
     (sql/delete-rows :wishlist ["code=?" code])))
 
@@ -43,3 +43,7 @@
 (defn insert-wish [wish {:keys [id]}]
   (sql/with-connection db
     (sql/insert-records :wish (assoc wish :wishlist id))))
+
+(defn delete-wish [{:keys [id]}]
+  (sql/with-connection db
+    (sql/delete-rows :wishlist ["id=?" id])))
