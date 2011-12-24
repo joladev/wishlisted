@@ -18,7 +18,7 @@
 ;[:created_at :timestamp "NOT NULL" "DEFAULT CURRENT_TIMESTAMP"]
 ;[:url :varchar]
 ;[:wishlist :int]
-;["constraint fk_wish_wishlist foreign key(wishlist) references Wishlist(id)"])))
+;["constraint fk_wish_wishlist foreign key(wishlist) references Wishlist(id) on delete cascade"])))
 
 (defn get-wishlist [{:keys [code]}]
   (sql/with-connection db
