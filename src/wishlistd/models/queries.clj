@@ -30,16 +30,16 @@
   (sql/with-connection db
 	(sql/insert-records :wishlist wishlist)))
 
-(defn delete-wishlist [code]
+(defn delete-wishlist [{:keys [code]}]
   (sql/with-connection db
     (sql/delete-rows :wishlist ["code=?" code])))
 
-(defn get-wishes-for-wishlist [id]
+(defn get-wishes-for-wishlist [{:keys [id]}]
   (sql/with-connection db
     (sql/with-query-results results
 	  ["select * from wish where wishlist=?" id]
-	  (into [] results))))
+	  (first (into [] results)))))
 
-(defn insert-wish [wish id]
+(defn insert-wish [wish {:keys [id]}]
   (sql/with-connection db
     (sql/insert-records :wish (assoc wish :wishlist id))))
