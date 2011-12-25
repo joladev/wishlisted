@@ -4,6 +4,6 @@
         hiccup.core
         hiccup.page-helpers))
 
-(defpage "/welcome" []
+(defpage "/" []
          (common/layout
            [:p "Welcome to wishlistd"]))
