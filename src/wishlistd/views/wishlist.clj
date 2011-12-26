@@ -6,4 +6,4 @@
 
 (defpage "/" []
          (common/layout
-           [:p "Welcome to wishlistd"]))
+           [:h1 "Welcome to wishlistd"]))
