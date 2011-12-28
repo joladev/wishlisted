@@ -6,4 +6,4 @@
 
 (defpage "/" []
          (common/layout
-           [:h1 "STUFF HERE"]))
+           [:input {:id "create-wishlist" :class "btn primary" :type "submit" :value "Create wishlist" :style "margin-left:350px;margin-top:150px;"}]))
