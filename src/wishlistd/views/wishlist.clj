@@ -4,6 +4,9 @@
         hiccup.core
         hiccup.page-helpers))
 
-(defpage "/" []
-         (common/layout
-           [:input {:id "create-wishlist" :class "btn primary" :type "submit" :value "Create wishlist" :style "margin-left:350px;margin-top:150px;"}]))
+(defn main-page []
+  (common/layout
+    [:input {:id "create-wishlist" :class "btn primary" :type "submit" :value "Create wishlist" :style "margin-left:350px;margin-top:150px;"}]))
+
+;(defn create-wishlist []
+;  ())
