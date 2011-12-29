@@ -33,12 +33,14 @@
       (first (into [] results)))))
 
 (defn insert-wishlist [wishlist]
-  (sql/with-connection db
-    (sql/insert-records :wishlist wishlist)))
+  (first
+    (sql/with-connection db
+      (sql/insert-records :wishlist wishlist))))
 
 (defn delete-wishlist [{:keys [code]}] ; code is unique not null
-  (sql/with-connection db
-    (sql/delete-rows :wishlist ["code=?" code])))
+  (first
+    (sql/with-connection db
+      (sql/delete-rows :wishlist ["code=?" code]))))
 
 (defn update-wishlist [wishlist]
   (let [{:keys [id]} wishlist]
