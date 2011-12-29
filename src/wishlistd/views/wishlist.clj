@@ -2,11 +2,20 @@
   (:require [wishlistd.views.common :as common])
   (:use noir.core
         hiccup.core
-        hiccup.page-helpers))
+        hiccup.page-helpers
+        wishlistd.models.queries))
 
 (defn main-page []
-  (common/layout
-    [:input {:id "create-wishlist" :class "btn primary" :type "submit" :value "Create wishlist" :style "margin-left:350px;margin-top:150px;"}]))
+  (common/layout ""))
 
-;(defn create-wishlist []
-;  ())
+(defn- new-wishlist []
+  {:title "Default"})
+
+(defn- wish-as-input []
+  [:input {:type "text"}])
+
+(defn create-wishlist []
+  (let [wishlist (insert-wishlist {:title "Default"})]
+    (html
+	  [:h3 (str "Title: " (:title wishlist))]
+	  (map wish-as-input (get-wishes-for-wishlist wishlist)))))

@@ -17,7 +17,8 @@
                [:div.container 
                 [:div.content
                  [:div.page-header
-                  [:h1 "Wishlistd"]]
+                  [:h1 "Wishlistd"]
+                  [:input {:id "create-wishlist" :class "btn primary" :type "submit" :value "Create wishlist" :style "margin-left:550px;margin-right:-100px"}]]
                 [:div.row
                  [:div.span10
                   content]]]
