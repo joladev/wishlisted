@@ -61,7 +61,7 @@
   (sql/with-connection db
     (sql/delete-rows :wish ["id=?" id])))
 
-(defn update-wishlist [wish]
+(defn update-wish [wish]
   (let [{:keys [id]} wish]
     (sql/with-connection db
       (sql/update-values :wish ["id=?" id] wish))))
