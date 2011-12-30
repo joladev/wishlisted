@@ -2,7 +2,7 @@
 
 (def letters ["A","B","C","D","E","F","G","H","I","J","K"])
 
-(defn generate-code [{:keys [id]}]
+(defn generate-code [id]
   (apply str 
     (map 
       (comp 
