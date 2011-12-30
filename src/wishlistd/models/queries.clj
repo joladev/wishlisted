@@ -1,5 +1,6 @@
 (ns wishlistd.models.queries
-  (:require [clojure.java.jdbc :as sql]))
+  (:require [clojure.java.jdbc :as sql])
+  (:use wishlistd.code))
 
 (def db {:classname "org.postgresql.Driver"
          :subprotocol "postgresql"
@@ -65,3 +66,9 @@
   (let [{:keys [id]} wish]
     (sql/with-connection db
       (sql/update-values :wish ["id=?" id] wish))))
+
+(defn get-code []
+  (sql/with-connection db
+    (sql/with-query-results results
+      ["select last_value+1 as last_value from wishlist_id_seq"]
+      (generate-code (:last_value (first (into [] results)))))))
