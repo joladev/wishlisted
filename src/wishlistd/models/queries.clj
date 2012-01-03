@@ -1,12 +1,13 @@
 (ns wishlistd.models.queries
   (:require [clojure.java.jdbc :as sql])
-  (:use wishlistd.code))
+  (:use wishlistd.code)) ; generate-code
 
 (def db {:classname "org.postgresql.Driver"
          :subprotocol "postgresql"
          :subname "//localhost:5432/cwl"
          :user "cwl"
          :password "wish"})
+
 ;wishlist
 ;[:id :serial "PRIMARY KEY"]
 ;[:title :varchar "NOT NULL"]
@@ -21,24 +22,23 @@
 ;[:wishlist :int]
 ;["constraint fk_wish_wishlist foreign key(wishlist) references Wishlist(id) on delete cascade"])))
 
-(defn get-wishlist-by-code [{:keys [code]}] ; code is unique not null
+(defn get-wishlist [{:keys [code]}] ; code is unique
   (sql/with-connection db
     (sql/with-query-results results
       ["select * from wishlist where code=?" code]
       (first (into [] results)))))
 
-(defn get-wishlist-by-id [{:keys [id]}]
-  (sql/with-connection db
-    (sql/with-query-results results
-      ["select * from wishlist where id=?" id]
-      (first (into [] results)))))
+(defn create-wishlist [wishlist]
+  (let [inserted (insert-wishlist wishlist) ; returns the wishlist
+        code (generate-code (:id inserted))] ; returns the code
+    (update-wishlist (assoc inserted :code code))))
 
 (defn insert-wishlist [wishlist]
   (first
     (sql/with-connection db
       (sql/insert-records :wishlist wishlist))))
 
-(defn delete-wishlist [{:keys [code]}] ; code is unique not null
+(defn delete-wishlist [{:keys [code]}] ; code is unique
   (first
     (sql/with-connection db
       (sql/delete-rows :wishlist ["code=?" code]))))
@@ -67,8 +67,8 @@
     (sql/with-connection db
       (sql/update-values :wish ["id=?" id] wish))))
 
-(defn get-code []
-  (sql/with-connection db
-    (sql/with-query-results results
-      ["select last_value+1 as last_value from wishlist_id_seq"]
-      (generate-code (:last_value (first (into [] results)))))))
+; (defn get-code []
+;   (sql/with-connection db
+;     (sql/with-query-results results
+;       ["select last_value+1 as last_value from wishlist_id_seq"]
+;       (generate-code (:last_value (first (into [] results)))))))
