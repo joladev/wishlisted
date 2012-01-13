@@ -20,9 +20,3 @@
 (defpartial wishlist-as-html [wishlist]
   [:h1 (:title wishlist)]
   [:p "LOLOLOLOL"])
-  
-(defn create-wishlist-html []
-  (let [wishlist (insert-wishlist {:title "Default"})
-        with-wishes (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))]
-    (wishlist-as-html with-wishes)))
-
