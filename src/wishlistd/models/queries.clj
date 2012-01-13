@@ -79,3 +79,7 @@
 ;       (generate-code (:last_value (first (into [] results)))))))
 
 ;; ADVANCED STUFF
+
+(defn create-wishlist-with-wishes []
+  (let [wishlist (insert-wishlist {:title "Default"})]
+    (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))))
