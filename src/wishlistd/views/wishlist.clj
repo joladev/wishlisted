@@ -9,13 +9,15 @@
 (defn main-page []
   (common/layout ""))
 
-(defn- new-wishlist []
-  {:title "Default"})
+(defn create-wishlist-json []
+  (let [wishlist (insert-wishlist {:title "Default"})
+        with-wishes (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))]
+    (response/json (dissoc with-wishes :created_at))))
 
 (defn create-wishlist []
   (let [wishlist (insert-wishlist {:title "Default"})
         with-wishes (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))]
-    (response/json (dissoc with-wishes :created_at))))
+    (wishlist-as-html with-wishes)))
 
 (defpartial wishlist-as-html [wishlist]
   [:h1 (:title wishlist)]
