@@ -22,31 +22,36 @@
 ;[:wishlist :int]
 ;["constraint fk_wish_wishlist foreign key(wishlist) references Wishlist(id) on delete cascade"])))
 
+
+;; CRUD
+
 (defn get-wishlist [{:keys [code]}] ; code is unique
   (sql/with-connection db
     (sql/with-query-results results
       ["select * from wishlist where code=?" code]
       (first (into [] results)))))
 
-(defn create-wishlist [wishlist]
-  (let [inserted (insert-wishlist wishlist) ; returns the wishlist
-        code (generate-code (:id inserted))] ; returns the code
-    (update-wishlist (assoc inserted :code code))))
+(defn update-wishlist [wishlist]
+  (let [{:keys [id]} wishlist]
+    (sql/with-connection db
+      (sql/update-values :wishlist ["id=?" id] wishlist))))
 
-(defn insert-wishlist [wishlist]
+(defn- helper-insert-wishlist [wishlist]
   (first
     (sql/with-connection db
       (sql/insert-records :wishlist wishlist))))
+
+(defn insert-wishlist [wishlist]
+  (let [inserted (helper-insert-wishlist wishlist) ; make wishlist
+        code (generate-code (:id inserted)) ; make code
+        finished (assoc inserted :code code)] ; add code to list
+    (update-wishlist finished)
+    (get-wishlist finished)))
 
 (defn delete-wishlist [{:keys [code]}] ; code is unique
   (first
     (sql/with-connection db
       (sql/delete-rows :wishlist ["code=?" code]))))
-
-(defn update-wishlist [wishlist]
-  (let [{:keys [id]} wishlist]
-    (sql/with-connection db
-      (sql/update-values :wishlist ["id=?" id] wishlist))))
 
 (defn get-wishes-for-wishlist [{:keys [id]}]
   (sql/with-connection db
@@ -72,3 +77,5 @@
 ;     (sql/with-query-results results
 ;       ["select last_value+1 as last_value from wishlist_id_seq"]
 ;       (generate-code (:last_value (first (into [] results)))))))
+
+;; ADVANCED STUFF
