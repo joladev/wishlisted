@@ -3,4 +3,4 @@
   (:use noir.core))
 
 (defpage "/" [] (wishlist/main-page))
-(defpage "/create-wishlist" [] (wishlist/create-wishlist))
+(defpage "/create-wishlist" [] (wishlist/create-wishlist-html))
