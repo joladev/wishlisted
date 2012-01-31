@@ -11,8 +11,9 @@
                (include-js "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
                (include-js "/js/core.js")
                (include-css "/css/reset.css")
-               (include-css "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css")]
+               (include-css "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css")
                (include-css "/css/core.css")
+               [:script {:type "text/javascript"} ""]]
               [:body
                [:div.container 
                 [:div.content
