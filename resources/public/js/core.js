@@ -1,9 +1,8 @@
-$(document).ready(function () {
-    $.ajaxSetup ({
-        cache: false
-    });
+var wishlist = function () {
+}
 
-	$("#create-wishlist").click(function () {
-		$("div.span10").load("/create-wishlist");
-	});
-});
+
+
+var app = function () {
+  this.$content = $('div.span10');
+};
