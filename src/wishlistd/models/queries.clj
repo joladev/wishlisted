@@ -82,4 +82,4 @@
 
 (defn create-wishlist-with-wishes []
   (let [wishlist (insert-wishlist {:title "Default"})]
-    (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))))
+    (assoc wishlist :wishes [])))
