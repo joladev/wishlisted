@@ -10,15 +10,20 @@
   (common/layout ""))
 
 (defn create-wishlist-json []
-  (let [wishlist (insert-wishlist {:title "Default"})
-        with-wishes (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))]
-    (response/json (dissoc with-wishes :created_at))))
+  (let [wishlist (create-wishlist-with-wishes)]
+    (response/json (dissoc wishlist :created_at)))) ; not serializable into json
+
+(defpartial wish-as-li [wish]
+  [:label "Description " [:input {:type "text"} (:description wish)]]
+  [:label "URL" [:input {:type "text"} (:url wish)]])
+
+(defpartial wishlist-as-html [wishlist]
+  [:h3 {:class "wishlist-title"} (:title wishlist)]
+  [:ul
+   (wish-as-li nil)
+   (map wish-as-li (:wishes wishlist))])
 
 (defn create-wishlist []
   (let [wishlist (insert-wishlist {:title "Default"})
         with-wishes (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))]
     (wishlist-as-html with-wishes)))
-
-(defpartial wishlist-as-html [wishlist]
-  [:h1 (:title wishlist)]
-  [:p "LOLOLOLOL"])
