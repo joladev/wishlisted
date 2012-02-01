@@ -59,6 +59,12 @@
       ["select * from wish where wishlist=?" id]
       (into [] results))))
 
+(defn get-wishes-for-wishlist-no-date [{:keys [id]}]
+  (sql/with-connection db
+    (sql/with-query-results results
+      ["select * from wish where wishlist=?" id]
+      (into [] (map #(dissoc % :created_at) results)))))
+
 (defn insert-wish [wish {:keys [id]}]
   (sql/with-connection db
     (sql/insert-records :wish (assoc wish :wishlist id))))
@@ -83,3 +89,7 @@
 (defn create-wishlist-with-wishes []
   (let [wishlist (insert-wishlist {:title "Default"})]
     (assoc wishlist :wishes [])))
+
+(defn get-wishlist-with-wishes [{:keys [code]}]
+  (when-let [wishlist (get-wishlist {:code code})]
+    (assoc wishlist :wishes (get-wishes-for-wishlist-no-date wishlist))))
