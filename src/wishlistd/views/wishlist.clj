@@ -27,3 +27,7 @@
   (let [wishlist (insert-wishlist {:title "Default"})
         with-wishes (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))]
     (wishlist-as-html with-wishes)))
+
+(defn get-wishlist-json [code]
+  (let [wishlist (get-wishlist-with-wishes {:code code})]
+    (response/json (dissoc wishlist :created_at))))
