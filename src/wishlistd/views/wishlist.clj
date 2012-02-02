@@ -1,6 +1,6 @@
 (ns wishlistd.views.wishlist
   (:require [wishlistd.views.common :as common]
-            [noir.response :as response])
+            [wishlistd.json :as response])
   (:use noir.core
         hiccup.core
         hiccup.page-helpers
@@ -30,4 +30,4 @@
 
 (defn get-wishlist-json [code]
   (let [wishlist (get-wishlist-with-wishes {:code code})]
-    (response/json (dissoc wishlist :created_at))))
+    (response/json wishlist)))
