@@ -44,11 +44,12 @@
       (sql/insert-records :wishlist wishlist))))
 
 (defn insert-wishlist [wishlist]
-  (let [inserted (helper-insert-wishlist wishlist) ; make wishlist
-        code (random-code code-length) ; make code
-        finished (assoc inserted :code code)] ; add code to list
-    (update-wishlist finished)
-    (get-wishlist finished)))
+  (let [code (random-code code-length)
+        finished (assoc wishlist :code code)]
+    (try 
+      (helper-insert-wishlist finished)
+      (catch Exception _
+        (new-insert-wishlist wishlist))))) ; simply try again if it fails
 
 (defn delete-wishlist [{:keys [code]}] ; code is unique
   (first
@@ -79,12 +80,6 @@
   (let [{:keys [id]} wish]
     (sql/with-connection db
       (sql/update-values :wish ["id=?" id] wish))))
-
-; (defn get-code []
-;   (sql/with-connection db
-;     (sql/with-query-results results
-;       ["select last_value+1 as last_value from wishlist_id_seq"]
-;       (generate-code (:last_value (first (into [] results)))))))
 
 ;; ADVANCED STUFF
 
