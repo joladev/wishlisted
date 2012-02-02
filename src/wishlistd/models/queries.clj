@@ -8,6 +8,8 @@
          :user "cwl"
          :password "wish"})
 
+(def code-length 8)
+
 ;wishlist
 ;[:id :serial "PRIMARY KEY"]
 ;[:title :varchar "NOT NULL"]
@@ -43,7 +45,7 @@
 
 (defn insert-wishlist [wishlist]
   (let [inserted (helper-insert-wishlist wishlist) ; make wishlist
-        code (generate-code (:id inserted)) ; make code
+        code (random-code code-length) ; make code
         finished (assoc inserted :code code)] ; add code to list
     (update-wishlist finished)
     (get-wishlist finished)))
