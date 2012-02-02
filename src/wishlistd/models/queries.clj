@@ -1,6 +1,6 @@
 (ns wishlistd.models.queries
   (:require [clojure.java.jdbc :as sql])
-  (:use wishlistd.code)) ; generate-code
+  (:use wishlistd.code))
 
 (def db {:classname "org.postgresql.Driver"
          :subprotocol "postgresql"
