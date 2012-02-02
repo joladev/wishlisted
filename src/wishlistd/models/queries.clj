@@ -33,10 +33,9 @@
       ["select * from wishlist where code=?" code]
       (first (into [] results)))))
 
-(defn update-wishlist [wishlist]
-  (let [{:keys [id]} wishlist]
-    (sql/with-connection db
-      (sql/update-values :wishlist ["id=?" id] wishlist))))
+(defn update-wishlist [{:keys [id] :as wishlist}]
+  (sql/with-connection db
+    (sql/update-values :wishlist ["id=?" id] wishlist)))
 
 (defn- helper-insert-wishlist [wishlist]
   (first
@@ -49,7 +48,7 @@
     (try 
       (helper-insert-wishlist finished)
       (catch Exception _
-        (new-insert-wishlist wishlist))))) ; simply try again if it fails
+        (insert-wishlist wishlist))))) ; simply try again if it fails
 
 (defn delete-wishlist [{:keys [code]}] ; code is unique
   (first
@@ -61,12 +60,6 @@
     (sql/with-query-results results
       ["select * from wish where wishlist=?" id]
       (into [] results))))
-
-(defn get-wishes-for-wishlist-no-date [{:keys [id]}]
-  (sql/with-connection db
-    (sql/with-query-results results
-      ["select * from wish where wishlist=?" id]
-      (into [] (map #(dissoc % :created_at) results)))))
 
 (defn insert-wish [wish {:keys [id]}]
   (sql/with-connection db
@@ -89,4 +82,4 @@
 
 (defn get-wishlist-with-wishes [{:keys [code]}]
   (when-let [wishlist (get-wishlist {:code code})]
-    (assoc wishlist :wishes (get-wishes-for-wishlist-no-date wishlist))))
+    (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))))
