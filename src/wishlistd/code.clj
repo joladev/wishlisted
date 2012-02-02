@@ -1,11 +1,14 @@
 (ns wishlistd.code)
 
-(def letters ["A","B","C","D","E","F","G","H","I","J","K"])
+(defn random-vowel []
+  (rand-nth ["a","i","u","e","o"]))
 
-(defn generate-code [id]
-  (apply str 
-    (map 
-      (comp 
-        #(letters %) 
-        #(Integer/parseInt (str %))) 
-      (format "%03d" id))))
+(defn random-consonant []
+  (rand-nth ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","y","z"]))
+
+(defn random-code [length]
+  (apply str
+    (for [i (range length)]
+      (if (even? i)
+        (random-consonant)
+        (random-vowel)))))
