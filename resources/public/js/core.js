@@ -17,6 +17,19 @@ wishlist.prototype.save = function(data, callback) {
   });
 };
 
+wishlist.prototype.createNew = funtion(callback) {
+  var _this = this;
+
+  var def = {
+    title : "Default"
+  };
+
+  $.post("/wishlist/", def, function(data) {
+    _this.data = data;
+    callback(_this.data);
+  });
+};
+
 wishlist.prototype.wishlistAsHTML = function() {
   var box = $('<div>');
   box.append($('<h3>').text(this.data.title));
