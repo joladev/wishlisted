@@ -27,7 +27,7 @@
 
 ;; CRUD
 
-(defn get-wishlist [{:keys [code]}] ; code is unique
+(defn get-wishlist [code] ; code is unique
   (sql/with-connection db
     (sql/with-query-results results
       ["select * from wishlist where code=?" code]
@@ -80,6 +80,6 @@
   (let [wishlist (insert-wishlist {:title "Default"})]
     (assoc wishlist :wishes [])))
 
-(defn get-wishlist-with-wishes [{:keys [code]}]
-  (when-let [wishlist (get-wishlist {:code code})]
+(defn get-wishlist-with-wishes [code]
+  (when-let [wishlist (get-wishlist code)]
     (assoc wishlist :wishes (get-wishes-for-wishlist wishlist))))
