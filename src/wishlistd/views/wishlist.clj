@@ -14,5 +14,5 @@
     (response/json wishlist)))
 
 (defn get-wishlist-json [code]
-  (let [wishlist (get-wishlist-with-wishes {:code code})]
+  (let [wishlist (get-wishlist-with-wishes code)]
     (response/json wishlist)))
