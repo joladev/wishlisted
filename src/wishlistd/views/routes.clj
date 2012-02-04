@@ -8,5 +8,5 @@
 (defpage "/wishlist/:code" {:keys [code]}
   (wishlist/get-wishlist-json code))
 
-(defpage "/create-wishlist" []
+(defpage [:post "/wishlist/"] []
   (wishlist/create-wishlist-json))
