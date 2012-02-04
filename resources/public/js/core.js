@@ -52,9 +52,10 @@ var app = function () {
 
 app.prototype.newWishlist = function () {
   _this = this;
-  this.$content.empty();
   this.wishlist = new wishlist();
   this.wishlist.createNew(function () {
+
+    _this.$content.empty();
     _this.wishlist.wishlistAsHTML(_this.$content);
     window.history.pushState(null, "lol", _this.wishlist.data.code);
   });
