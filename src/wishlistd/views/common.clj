@@ -13,7 +13,7 @@
                (include-css "/css/reset.css")
                (include-css "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css")
                (include-css "/css/core.css")
-               [:script {:type "text/javascript"} ""]]
+               [:script {:type "text/javascript"} " var s = null;$.ready(function () { s = new app(); });"]]
               [:body
                [:div.container 
                 [:div.content

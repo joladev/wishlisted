@@ -1,6 +1,6 @@
 var wishlist = function () {
-  var data;
-  var key;
+  this.data;
+  this.key;
 };
 
 wishlist.prototype.load = function(key, callback) {
@@ -17,7 +17,7 @@ wishlist.prototype.save = function(data, callback) {
   });
 };
 
-wishlist.prototype.createNew = funtion(callback) {
+wishlist.prototype.createNew = function(callback) {
   var _this = this;
 
   var def = {
@@ -26,12 +26,11 @@ wishlist.prototype.createNew = funtion(callback) {
 
   $.post("/wishlist/", def, function(data) {
     _this.data = data;
-    callback(_this.data);
+    callback();
   });
 };
 
-wishlist.prototype.wishlistAsHTML = function() {
-  var box = $('<div>');
+wishlist.prototype.wishlistAsHTML = function(box) {
   box.append($('<h3>').text(this.data.title));
   var ul = $('<ul>');
   box.append(ul);
@@ -47,9 +46,23 @@ wishlist.prototype.wishlistAsHTML = function() {
 
 var app = function () {
   this.$content = $('div.span10');
+  this.$create = $('#create-wishlist');
+  this.clickers();
 };
 
 app.prototype.newWishlist = function () {
+  _this = this;
+  this.$content.empty();
   this.wishlist = new wishlist();
-  
+  this.wishlist.createNew(function () {
+    _this.wishlist.wishlistAsHTML(_this.$content);
+    window.history.pushState(null, "lol", _this.wishlist.data.code);
+  });
+};
+
+app.prototype.clickers = function () {
+  var _this = this;
+  this.$create.click(function () {
+    _this.newWishlist();
+  });
 };
