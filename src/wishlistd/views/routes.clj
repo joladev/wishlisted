@@ -10,3 +10,6 @@
 
 (defpage [:post "/wishlist/"] []
   (wishlist/create-wishlist-json))
+
+(defpage "/:dontcare" [] ; catchall! kinda...
+  (wishlist/main-page))
