@@ -3,6 +3,29 @@
         hiccup.core
         hiccup.page-helpers))
 
+(def initialize-js 
+"
+var s = null;
+// Handle pops
+var handlePop = function(evt) {
+  var path = evt.target.location.pathname;
+  if (path !== '/') { s.loadWishlist(path.substring(1,path.length)); }
+};
+// Set up the pop state to handle loads, skipping the first load
+// to make chrome behave like others:
+// http://code.google.com/p/chromium/issues/detail?id=63040
+setTimeout(function() {
+  window.onpopstate = function(evt) {
+    try { handlePop(evt); } catch(err) { /* not loaded yet */ }
+  };
+}, 1000);
+// Construct s and load initial path
+$(function() {
+  s = new app();
+  handlePop({ target: window });
+});
+")
+
 (defpartial layout [& content]
             (html5
               [:head
@@ -13,7 +36,7 @@
                (include-css "/css/reset.css")
                (include-css "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css")
                (include-css "/css/core.css")
-               [:script {:type "text/javascript"} " var s = null;$.ready(function () { s = new app(); });"]]
+               [:script {:type "text/javascript"} initialize-js]]
               [:body
                [:div.container 
                 [:div.content
