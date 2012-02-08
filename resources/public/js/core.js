@@ -43,6 +43,14 @@ wishlist.prototype.wishlistAsHTML = function(box) {
     li.append(url);
   });
 
+  // Make one last empty set of boxes
+  desc = $('<input type="text" class="wishlist-wish-description-last">');
+  url = $('<input type="text" class="wishlist-wish-url-last">');
+  li = $('<li>');
+  ul.append(li);
+  li.append(desc);
+  li.append(url);
+
   return box;
 }
 
