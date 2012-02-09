@@ -70,8 +70,8 @@
     (sql/delete-rows :wish ["id=?" id])))
 
 (defn update-wish [{:keys [id] :as wish}]
-    (sql/with-connection db
-      (sql/update-values :wish ["id=?" id] wish)))
+  (sql/with-connection db
+    (sql/update-values :wish ["id=?" id] wish)))
 
 ;; ADVANCED STUFF
 
