@@ -14,14 +14,16 @@
         code))))
         
 (defn create-wishlist [wishlist]
+  "Gets a fresh code and adds the wishlist to the datastore."
   (let [code (new-code)
         with-code (assoc wishlist :code code)
         as-json (encode with-code)]
     (r/with-server db
       (r/set code as-json))
-    code))
+    code)) ; return the code
 
 (defn read-wishlist [code]
+  "Get a single wishlist from datastore."
   (r/with-server db
     (decode
       (r/get code))))
