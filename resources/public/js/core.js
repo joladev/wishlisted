@@ -77,6 +77,7 @@ wishlist.prototype.wishlistFromHTML = function ($content) {
 var app = function () {
   this.$content = $('div.span10');
   this.$create = $('#create-wishlist');
+  this.$save = $('#save-wishlist');
   this.clickers();
 };
 
@@ -109,5 +110,9 @@ app.prototype.clickers = function () {
   var _this = this;
   this.$create.click(function () {
     _this.newWishlist();
+  });
+  
+  this.$save.click(function () {
+    _this.saveWishlist();
   });
 };
