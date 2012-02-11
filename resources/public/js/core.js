@@ -19,10 +19,7 @@ wishlist.prototype.save = function(data, callback) {
 
 wishlist.prototype.createNew = function(callback) {
   var _this = this;
-
-  var def = {
-    title : "Default"
-  };
+  var def = { title : "Default" };
 
   $.post("/wishlist/", def, function(data) {
     _this.data = data;
@@ -87,7 +84,6 @@ app.prototype.newWishlist = function () {
   var _this = this;
   this.wishlist = new wishlist();
   this.wishlist.createNew(function () {
-
     _this.$content.empty();
     _this.wishlist.wishlistAsHTML(_this.$content);
     window.history.pushState(null, "lol", _this.wishlist.data.code);
