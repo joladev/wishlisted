@@ -42,7 +42,9 @@ $(function() {
                 [:div.content
                  [:div.page-header
                   [:h1 "Wishlistd"]
-                  [:input {:id "create-wishlist" :class "btn primary" :type "submit" :value "Create wishlist" :style "margin-left:550px;margin-right:-100px"}]]
+                  [:p {:style "margin-left:550px;margin-right:-100px"}
+                   [:input {:id "save-wishlist" :class "btn primary" :type "submit" :value "Save wishlist"}]
+                   [:input {:id "create-wishlist" :class "btn primary" :type "submit" :value "New wishlist"}]]]
                 [:div.row
                  [:div.span10
                   content]]]
