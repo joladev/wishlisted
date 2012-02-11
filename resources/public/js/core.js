@@ -61,7 +61,7 @@ var app = function () {
 };
 
 app.prototype.newWishlist = function () {
-  _this = this;
+  var _this = this;
   this.wishlist = new wishlist();
   this.wishlist.createNew(function () {
 
@@ -72,7 +72,7 @@ app.prototype.newWishlist = function () {
 };
 
 app.prototype.loadWishlist = function (key) {
-  _this = this;
+  var _this = this;
   this.wishlist = new wishlist();
   this.wishlist.load(key, function (data) {
     _this.$content.empty();
