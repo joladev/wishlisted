@@ -42,6 +42,7 @@
 ;; Advanced
 
 (defn update-merge [{:keys [code] :as wishlist}]
+  "Allows incremental updates by merging old and new wishlist maps."
   (r/with-server db
     (when-let [old (read-wishlist code)]
       (update-wishlist (merge old wishlist)))))
