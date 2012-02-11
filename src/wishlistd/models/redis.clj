@@ -1,7 +1,7 @@
 (ns wishlistd.models.redis
   (:require [redis.core :as r])
   (:use [wishlistd.code]
-        [cheshire.core]))
+        [wishlistd.json]))
   
 (def db {:host "127.0.0.1" :port 6379 :db 0})
     
@@ -26,8 +26,7 @@
   "Get a single wishlist from datastore."
   (r/with-server db
     (decode
-      (r/get code)
-      true))) ; so it decodes into keywords
+      (r/get code)))) ; so it decodes into keywords
 
 (defn update-wishlist [{:keys [code] :as wishlist}]
   "Update a single wishlist in the datastore."
