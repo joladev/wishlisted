@@ -20,7 +20,7 @@
         as-json (encode with-code)]
     (r/with-server db
       (r/set code as-json))
-    code)) ; return the code
+    with-code)) ; return the wishlist
 
 (defn read-wishlist [code]
   "Get a single wishlist from datastore."
