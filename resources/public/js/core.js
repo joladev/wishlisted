@@ -57,14 +57,12 @@ wishlist.prototype.wishlistAsHTML = function(box) {
 }
 
 wishlist.prototype.wishlistFromHTML = function ($content) {
-  var _this = this;
   var result = {};
   result.title = $content.find('.title').val();
   var $wishes = $('.wish');
   result.wishes = [];
   
   $.each($wishes, function (i) {
-    
     var description = $(this).find('.description').val();
     var url = $(this).find('.url').val();
     
