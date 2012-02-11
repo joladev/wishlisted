@@ -1,11 +1,10 @@
 var wishlist = function () {
   this.data;
-  this.key;
 };
 
-wishlist.prototype.load = function(key, callback) {
+wishlist.prototype.load = function(code, callback) {
   var _this = this;
-  $.get("/wishlist/" + key, function (data) {
+  $.get("/wishlist/" + code, function (data) {
     _this.data = data;
     callback(_this.data);
   });
@@ -71,10 +70,10 @@ app.prototype.newWishlist = function () {
   });
 };
 
-app.prototype.loadWishlist = function (key) {
+app.prototype.loadWishlist = function (code) {
   var _this = this;
   this.wishlist = new wishlist();
-  this.wishlist.load(key, function (data) {
+  this.wishlist.load(code, function (data) {
     _this.$content.empty();
     _this.wishlist.wishlistAsHTML(_this.$content);
   });
