@@ -16,3 +16,6 @@
 (defn get-wishlist-json [code]
   (let [wishlist (read-wishlist code)]
     (response/json wishlist)))
+
+(defn update-wishlist-json [wishlist]
+  (response/json (update-wishlist wishlist)))
