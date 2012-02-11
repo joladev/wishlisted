@@ -5,7 +5,7 @@
   "Wraps the response in the json content type and generates JSON from the content. Uses Chesire for date support."
   [content]
   {:headers {"Content-Type" "application/json"}
-   :body (cheshire/generate-string content)})
+   :body (cheshire/encode content)})
    
 (defn encode [v]
   "Cheshire encode."
