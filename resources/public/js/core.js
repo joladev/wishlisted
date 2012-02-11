@@ -11,6 +11,7 @@ wishlist.prototype.load = function(code, callback) {
 };
 
 wishlist.prototype.save = function(data, callback) {
+  data.code = this.data.code;
   $.post("/wishlist/", data, function () {
     callback();
   });
@@ -35,7 +36,7 @@ wishlist.prototype.wishlistAsHTML = function(box) {
   box.append(ul);
   if(this.data.wishes) {
     $.each(this.data.wishes, function (i, v) {
-      var li = $('<li>');
+      var li = $('<li class="wish">');
       var desc = $('<input type="text" class="description">').val(v.description);
       var url = $('<input type="text" class="url">').val(v.url);
       ul.append(li);
@@ -44,17 +45,33 @@ wishlist.prototype.wishlistAsHTML = function(box) {
     });    
   }
 
-
   // Make one last empty set of boxes
-  desc = $('<input type="text" class="description last">');
+  desc = $('<input type="text" class="description last" value="">');
   url = $('<input type="text" class="url last">');
-  li = $('<li>');
+  li = $('<li class="wish">');
   ul.append(li);
   li.append(desc);
   li.append(url);
 
   return box;
 }
+
+wishlist.prototype.wishlistFromHTML = function ($content) {
+  var _this = this;
+  var result = {};
+  result.title = $content.find('.title').val();
+  var $wishes = $('.wish');
+  result.wishes = [];
+  
+  $.each($wishes, function (i) {
+    result.wishes[i] = {
+      description: $(this).find('.description').val(),
+      url: $(this).find('.url').val()
+    }
+  });
+  
+  return result;
+};
 
 var app = function () {
   this.$content = $('div.span10');
@@ -75,7 +92,8 @@ app.prototype.newWishlist = function () {
 
 app.prototype.saveWishlist = function () {
   var _this = this;
-  
+  var data = this.wishlist.wishlistFromHTML(this.$content);
+  this.wishlist.save(data, function() {});
 };
 
 app.prototype.loadWishlist = function (code) {
