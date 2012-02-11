@@ -38,3 +38,10 @@
   "Deletes a single wishlist in the datastore."
   (r/with-server db
     (r/del code)))
+    
+;; Advanced
+
+(defn update-merge [{:keys [code] :as wishlist}]
+  (r/with-server db
+    (when-let [old (read-wishlist code)]
+      (update-wishlist (merge old wishlist)))))
