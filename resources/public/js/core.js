@@ -33,14 +33,17 @@ wishlist.prototype.wishlistAsHTML = function(box) {
   box.append($('<input type="text" class="title">').val(this.data.title));
   var ul = $('<ul>');
   box.append(ul);
-  $.each(this.data.wishes, function (i, v) {
-    var li = $('<li>');
-    var desc = $('<input type="text" class="description">').val(v.description);
-    var url = $('<input type="text" class="url">').val(v.url);
-    ul.append(li);
-    li.append(desc);
-    li.append(url);
-  });
+  if(this.data.wishes) {
+    $.each(this.data.wishes, function (i, v) {
+      var li = $('<li>');
+      var desc = $('<input type="text" class="description">').val(v.description);
+      var url = $('<input type="text" class="url">').val(v.url);
+      ul.append(li);
+      li.append(desc);
+      li.append(url);
+    });    
+  }
+
 
   // Make one last empty set of boxes
   desc = $('<input type="text" class="description last">');
