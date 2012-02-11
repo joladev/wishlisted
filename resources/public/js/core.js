@@ -64,9 +64,15 @@ wishlist.prototype.wishlistFromHTML = function ($content) {
   result.wishes = [];
   
   $.each($wishes, function (i) {
-    result.wishes[i] = {
-      description: $(this).find('.description').val(),
-      url: $(this).find('.url').val()
+    
+    var description = $(this).find('.description').val();
+    var url = $(this).find('.url').val();
+    
+    if (description) {
+      result.wishes.push({
+        "description": description,
+        "url": url
+      });
     }
   });
   
