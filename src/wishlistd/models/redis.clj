@@ -26,7 +26,7 @@
   "Get a single wishlist from datastore."
   (r/with-server db
     (decode
-      (r/get code)))) ; so it decodes into keywords
+      (r/get code))))
 
 (defn update-wishlist [{:keys [code] :as wishlist}]
   "Update a single wishlist in the datastore."
