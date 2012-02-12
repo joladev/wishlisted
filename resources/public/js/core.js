@@ -122,7 +122,7 @@ app.prototype.wishClickers = function () {
   var $title = this.$content.find('.title');
   $title.data('oldVal', $title.val());
   $title.change(function () {
-    if($(this).data('oldVal') !== $(this).val()) {
+    if($(this).data('oldVal') !== $(this).val() && $(this).val()) {
       _this.saveWishlist();
     }
   });
