@@ -158,8 +158,15 @@ app.prototype.wishClickers = function () {
       }
     });
     
+    $url.unbind('click');
     $url.change(function () {
-      
+      if ($(this).data('oldVal') !== $(this).val()) {
+        $(this).data('oldVal', $(this).val());
+        
+        if ($(this).prev().val()){
+          _this.saveWishlist();
+        }
+      }
     });
   });
 };
