@@ -79,6 +79,7 @@ var app = function () {
   this.$create = $('#create-wishlist');
   this.$save = $('#save-wishlist');
   this.clickers();
+  this.wishClickers();
 };
 
 app.prototype.newWishlist = function () {
@@ -87,6 +88,7 @@ app.prototype.newWishlist = function () {
   this.wishlist.createNew(function () {
     _this.$content.empty();
     _this.wishlist.wishlistAsHTML(_this.$content);
+    _this.wishClickers(); // reload the change events on wish items
     window.history.pushState(null, "lol", _this.wishlist.data.code);
   });
 };
@@ -103,6 +105,7 @@ app.prototype.loadWishlist = function (code) {
   this.wishlist.load(code, function (data) {
     _this.$content.empty();
     _this.wishlist.wishlistAsHTML(_this.$content);
+    _this.wishClickers(); // reload the change events on wish items
   });
 };
 
@@ -114,5 +117,21 @@ app.prototype.clickers = function () {
   
   this.$save.click(function () {
     _this.saveWishlist();
+  });
+};
+
+app.prototype.wishClickers = function () {
+  var _this = this;
+  
+  this.$content.find('.description').each(function () {
+    $(this).data('oldVal', $(this).val());
+    
+    $(this).change(function () {
+      if ($(this).data('oldVal') !== $(this).val()) {
+        $(this).data('oldVal', $(this).val());
+        
+        
+      }
+    });
   });
 };
