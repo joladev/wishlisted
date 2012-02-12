@@ -51,7 +51,7 @@ wishlist.prototype.wishlistAsHTML = function(box) {
   li.append(url);
 
   return box;
-}
+};
 
 wishlist.prototype.wishlistFromHTML = function ($content) {
   var result = {};
