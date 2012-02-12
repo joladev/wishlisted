@@ -114,14 +114,18 @@ app.prototype.clickers = function () {
   this.$create.click(function () {
     _this.newWishlist();
   });
-  
-  this.$save.click(function () {
-    _this.saveWishlist();
-  });
 };
 
 app.prototype.wishClickers = function () {
   var _this = this;
+  
+  var $title = this.$content.find('.title');
+  $title.data('oldVal', $title.val());
+  $title.change(function () {
+    if($(this).data('oldVal') !== $(this).val()) {
+      _this.saveWishlist();
+    }
+  });
   
   this.$content.find('.wish').each(function () {
     var $desc = $(this).find('.description');
