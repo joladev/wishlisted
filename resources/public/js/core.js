@@ -43,9 +43,9 @@ wishlist.prototype.wishlistAsHTML = function(box) {
   }
 
   // Make one last empty set of boxes
-  desc = $('<input type="text" class="description last" value="">');
-  url = $('<input type="text" class="url last">');
-  li = $('<li class="wish">');
+  desc = $('<input type="text" class="description" value="">');
+  url = $('<input type="text" class="url">');
+  li = $('<li class="wish last">');
   ul.append(li);
   li.append(desc);
   li.append(url);
@@ -123,15 +123,43 @@ app.prototype.clickers = function () {
 app.prototype.wishClickers = function () {
   var _this = this;
   
-  this.$content.find('.description').each(function () {
-    $(this).data('oldVal', $(this).val());
+  this.$content.find('.wish').each(function () {
+    var $desc = $(this).find('.description');
+    var $url = $(this).find('.url');
+    $desc.data('oldVal', $desc.val());
+    $url.data('oldVal', $url.val());
     
-    $(this).change(function () {
+    $desc.unbind('change');
+    $desc.change(function () {
       if ($(this).data('oldVal') !== $(this).val()) {
         $(this).data('oldVal', $(this).val());
         
-        
+        if ($(this).val()) {
+          _this.saveWishlist();
+          
+          if($(this).parent().hasClass('last')) {
+            desc = $('<input type="text" class="description" value="">');
+            url = $('<input type="text" class="url">');
+            li = $('<li class="wish last">');
+            $(this).parent().after(li);
+            li.append(desc);
+            li.append(url);
+            _this.wishClickers();
+            
+            $(this).parent().removeClass('last');
+          }
+        }
+        else {
+          if (!$(this).parent().hasClass('last')) {
+            $(this).parent().remove();
+            _this.saveWishlist();
+          }
+        }
       }
+    });
+    
+    $url.change(function () {
+      
     });
   });
 };
