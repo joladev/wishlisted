@@ -79,7 +79,6 @@ var app = function () {
   this.$create = $('#create-wishlist');
   this.$save = $('#save-wishlist');
   this.clickers();
-  this.wishClickers();
 };
 
 app.prototype.newWishlist = function () {
@@ -88,7 +87,7 @@ app.prototype.newWishlist = function () {
   this.wishlist.createNew(function () {
     _this.$content.empty();
     _this.wishlist.wishlistAsHTML(_this.$content);
-    _this.wishClickers(); // reload the change events on wish items
+    _this.wishClickers(); // set the change events on wish items
     window.history.pushState(null, "lol", _this.wishlist.data.code);
   });
 };
