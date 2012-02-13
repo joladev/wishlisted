@@ -1,17 +1,17 @@
 (ns wishlistd.views.routes
-  (:require [wishlistd.views.wishlist :as wishlist])
-  (:use noir.core))
+  (:use noir.core
+        wishlistd.views.wishlist))
 
 (defpage "/" []
-  (wishlist/main-page))
+  (main-page))
 
 (defpage "/wishlist/:code" {:keys [code]}
-  (wishlist/get-wishlist-json code))
+  (get-wishlist-json code))
 
 (defpage [:post "/wishlist/"] {:keys [code] :as wishlist}
   (if (nil? code)
-    (wishlist/create-wishlist-json wishlist)
-    (wishlist/update-wishlist-json wishlist)))
+    (create-wishlist-json wishlist)
+    (update-wishlist-json wishlist)))
   
 (defpage "/:dontcare" [] ; catchall! kinda...
-  (wishlist/main-page))
+  (main-page))
