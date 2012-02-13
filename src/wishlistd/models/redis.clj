@@ -49,4 +49,4 @@
       (let [wishes (merge (:wishes old) (:wishes wishlist))
             no-nils (remove-map-nils wishes)
             neu (assoc wishlist :wishes no-nils)]
-      (update-wishlist (merge old neu))))))
+        (update-wishlist (merge old neu))))))
