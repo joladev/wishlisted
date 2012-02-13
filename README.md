@@ -1,6 +1,6 @@
 # wishlistd
 
-A website written in noir. 
+A wishlist sharing site written in noir, heavily influenced by [hastebin][hastebin]. 
 
 ## Usage
 
@@ -13,5 +13,4 @@ lein run
 
 Copyright (C) 2011 Erik Kronberg
 
-Distributed under the Eclipse Public License, the same as Clojure.
-
+[hastebin]: http://hastebin.com
