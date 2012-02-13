@@ -1,8 +1,7 @@
 (ns wishlistd.views.wishlist
   (:require [wishlistd.views.common :as common]
             [wishlistd.json :as response])
-  (:use noir.core
-        wishlistd.models.redis))
+  (:use wishlistd.models.redis))
 
 (defn main-page []
   (common/layout ""))
