@@ -1,8 +1,7 @@
 (ns wishlistd.models.redis
   (:require [redis.core :as r])
   (:use [wishlistd.code]
-        [wishlistd.json]
-        [wishlistd.utilities]))
+        [wishlistd.json]))
   
 (def db {:host "127.0.0.1" :port 6379 :db 0})
     
