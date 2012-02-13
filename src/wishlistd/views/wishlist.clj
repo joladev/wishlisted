@@ -9,8 +9,8 @@
 (defn main-page []
   (common/layout ""))
 
-(defn create-wishlist-json []
-  (let [wishlist (create-wishlist {:title "Default"})] ; will in the future get a wishlist from the client
+(defn create-wishlist-json [wishlist]
+  (let [wishlist (create-wishlist wishlist)] ; will in the future get a wishlist from the client
     (response/json wishlist)))
 
 (defn get-wishlist-json [code]

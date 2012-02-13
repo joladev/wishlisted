@@ -10,7 +10,7 @@
 
 (defpage [:post "/wishlist/"] {:keys [code] :as wishlist}
   (if (nil? code)
-    (wishlist/create-wishlist-json)
+    (wishlist/create-wishlist-json wishlist)
     (wishlist/update-wishlist-json wishlist)))
   
 (defpage "/:dontcare" [] ; catchall! kinda...
