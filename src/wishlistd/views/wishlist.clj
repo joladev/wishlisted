@@ -10,7 +10,7 @@
   (common/layout ""))
 
 (defn create-wishlist-json [wishlist]
-  (let [wishlist (create-wishlist wishlist)] ; will in the future get a wishlist from the client
+  (let [wishlist (create-wishlist wishlist)]
     (response/json wishlist)))
 
 (defn get-wishlist-json [code]
