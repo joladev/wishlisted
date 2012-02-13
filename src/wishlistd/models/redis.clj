@@ -46,3 +46,12 @@
   (r/with-server db
     (when-let [old (read-wishlist code)]
       (update-wishlist (merge old wishlist)))))
+
+(defn update-merge-new [{:keys [code] :as wishlist}]
+  "Allows incremental updates by merging old and new wishlist maps."
+  (r/with-server db
+    (when-let [old (read-wishlist code)]
+      (let [wishes (merge (:wishes old) (:wishes wishlist))
+            no-nils (remove-map-nils wishes)
+            neu (assoc wishlist :wishes no-nils)]
+      (update-wishlist (merge old neu)))))
