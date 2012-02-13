@@ -1,7 +1,8 @@
 (ns wishlistd.models.redis
   (:require [redis.core :as r])
   (:use [wishlistd.code]
-        [wishlistd.json]))
+        [wishlistd.json]
+        [wishlistd.utilities]))
   
 (def db {:host "127.0.0.1" :port 6379 :db 0})
     
@@ -54,4 +55,4 @@
       (let [wishes (merge (:wishes old) (:wishes wishlist))
             no-nils (remove-map-nils wishes)
             neu (assoc wishlist :wishes no-nils)]
-      (update-wishlist (merge old neu)))))
+      (update-wishlist (merge old neu))))))
