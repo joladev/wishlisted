@@ -2,8 +2,6 @@
   (:require [wishlistd.views.common :as common]
             [wishlistd.json :as response])
   (:use noir.core
-        hiccup.core
-        hiccup.page-helpers
         wishlistd.models.redis))
 
 (defn main-page []
