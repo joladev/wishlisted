@@ -46,7 +46,7 @@ $(function() {
                    [:input {:id "create-wishlist" :class "btn primary" :type "submit" :value "New wishlist"}]]]
                 [:div.row
                  [:div.span10
-                  content]]]
+                  [:p "Activate JavaScript, dummy!"]]]]
                 [:footer
                  [:p "&copy; _ME_ 2011"]]]]))
 
