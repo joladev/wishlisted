@@ -4,7 +4,7 @@
   (:use wishlistd.models.redis))
 
 (defn main-page []
-  (common/layout ""))
+  (common/new-layout))
 
 (defn create-wishlist-json [wishlist]
   (let [wishlist (create-wishlist wishlist)]
