@@ -75,7 +75,7 @@ wishlist.prototype.wishlistFromHTML = function ($content) {
 };
 
 var app = function () {
-  this.$content = $('div.span10');
+  this.$content = $('div#box');
   this.$content.empty(); // remove the "activate javascript" message
   this.$create = $('#create-wishlist');
   this.$save = $('#save-wishlist');
