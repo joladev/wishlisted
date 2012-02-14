@@ -2,6 +2,8 @@
   (:use noir.core
         hiccup.core
         hiccup.page-helpers))
+        
+(defn new-layout [] (slurp "resources/public/index.html"))
 
 (def initialize-js 
 "
@@ -45,7 +47,7 @@ $(function() {
                   [:p {:style "margin-left:700px;margin-right:-100px"}
                    [:input {:id "create-wishlist" :class "btn primary" :type "submit" :value "New wishlist"}]]]
                 [:div.row
-                 [:div.span10
+                 [:div.span10 {:id "box"}
                   [:p "Activate JavaScript, dummy!"]]]]
                 [:footer
                  [:p "&copy; _ME_ 2011"]]]]))
