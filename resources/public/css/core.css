@@ -24,3 +24,9 @@ li input {
   border-color:black;
   color:white;
 }
+
+input:focus, input:active {
+  -webkit-appearance:none;
+  -webkit-box-shadow:none;
+  border-color:black;
+}
