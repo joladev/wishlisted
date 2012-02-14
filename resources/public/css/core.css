@@ -1,0 +1,17 @@
+.container {
+  margin-top:20px;
+}
+
+#box {
+  min-height:400px;
+  padding:20px;
+  background-color:#EEE;
+}
+
+.right {
+  float:right;
+}
+
+li input {
+  margin-right:10px;
+}
