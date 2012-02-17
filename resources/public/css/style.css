@@ -1,0 +1,11 @@
+/* style.scss */
+/* variables */
+/*header*/
+#header {
+  background-color: #28165f; }
+
+#header-content {
+  width: 720px;
+  height: 100px;
+  margin: auto;
+  background-color: #4b3985; }

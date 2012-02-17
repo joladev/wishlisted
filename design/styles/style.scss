@@ -1,0 +1,20 @@
+/* style.scss */
+
+/* variables */
+$darkpurple-dark: #28165f;
+$darkpurple-light: #4b3985;
+
+/*header*/
+#header{
+	
+	background-color: $darkpurple-dark;
+}
+
+#header-content{
+	width: 720px;
+	height: 100px;
+	margin: auto;
+	background-color: $darkpurple-light;
+}
+
+
