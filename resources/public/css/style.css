@@ -9,3 +9,12 @@
   height: 100px;
   margin: auto;
   background-color: #4b3985; }
+
+/* main */
+#main {
+  background-color: #43145c; }
+
+#main-content {
+  width: 720px;
+  margin: auto;
+  background-color: #643280; }

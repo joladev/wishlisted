@@ -1,20 +1,36 @@
 /* style.scss */
 
 /* variables */
-$darkpurple-dark: #28165f;
-$darkpurple-light: #4b3985;
+$bg-darkpurple-dark: #28165f;
+$bg-darkpurple-light: #4b3985;
+$bg-main-purple-dark: #43145c;
+$bg-main-purple-light: #643280;
+
+$content-width: 720px; 
 
 /*header*/
 #header{
 	
-	background-color: $darkpurple-dark;
+	background-color: $bg-darkpurple-dark;
 }
 
 #header-content{
-	width: 720px;
+	width: $content-width;
 	height: 100px;
 	margin: auto;
-	background-color: $darkpurple-light;
+	background-color: $bg-darkpurple-light;
 }
+
+/* main */
+#main{
+	background-color: $bg-main-purple-dark;
+}
+
+#main-content{
+	width: $content-width;
+	margin: auto;
+	background-color: $bg-main-purple-light;
+}
+
 
 
