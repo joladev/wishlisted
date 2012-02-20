@@ -28,9 +28,9 @@ wishlist.prototype.createNew = function(callback) {
 };
 
 wishlist.prototype.wishlistAsHTML = function($header, $box) {
-  header.append($('<input type="text" class="title">').val(this.data.title));
+  $header.append($('<input type="text" class="title">').val(this.data.title));
   var ul = $('<ul class="wishes">');
-  box.append(ul);
+  $box.append(ul);
   if(this.data.wishes) {
     $.each(this.data.wishes, function (i, v) {
       var li = $('<li class="wish">');
@@ -76,7 +76,7 @@ wishlist.prototype.wishlistFromHTML = function ($header,$content) {
 
 var app = function () {
   this.$content = $('div#box');
-  this.$header = $('div#title-box')
+  this.$header = $('div#title-box');
   this.$content.empty(); // remove the "activate javascript" message
   this.$create = $('#create-wishlist');
   this.clickers();
