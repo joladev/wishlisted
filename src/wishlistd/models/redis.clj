@@ -2,8 +2,8 @@
   (:require [redis.core :as r])
   (:use [wishlistd.code]
         [wishlistd.json]))
-  
-(def db {:host "127.0.0.1" :port 6379 :db 0})
+
+(def ^:private db {:host "127.0.0.1" :port 6379 :db 0})    
     
 (defn- new-code []
   "Generates random codes until it finds one that doesn't exist."

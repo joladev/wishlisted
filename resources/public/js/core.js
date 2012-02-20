@@ -27,9 +27,9 @@ wishlist.prototype.createNew = function(callback) {
   });
 };
 
-wishlist.prototype.wishlistAsHTML = function(box) {
-  box.append($('<input type="text" class="title">').val(this.data.title));
-  var ul = $('<ul>');
+wishlist.prototype.wishlistAsHTML = function($header, $box) {
+  header.append($('<input type="text" class="title">').val(this.data.title));
+  var ul = $('<ul class="wishes">');
   box.append(ul);
   if(this.data.wishes) {
     $.each(this.data.wishes, function (i, v) {
@@ -53,9 +53,9 @@ wishlist.prototype.wishlistAsHTML = function(box) {
   return box;
 };
 
-wishlist.prototype.wishlistFromHTML = function ($content) {
+wishlist.prototype.wishlistFromHTML = function ($header,$content) {
   var result = {};
-  result.title = $content.find('.title').val();
+  result.title = $header.find('.title').val();
   var $wishes = $('.wish');
   result.wishes = [];
   
@@ -76,9 +76,9 @@ wishlist.prototype.wishlistFromHTML = function ($content) {
 
 var app = function () {
   this.$content = $('div#box');
+  this.$header = $('div#title-box')
   this.$content.empty(); // remove the "activate javascript" message
   this.$create = $('#create-wishlist');
-  this.$save = $('#save-wishlist');
   this.clickers();
 };
 
@@ -87,7 +87,8 @@ app.prototype.newWishlist = function () {
   this.wishlist = new wishlist();
   this.wishlist.createNew(function () {
     _this.$content.empty();
-    _this.wishlist.wishlistAsHTML(_this.$content);
+    _this.$header.empty();
+    _this.wishlist.wishlistAsHTML(_this.$header,_this.$content);
     _this.wishClickers(); // set the change events on wish items
     window.history.pushState(null, "lol", _this.wishlist.data.code);
   });
@@ -104,7 +105,8 @@ app.prototype.loadWishlist = function (code) {
   this.wishlist = new wishlist();
   this.wishlist.load(code, function (data) {
     _this.$content.empty();
-    _this.wishlist.wishlistAsHTML(_this.$content);
+    _this.$header.empty();
+    _this.wishlist.wishlistAsHTML(_this.$header,_this.$content);
     _this.wishClickers(); // reload the change events on wish items
   });
 };
@@ -119,7 +121,7 @@ app.prototype.clickers = function () {
 app.prototype.wishClickers = function () {
   var _this = this;
   
-  var $title = this.$content.find('.title');
+  var $title = this.$header.find('.title');
   $title.data('oldVal', $title.val());
   $title.unbind('change');
   $title.change(function () {

@@ -8,10 +8,25 @@
   background-color:inherit;
 }
 
-.right {
-  float:right;
+ul {
+  list-style:none;
+  margin-left:0;
+}
+
+li {
+  background-color:#333;
+  margin-bottom:5px;
 }
 
 li input {
   margin-right:10px;
+  background-color:rgb(105,105,105);
+  border-color:black;
+  color:white;
+}
+
+input:focus, input:active {
+  -webkit-appearance:none;
+  -webkit-box-shadow:none;
+  border-color:black;
 }

@@ -4,4 +4,5 @@ pom.xml
 /classes/
 .lein-deps-sum
 .cake
+.DS_Store
 .sass-cache
