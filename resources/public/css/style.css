@@ -32,3 +32,5 @@ body {
   background-color: #643280; }
 
 /* wishes */
+.wishes ul {
+  list-style-image: none; }
