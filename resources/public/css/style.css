@@ -35,6 +35,12 @@ body {
 .wishes ul {
   list-style: none;
   background: transparent; }
-
 .wishes li {
   background-color: transparent; }
+.wishes input {
+  background-color: #d0c9e6;
+  border-color: #382f54;
+  color: #3a383f; }
+.wishes input:focus, .wishes input:active {
+  -webkit-appearance: none;
+  -webkit-box-shadow: red; }

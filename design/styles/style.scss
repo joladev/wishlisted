@@ -6,6 +6,10 @@ $bg-darkpurple-light: #4b3985;
 $bg-main-purple-dark: #43145c;
 $bg-main-purple-light: #643280;
 
+$bg-input-fields: #d0c9e6;
+$bordercolor-input-fields: #382f54;
+$texrcolor-input-fields: #3a383f;
+
 $content-width: 720px; 
 
 body{
@@ -49,14 +53,26 @@ body{
 }
 
 /* wishes */
-.wishes ul{
+.wishes {
+	ul{
 	
 		list-style: none;
 		background: transparent;
 	
-}
-.wishes li{
+	}
+	li{
 	background-color: transparent;
+	}
+	input{
+		background-color: $bg-input-fields;
+		border-color: $bordercolor-input-fields;
+		color: $texrcolor-input-fields;
+	}
+	input:focus, input:active {
+  -webkit-appearance:none;
+  -webkit-box-shadow:red;
+
+}
 }
 
 
