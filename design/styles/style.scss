@@ -58,22 +58,21 @@ body{
 	
 		list-style: none;
 		background: transparent;
-	
 	}
 	li{
-	background-color: transparent;
+		background-color: transparent;
 	}
 	input{
 		background-color: $bg-input-fields;
 		border-color: $bordercolor-input-fields;
 		color: $texrcolor-input-fields;
+
 	}
-	input:focus, input:active {
-  -webkit-appearance:none;
-  -webkit-box-shadow:red;
+	
+}
+.description input{
+	width: 500px;
 
 }
-}
-
 
 

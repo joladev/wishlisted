@@ -41,6 +41,6 @@ body {
   background-color: #d0c9e6;
   border-color: #382f54;
   color: #3a383f; }
-.wishes input:focus, .wishes input:active {
-  -webkit-appearance: none;
-  -webkit-box-shadow: red; }
+
+.description input {
+  width: 500px; }
