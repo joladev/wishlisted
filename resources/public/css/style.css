@@ -33,4 +33,8 @@ body {
 
 /* wishes */
 .wishes ul {
-  list-style-image: none; }
+  list-style: none;
+  background: transparent; }
+
+.wishes li {
+  background-color: transparent; }
