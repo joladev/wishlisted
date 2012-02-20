@@ -1,14 +1,26 @@
 /* style.scss */
 /* variables */
+body {
+  background-color: #43145c; }
+
 /*header*/
 #header {
-  background-color: #28165f; }
+  background: #28165f url(../images/bottom-shadow2.png); }
 
 #header-content {
   width: 720px;
   height: 100px;
   margin: auto;
-  background-color: #4b3985; }
+  background: #4b3985 url(../images/bottom-shadow1.png);
+  position: relative; }
+
+#logo {
+  position: absolute;
+  bottom: 10px;
+  right: -4px;
+  background: url(../images/logo.png) no-repeat;
+  height: 65px;
+  width: 323px; }
 
 /* main */
 #main {
@@ -18,3 +30,5 @@
   width: 720px;
   margin: auto;
   background-color: #643280; }
+
+/* wishes */

@@ -8,17 +8,33 @@ $bg-main-purple-light: #643280;
 
 $content-width: 720px; 
 
+body{
+	background-color: $bg-main-purple-dark
+}
+
 /*header*/
 #header{
 	
-	background-color: $bg-darkpurple-dark;
+	background: $bg-darkpurple-dark  url(../images/bottom-shadow2.png);
+	
 }
 
 #header-content{
 	width: $content-width;
 	height: 100px;
 	margin: auto;
-	background-color: $bg-darkpurple-light;
+	background: $bg-darkpurple-light url(../images/bottom-shadow1.png);
+	position: relative;
+}
+
+#logo{
+	position: absolute;
+	bottom: 10px;
+	right: -4px;
+	background: url(../images/logo.png) no-repeat;
+	height:65px;
+	width:323px;
+
 }
 
 /* main */
@@ -30,6 +46,11 @@ $content-width: 720px;
 	width: $content-width;
 	margin: auto;
 	background-color: $bg-main-purple-light;
+}
+
+/* wishes */
+.wishes{
+	
 }
 
 
