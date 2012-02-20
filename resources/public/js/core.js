@@ -29,7 +29,7 @@ wishlist.prototype.createNew = function(callback) {
 
 wishlist.prototype.wishlistAsHTML = function($header, $box) {
   header.append($('<input type="text" class="title">').val(this.data.title));
-  var ul = $('<ul>');
+  var ul = $('<ul class="wishes">');
   box.append(ul);
   if(this.data.wishes) {
     $.each(this.data.wishes, function (i, v) {
