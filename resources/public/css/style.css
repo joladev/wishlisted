@@ -40,7 +40,8 @@ body {
 .wishes input {
   background-color: #d0c9e6;
   border-color: #382f54;
-  color: #3a383f; }
+  color: #3a383f;
+  width: 320px; }
 
 .description input {
   width: 500px; }
