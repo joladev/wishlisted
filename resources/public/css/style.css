@@ -1,7 +1,15 @@
 /* style.scss */
 /* variables */
+html {
+  height: 100%; }
+
 body {
+  height: 100%;
   background-color: #43145c; }
+
+/* wrap */
+#wrap {
+  min-height: 100%; }
 
 /*header*/
 #header {
@@ -33,15 +41,20 @@ body {
 
 /* main */
 #main {
-  background-color: #43145c; }
+  background-color: #43145c;
+  overflow: auto;
+  padding-bottom: 50px;
+  min-height: 100%; }
 
 #main-content {
   width: 720px;
   margin: auto;
-  background-color: #643280; }
+  background-color: #643280;
+  padding-top: 20px; }
 
 /* wishes */
 ul.wishes {
+  margin-left: 20px;
   list-style: none;
   background: transparent; }
   ul.wishes li {
@@ -56,3 +69,11 @@ input.description {
 
 input.url {
   width: 270px; }
+
+/* footer */
+#footer {
+  position: relative;
+  margin-top: -50px;
+  height: 50px;
+  clear: both;
+  background: red; }

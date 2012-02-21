@@ -11,9 +11,17 @@ $bordercolor-input-fields: #382f54;
 $texrcolor-input-fields: #3a383f;
 
 $content-width: 720px; 
+$footer-height: 50px;
 
+html{height: 100%;}
 body{
+	height: 100%;
 	background-color: $bg-main-purple-dark
+}
+
+/* wrap */
+#wrap{
+	min-height: 100%;
 }
 
 /*header*/
@@ -55,18 +63,27 @@ body{
 /* main */
 #main{
 	background-color: $bg-main-purple-dark;
+	overflow:auto;
+	padding-bottom: $footer-height;
+		min-height:100%;
+
 }
 
 #main-content{
 	width: $content-width;
 	margin: auto;
 	background-color: $bg-main-purple-light;
+	padding-top:20px;
+
+
+
 }
 
 /* wishes */
 ul.wishes {
 	
-	
+	margin-left:20px;
+
 	list-style: none;
 	background: transparent;
 
@@ -89,5 +106,14 @@ input.description{
 input.url{
 	width: 270px;
 }
+
+/* footer */
+#footer {
+	position: relative;
+	margin-top: -$footer-height; 
+	height: $footer-height;
+	clear:both;
+	background:red;
+} 
 
 
