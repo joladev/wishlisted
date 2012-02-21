@@ -111,14 +111,14 @@ input.url{
 	margin-top: -$footer-height; 
 	height: $footer-height;
 	clear:both;
-	background:$bg-darkpurple-dark;
+	background:$bg-darkpurple-dark  url(../images/top-shadow-dark.png);
 } 
 
 #footer-content{
 	width: $content-width;
 	height: $footer-height;
 	margin: auto;
-	background: $bg-darkpurple-light;
+	background: $bg-darkpurple-light url(../images/top-shadow-light.png);
 }
 
 
