@@ -22,6 +22,15 @@ body {
   height: 65px;
   width: 323px; }
 
+#title-box input {
+  float: left;
+  margin-left: 20px;
+  margin-top: 60px; }
+
+#create-wishlist {
+  margin-top: 60px;
+  margin-left: 10px; }
+
 /* main */
 #main {
   background-color: #43145c; }
