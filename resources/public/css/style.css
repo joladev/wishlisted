@@ -41,16 +41,18 @@ body {
   background-color: #643280; }
 
 /* wishes */
-.wishes ul {
+ul.wishes {
   list-style: none;
   background: transparent; }
-.wishes li {
-  background-color: transparent; }
-.wishes input {
-  background-color: #d0c9e6;
-  border-color: #382f54;
-  color: #3a383f;
-  width: 320px; }
+  ul.wishes li {
+    background-color: transparent; }
+  ul.wishes input {
+    background-color: #d0c9e6;
+    border-color: #382f54;
+    color: #3a383f; }
 
-.description input {
-  width: 500px; }
+input.description {
+  width: 370px; }
+
+input.url {
+  width: 270px; }

@@ -64,27 +64,30 @@ body{
 }
 
 /* wishes */
-.wishes {
-	ul{
+ul.wishes {
 	
-		list-style: none;
-		background: transparent;
-	}
-	li{
-		background-color: transparent;
-	}
-	input{
-		background-color: $bg-input-fields;
-		border-color: $bordercolor-input-fields;
-		color: $texrcolor-input-fields;
-		width: 320px;
+	
+	list-style: none;
+	background: transparent;
 
-	}
+		li{
+			background-color: transparent;
+		}
+		input{
+			background-color: $bg-input-fields;
+			border-color: $bordercolor-input-fields;
+			color: $texrcolor-input-fields;
+
+		}
+	
 	
 }
-.description input{
-	width: 500px;
+input.description{
+	width: 370px;
 
+}
+input.url{
+	width: 270px;
 }
 
 
