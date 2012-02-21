@@ -43,8 +43,7 @@ body {
 #main {
   background-color: #43145c;
   overflow: auto;
-  padding-bottom: 50px;
-  min-height: 100%; }
+  padding-bottom: 50px; }
 
 #main-content {
   width: 720px;
@@ -76,4 +75,10 @@ input.url {
   margin-top: -50px;
   height: 50px;
   clear: both;
-  background: red; }
+  background: #28165f; }
+
+#footer-content {
+  width: 720px;
+  height: 50px;
+  margin: auto;
+  background: #4b3985; }

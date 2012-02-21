@@ -65,8 +65,6 @@ body{
 	background-color: $bg-main-purple-dark;
 	overflow:auto;
 	padding-bottom: $footer-height;
-		min-height:100%;
-
 }
 
 #main-content{
@@ -113,7 +111,14 @@ input.url{
 	margin-top: -$footer-height; 
 	height: $footer-height;
 	clear:both;
-	background:red;
+	background:$bg-darkpurple-dark;
 } 
+
+#footer-content{
+	width: $content-width;
+	height: $footer-height;
+	margin: auto;
+	background: $bg-darkpurple-light;
+}
 
 
