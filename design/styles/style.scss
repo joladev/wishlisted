@@ -13,23 +13,27 @@ $texrcolor-input-fields: #3a383f;
 $content-width: 720px; 
 $footer-height: 50px;
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+
 html,body{height: 100%;}
 body{
 
-	background-color: $bg-main-purple-dark
+	
 }
 
-/* wrap */
-#wrap{
-	min-height: 100%;
-	height:auto;
+#new-main{
+  width:100%;
+  min-height:100%;
+  background:red;
 }
+
 
 /*header*/
 #header{
-	
 	background: $bg-darkpurple-dark  url(../images/bottom-shadow2.png);
-	
 }
 
 #header-content{
@@ -47,7 +51,6 @@ body{
 	background: url(../images/logo.png) no-repeat;
 	height:65px;
 	width:323px;
-
 }
 
 #title-box input{
@@ -64,14 +67,14 @@ body{
 /* main */
 #main{
 	background-color: $bg-main-purple-dark;
-	overflow:auto;
-	padding-bottom: $footer-height;
-  
+  min-height:100%;
+  width:100%;
 }
 
 #main-content{
+  height:100%;
 	width: $content-width;
-	margin: auto;
+	margin: 0 auto;
 	background-color: $bg-main-purple-light;
 	padding-top:20px;
 
@@ -107,12 +110,10 @@ input.url{
 	width: 270px;
 }
 
-/* footer */
 #footer {
-	position: relative;
-	margin-top: -$footer-height; 
-	height: $footer-height;
-	clear:both;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 	background:$bg-darkpurple-dark  url(../images/top-shadow-dark.png);
 } 
 

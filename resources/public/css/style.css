@@ -1,15 +1,16 @@
 /* style.scss */
 /* variables */
+* {
+  margin: 0;
+  padding: 0; }
+
 html, body {
   height: 100%; }
 
-body {
-  background-color: #43145c; }
-
-/* wrap */
-#wrap {
+#new-main {
+  width: 100%;
   min-height: 100%;
-  height: auto; }
+  background: red; }
 
 /*header*/
 #header {
@@ -42,12 +43,13 @@ body {
 /* main */
 #main {
   background-color: #43145c;
-  overflow: auto;
-  padding-bottom: 50px; }
+  min-height: 100%;
+  width: 100%; }
 
 #main-content {
+  height: 100%;
   width: 720px;
-  margin: auto;
+  margin: 0 auto;
   background-color: #643280;
   padding-top: 20px; }
 
@@ -69,12 +71,10 @@ input.description {
 input.url {
   width: 270px; }
 
-/* footer */
 #footer {
-  position: relative;
-  margin-top: -50px;
-  height: 50px;
-  clear: both;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background: #28165f url(../images/top-shadow-dark.png); }
 
 #footer-content {
