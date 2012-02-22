@@ -13,15 +13,16 @@ $texrcolor-input-fields: #3a383f;
 $content-width: 720px; 
 $footer-height: 50px;
 
-html{height: 100%;}
+html,body{height: 100%;}
 body{
-	height: 100%;
+
 	background-color: $bg-main-purple-dark
 }
 
 /* wrap */
 #wrap{
 	min-height: 100%;
+	height:auto;
 }
 
 /*header*/
@@ -65,6 +66,7 @@ body{
 	background-color: $bg-main-purple-dark;
 	overflow:auto;
 	padding-bottom: $footer-height;
+  
 }
 
 #main-content{
