@@ -10,7 +10,7 @@ html, body {
 body {
   background: #43145c; }
 
-/*header*/
+/* header */
 .navbar-inner {
   background: #28165f url(../images/bottom-shadow2.png); }
 
@@ -37,6 +37,7 @@ body {
   border-color: #382f54;
   color: #3a383f; }
 
+/* button */
 #create-wishlist {
   margin: 55px 0px 0px 20px;
   float: left; }
