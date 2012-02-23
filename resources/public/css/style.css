@@ -7,14 +7,15 @@
 html, body {
   height: 100%; }
 
-#new-main {
-  width: 100%;
-  min-height: 100%;
-  background: red; }
+body {
+  background: #43145c; }
 
 /*header*/
 #header {
-  background: #28165f url(../images/bottom-shadow2.png); }
+  background: #28165f url(../images/bottom-shadow2.png);
+  position: fixed;
+  width: 100%;
+  top: 0px; }
 
 #header-content {
   width: 720px;
@@ -23,22 +24,30 @@ html, body {
   background: #4b3985 url(../images/bottom-shadow1.png);
   position: relative; }
 
+.navbar-inner {
+  background: #28165f url(../images/bottom-shadow2.png); }
+
+.container {
+  margin-top: 0px;
+  width: 720px;
+  height: 100px;
+  background: #4b3985 url(../images/bottom-shadow1.png); }
+
 #logo {
-  position: absolute;
-  bottom: 10px;
-  right: -4px;
+  float: right;
   background: url(../images/logo.png) no-repeat;
   height: 65px;
-  width: 323px; }
+  width: 323px;
+  margin: 20px 0px 0px 0px; }
 
-#title-box input {
+#title-box {
+  width: 300px;
   float: left;
-  margin-left: 20px;
-  margin-top: 60px; }
+  margin: 55px 0px 0px 10px; }
 
 #create-wishlist {
-  margin-top: 60px;
-  margin-left: 10px; }
+  margin: 55px 0px 0px 20px;
+  float: left; }
 
 /* main */
 #main {
@@ -47,15 +56,15 @@ html, body {
   width: 100%; }
 
 #main-content {
-  height: 100%;
+  min-height: 100%;
   width: 720px;
   margin: 0 auto;
-  background-color: #643280;
-  padding-top: 20px; }
+  background-color: #643280; }
 
 /* wishes */
 ul.wishes {
   margin-left: 20px;
+  padding-top: 120px;
   list-style: none;
   background: transparent; }
   ul.wishes li {

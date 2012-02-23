@@ -18,22 +18,22 @@ $footer-height: 50px;
     padding: 0;
   }
 
-html,body{height: 100%;}
-body{
-
-	
+html,body{
+  height: 100%;
 }
 
-#new-main{
-  width:100%;
-  min-height:100%;
-  background:red;
+body{
+  background:$bg-main-purple-dark;
+
 }
 
 
 /*header*/
 #header{
 	background: $bg-darkpurple-dark  url(../images/bottom-shadow2.png);
+  position: fixed;
+  width:100%;
+  top:0px;
 }
 
 #header-content{
@@ -44,48 +44,58 @@ body{
 	position: relative;
 }
 
+.navbar-inner{
+  background: $bg-darkpurple-dark  url(../images/bottom-shadow2.png);
+}
+.container{
+  margin-top:0px;
+  width:$content-width;
+  height:100px;
+  background: $bg-darkpurple-light url(../images/bottom-shadow1.png);
+}
+
 #logo{
-	position: absolute;
-	bottom: 10px;
-	right: -4px;
+  float: right;
 	background: url(../images/logo.png) no-repeat;
 	height:65px;
 	width:323px;
+  margin: 20px 0px 0px 0px;
 }
 
+#title-box{
+  width:300px;
+  float: left;
+  margin: 55px 0px 0px 10px;
+}
 #title-box input{
-	float: left;
-	margin-left:20px;
-	margin-top: 60px;
+
 }
 
 #create-wishlist{
-	margin-top: 60px;
-	margin-left: 10px;
+    margin: 55px 0px 0px 20px;
+    float: left;
 }
 
 /* main */
 #main{
-	background-color: $bg-main-purple-dark;
+  background-color: $bg-main-purple-dark;
   min-height:100%;
   width:100%;
 }
 
 #main-content{
-  height:100%;
+  min-height:100%;
 	width: $content-width;
 	margin: 0 auto;
+
 	background-color: $bg-main-purple-light;
-	padding-top:20px;
-
-
-
 }
 
 /* wishes */
 ul.wishes {
 	
 	margin-left:20px;
+  padding-top:120px;
 
 	list-style: none;
 	background: transparent;
