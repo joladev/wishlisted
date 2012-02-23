@@ -8,7 +8,7 @@ $bg-main-purple-light: #643280;
 
 $bg-input-fields: #d0c9e6;
 $bordercolor-input-fields: #382f54;
-$texrcolor-input-fields: #3a383f;
+$textcolor-input-fields: #3a383f;
 
 $content-width: 720px; 
 $footer-height: 50px;
@@ -29,20 +29,6 @@ body{
 
 
 /*header*/
-#header{
-	background: $bg-darkpurple-dark  url(../images/bottom-shadow2.png);
-  position: fixed;
-  width:100%;
-  top:0px;
-}
-
-#header-content{
-	width: $content-width;
-	height: 100px;
-	margin: auto;
-	background: $bg-darkpurple-light url(../images/bottom-shadow1.png);
-	position: relative;
-}
 
 .navbar-inner{
   background: $bg-darkpurple-dark  url(../images/bottom-shadow2.png);
@@ -68,7 +54,9 @@ body{
   margin: 55px 0px 0px 10px;
 }
 #title-box input{
-
+  background-color: $bg-input-fields;
+  border-color: $bordercolor-input-fields;
+  color: $textcolor-input-fields;
 }
 
 #create-wishlist{
@@ -96,6 +84,7 @@ ul.wishes {
 	
 	margin-left:20px;
   padding-top:120px;
+  padding-bottom:60px;
 
 	list-style: none;
 	background: transparent;
@@ -106,7 +95,7 @@ ul.wishes {
 		input{
 			background-color: $bg-input-fields;
 			border-color: $bordercolor-input-fields;
-			color: $texrcolor-input-fields;
+			color: $textcolor-input-fields;
 
 		}
 	
@@ -134,4 +123,17 @@ input.url{
 	background: $bg-darkpurple-light url(../images/top-shadow-light.png);
 }
 
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
 
+#pony{
+  position: absolute;
+  bottom: 50px;
+  right:30px;
+  height:194px;
+  width:200px;
+  background: url(../images/pony.png);
+}

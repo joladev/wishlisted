@@ -11,19 +11,6 @@ body {
   background: #43145c; }
 
 /*header*/
-#header {
-  background: #28165f url(../images/bottom-shadow2.png);
-  position: fixed;
-  width: 100%;
-  top: 0px; }
-
-#header-content {
-  width: 720px;
-  height: 100px;
-  margin: auto;
-  background: #4b3985 url(../images/bottom-shadow1.png);
-  position: relative; }
-
 .navbar-inner {
   background: #28165f url(../images/bottom-shadow2.png); }
 
@@ -45,6 +32,11 @@ body {
   float: left;
   margin: 55px 0px 0px 10px; }
 
+#title-box input {
+  background-color: #d0c9e6;
+  border-color: #382f54;
+  color: #3a383f; }
+
 #create-wishlist {
   margin: 55px 0px 0px 20px;
   float: left; }
@@ -65,6 +57,7 @@ body {
 ul.wishes {
   margin-left: 20px;
   padding-top: 120px;
+  padding-bottom: 60px;
   list-style: none;
   background: transparent; }
   ul.wishes li {
@@ -91,3 +84,16 @@ input.url {
   height: 50px;
   margin: auto;
   background: #4b3985 url(../images/top-shadow-light.png); }
+
+/* IE 6 */
+* html #footer {
+  position: absolute;
+  top: expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px'); }
+
+#pony {
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+  height: 194px;
+  width: 200px;
+  background: url(../images/pony.png); }
