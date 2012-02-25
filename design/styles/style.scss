@@ -1,8 +1,8 @@
 /* style.scss */
 
 /* variables */
-
-
+$body-background: #fdf6e3;
+$top-background: #93a1a1;
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +13,7 @@ html,body{
 }
 
 body{
-  background:$bg-main-purple-dark;
-
+  background:$body-background;
 }
 
 
@@ -25,11 +24,17 @@ body{
 }
 
 .container{
-
+  margin:0px;
+  background-color: $top-background;
+  width:100%;
 }
 
-#logo{
- 
+h1#logo{
+  width:150px;
+  position: relative;
+  left:5px;
+  top:5px; 
+
 }
 
 #title-box{

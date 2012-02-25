@@ -1,83 +1,27 @@
-/*
-Syntax error: Undefined variable: "$bg-main-purple-dark".
-        on line 16 of design/styles/style.scss
+/* style.scss */
+/* variables */
+* {
+  margin: 0;
+  padding: 0; }
 
-11: html,body{
-12:   height: 100%;
-13: }
-14: 
-15: body{
-16:   background:$bg-main-purple-dark;
-17: 
-18: }
-19: 
-20: 
-21: /* header */
+html, body {
+  height: 100%; }
 
-Backtrace:
-design/styles/style.scss:16
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/script/variable.rb:49:in `_perform'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/script/node.rb:40:in `perform'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:216:in `visit_prop'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:238:in `visit_rule'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/engine.rb:299:in `_render'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/engine.rb:246:in `render'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/plugin/compiler.rb:339:in `update_stylesheet'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/plugin/compiler.rb:202:in `update_stylesheets'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `each'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `update_stylesheets'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/plugin/compiler.rb:293:in `watch'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/path.rb:73:in `call'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/path.rb:73:in `run_callback'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/path.rb:55:in `callback_action'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/path.rb:35:in `update'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/state/file.rb:19:in `refresh'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:17:in `each'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:15:in `loop'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/backends/polling.rb:15:in `run'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm/monitor.rb:26:in `run'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/vendor/fssm/lib/fssm.rb:70:in `monitor'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/plugin/compiler.rb:265:in `watch'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/plugin.rb:107:in `send'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/exec.rb:431:in `watch_or_update'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/exec.rb:302:in `process_result'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/Users/StinaQ/.gem/ruby/1.8/gems/sass-3.1.15/bin/sass:8
-/usr/bin/sass:19:in `load'
-/usr/bin/sass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$bg-main-purple-dark\".\A         on line 16 of design/styles/style.scss\A \A 11: html,body{\A 12:   height: 100%;\A 13: }\A 14: \A 15: body{\A 16:   background:$bg-main-purple-dark;\A 17: \A 18: }\A 19: \A 20: \A 21: /* header */"; }
+body {
+  background: #fdf6e3; }
+
+/* header */
+.container {
+  margin: 0px;
+  background-color: #93a1a1;
+  width: 100%; }
+
+h1#logo {
+  width: 150px;
+  position: relative;
+  left: 5px;
+  top: 5px; }
+
+/* button */
+/* box */
+/* wishes */
