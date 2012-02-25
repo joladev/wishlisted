@@ -3,6 +3,8 @@
 /* variables */
 $body-background: #fdf6e3;
 $top-background: #93a1a1;
+$logo-background: #b58900;
+$logo-text: #fdf6e3;
 
 
 body{
@@ -11,4 +13,9 @@ body{
 
 .container{
   background-color: $top-background;
+}
+
+h1#logo{
+	background:$logo-background;
+	color: $logo-text;
 }
