@@ -7,13 +7,9 @@
 html, body {
   height: 100%; }
 
-body {
-  background: #fdf6e3; }
-
 /* header */
-.container {
+container {
   margin: 0px;
-  background-color: #93a1a1;
   width: 100%; }
 
 h1#logo {

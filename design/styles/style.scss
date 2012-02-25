@@ -1,8 +1,7 @@
 /* style.scss */
 
 /* variables */
-$body-background: #fdf6e3;
-$top-background: #93a1a1;
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,7 @@ html,body{
 }
 
 body{
-  background:$body-background;
+
 }
 
 
@@ -23,9 +22,8 @@ body{
 
 }
 
-.container{
+container{
   margin:0px;
-  background-color: $top-background;
   width:100%;
 }
 

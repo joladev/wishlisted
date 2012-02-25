@@ -1,0 +1,14 @@
+/* sol-style.scss */
+
+/* variables */
+$body-background: #fdf6e3;
+$top-background: #93a1a1;
+
+
+body{
+  background:$body-background;
+}
+
+.container{
+  background-color: $top-background;
+}
