@@ -13,10 +13,10 @@ html, body {
   width: 100%; }
 
 h1#logo {
+  margin: 0px;
+  padding: 5px;
   width: 150px;
-  position: relative;
-  left: 5px;
-  top: 5px; }
+  float: left; }
 
 /* button */
 /* box */
