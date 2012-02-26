@@ -24,6 +24,11 @@ li input {
   color:white;
 }
 
+input{  
+  -webkit-appearance:none;
+  -webkit-box-shadow:none;
+}
+
 input:focus, input:active {
   -webkit-appearance:none;
   -webkit-box-shadow:none;

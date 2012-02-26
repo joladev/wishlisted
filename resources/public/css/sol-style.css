@@ -9,3 +9,13 @@ body {
 h1#logo {
   background: #b58900;
   color: #fdf6e3; }
+
+a#create-wishlist {
+  color: #586e75; }
+
+#title-box input {
+  background: #93a1a1;
+  border-style: none;
+  border-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-color: #586e75; }

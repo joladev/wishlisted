@@ -29,24 +29,32 @@ body{
 
 h1#logo{
   margin: 0px;
-  padding: 5px;
-  width:150px;
+  padding: 3px;
+  width:140px;
   float:left;
-
+  font-family:helvetica;
+  font-weight:normal;
 
 }
 
 #title-box{
-
+  float: left;
+  position:relative;
+  left:20px;
+  top:5px;
 }
 
 #title-box input{
- 
+
 }
 
-/* button */
-#create-wishlist{
-   
+/* link */
+a#create-wishlist{
+  float:left;
+  position: relative;
+  top:10px;
+  left:10px;
+  font-size:20px;
 }
 
 /* box */
