@@ -29,12 +29,15 @@ a#create-wishlist{
 
 #title-box input{
   background:$title-input-bg;
+  color:$banner-link-color;
   border:{
     style:none;
     color: transparent;
     bottom:
       {
         style:solid;
-        color:$title-input-border;}
+        color:$title-input-border;
+      }
   }
+  &:hover{border-bottom-width:2px;}
 }

@@ -26,6 +26,10 @@ h1#logo {
   left: 20px;
   top: 5px; }
 
+#title-box input {
+  font-size: 120%;
+  height: 20px; }
+
 /* link */
 a#create-wishlist {
   float: left;
@@ -35,4 +39,11 @@ a#create-wishlist {
   font-size: 20px; }
 
 /* box */
+#box {
+  width: 700px;
+  margin: 70px auto 0 auto;
+  background-color: red; }
+
 /* wishes */
+ul.wishes {
+  list-style: disc url(bullet.gif) inside; }

@@ -45,7 +45,8 @@ h1#logo{
 }
 
 #title-box input{
-
+  font-size:120%;
+  height:20px;
 }
 
 /* link */
@@ -58,11 +59,15 @@ a#create-wishlist{
 }
 
 /* box */
-
+#box{
+  width:700px;
+  margin: 70px auto 0 auto;
+  background-color: red;
+}
 
 /* wishes */
 ul.wishes {
-	
+	list-style: disc url(bullet.gif) inside;
 		li{
 			
 		}

@@ -15,7 +15,10 @@ a#create-wishlist {
 
 #title-box input {
   background: #93a1a1;
+  color: #586e75;
   border-style: none;
   border-color: transparent;
   border-bottom-style: solid;
   border-bottom-color: #586e75; }
+  #title-box input:hover {
+    border-bottom-width: 2px; }
