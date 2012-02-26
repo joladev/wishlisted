@@ -4,17 +4,14 @@
   margin: 0;
   padding: 0; }
 
-html, body {
-  height: 100%; }
-
-/* header */
+/* banner */
 .container {
   margin: 0px;
   width: 100%; }
 
 h1#logo {
   margin: 0px;
-  padding: 3px;
+  padding-left: 13px;
   width: 140px;
   float: left;
   font-family: helvetica;
@@ -24,13 +21,14 @@ h1#logo {
   float: left;
   position: relative;
   left: 20px;
-  top: 5px; }
+  top: 5px;
+  font-size: 90%; }
 
 #title-box input {
   font-size: 120%;
   height: 20px; }
 
-/* link */
+/* create link */
 a#create-wishlist {
   float: left;
   position: relative;
@@ -41,9 +39,18 @@ a#create-wishlist {
 /* box */
 #box {
   width: 700px;
-  margin: 70px auto 0 auto;
-  background-color: red; }
+  margin: 130px auto 80px auto; }
 
 /* wishes */
 ul.wishes {
-  list-style: disc url(bullet.gif) inside; }
+  list-style-type: disc;
+  list-style-position: inside; }
+  ul.wishes input {
+    height: 25px;
+    font-size: 120%; }
+
+input.description {
+  width: 350px; }
+
+input.url {
+  width: 295px; }

@@ -9,6 +9,9 @@ $banner-link-color:   #586e75;
 
 $title-input-bg:      #93a1a1;
 $title-input-border:  #586e75;
+$wishes-input-border: #93a1a1;
+$wish-color:          #d33682;
+$url-color:           #93a1a1;
 
 body{
   background:$body-background;
@@ -23,10 +26,12 @@ h1#logo{
 	color: $logo-text;
 }
 
+/* create link*/
 a#create-wishlist{
   color: $banner-link-color;
 }
 
+/* title box*/
 #title-box input{
   background:$title-input-bg;
   color:$banner-link-color;
@@ -40,4 +45,32 @@ a#create-wishlist{
       }
   }
   &:hover{border-bottom-width:2px;}
+}
+
+/* wishes */
+ul.wishes {
+  list-style: url(../images/bullet_sol.png);
+  list-style-position: inside;
+  background:transparent;
+  li{
+    background:transparent;
+  }
+    input{
+      background:transparent;
+      border:{
+        style:none;
+        color:transparent;
+        bottom:{
+          style:solid;
+          color: $wishes-input-border;
+        }
+      }
+    }  
+}
+
+input.description{
+  color:$wish-color;
+}
+input.url{
+  color:$url-color;
 }

@@ -10,9 +10,11 @@ h1#logo {
   background: #b58900;
   color: #fdf6e3; }
 
+/* create link*/
 a#create-wishlist {
   color: #586e75; }
 
+/* title box*/
 #title-box input {
   background: #93a1a1;
   color: #586e75;
@@ -22,3 +24,23 @@ a#create-wishlist {
   border-bottom-color: #586e75; }
   #title-box input:hover {
     border-bottom-width: 2px; }
+
+/* wishes */
+ul.wishes {
+  list-style: url(../images/bullet_sol.png);
+  list-style-position: inside;
+  background: transparent; }
+  ul.wishes li {
+    background: transparent; }
+  ul.wishes input {
+    background: transparent;
+    border-style: none;
+    border-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-color: #93a1a1; }
+
+input.description {
+  color: #d33682; }
+
+input.url {
+  color: #93a1a1; }

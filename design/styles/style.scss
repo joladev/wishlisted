@@ -8,7 +8,7 @@
   }
 
 html,body{
-  height: 100%;
+
 }
 
 body{
@@ -16,7 +16,7 @@ body{
 }
 
 
-/* header */
+/* banner */
 
 .navbar-inner{
 
@@ -29,7 +29,7 @@ body{
 
 h1#logo{
   margin: 0px;
-  padding: 3px;
+  padding-left: 13px;
   width:140px;
   float:left;
   font-family:helvetica;
@@ -42,6 +42,7 @@ h1#logo{
   position:relative;
   left:20px;
   top:5px;
+  font-size:90%;
 }
 
 #title-box input{
@@ -49,7 +50,7 @@ h1#logo{
   height:20px;
 }
 
-/* link */
+/* create link */
 a#create-wishlist{
   float:left;
   position: relative;
@@ -61,27 +62,24 @@ a#create-wishlist{
 /* box */
 #box{
   width:700px;
-  margin: 70px auto 0 auto;
-  background-color: red;
+  margin: 130px auto 80px auto;
 }
 
 /* wishes */
 ul.wishes {
-	list-style: disc url(bullet.gif) inside;
-		li{
-			
-		}
-		input{
-
-		}
-		
+	list-style-type: disc;
+  list-style-position: inside;
+	input{
+    height:25px;
+    font-size: 120%;
+	}
 }
 
 input.description{
-
+  width:350px;
 }
 
 input.url{
-
+  width:295px;
 }
 
