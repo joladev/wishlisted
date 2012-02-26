@@ -21,9 +21,11 @@ body{
   background-color: $banner-background;
 }
 
-h1#logo{
+#logo{
 	background:$logo-background;
-	color: $logo-text;
+	h1{
+    color: $logo-text;
+  }
 }
 
 /* create link*/

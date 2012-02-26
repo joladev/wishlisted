@@ -6,9 +6,10 @@ body {
 .container {
   background-color: #93a1a1; }
 
-h1#logo {
-  background: #b58900;
-  color: #fdf6e3; }
+#logo {
+  background: #b58900; }
+  #logo h1 {
+    color: #fdf6e3; }
 
 /* create link*/
 a#create-wishlist {

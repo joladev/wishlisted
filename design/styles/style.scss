@@ -1,19 +1,13 @@
 /* style.scss */
 
 /* variables */
+$banner-height:   37px;
+
 
 * {
     margin: 0;
     padding: 0;
   }
-
-html,body{
-
-}
-
-body{
-
-}
 
 
 /* banner */
@@ -27,15 +21,17 @@ body{
   width:100%;
 }
 
-h1#logo{
-  margin: 0px;
-  padding-left: 13px;
-  width:140px;
+#logo{
+  width:150px;
+  height:$banner-height;
   float:left;
-  font-family:helvetica;
-  font-weight:normal;
-
+  h1{
+    font-family:helvetica;
+    font-weight:normal;
+    margin-left:10px;
+  }
 }
+
 
 #title-box{
   float: left;

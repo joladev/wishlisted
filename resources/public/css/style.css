@@ -9,13 +9,14 @@
   margin: 0px;
   width: 100%; }
 
-h1#logo {
-  margin: 0px;
-  padding-left: 13px;
-  width: 140px;
-  float: left;
-  font-family: helvetica;
-  font-weight: normal; }
+#logo {
+  width: 150px;
+  height: 37px;
+  float: left; }
+  #logo h1 {
+    font-family: helvetica;
+    font-weight: normal;
+    margin-left: 10px; }
 
 #title-box {
   float: left;
