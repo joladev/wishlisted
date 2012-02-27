@@ -68,6 +68,11 @@ a#create-wishlist{
   font-size: 110%;
   font-weight:bold;
 }
+
+ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
 /* box */
 #box{
   width:$box-width;
@@ -86,9 +91,18 @@ ul.wishes {
 
 input.description{
   width:330px;
+  margin-left:10px;
 }
 
 input.url{
   width:275px;
 }
 
+/* delete bullet */
+.delete{
+  width:15px;
+  height:15px;
+  margin-top:13px;
+  float: left;
+background-repeat:no-repeat !important;
+}

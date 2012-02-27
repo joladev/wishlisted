@@ -58,7 +58,4 @@ input.url {
   color: #93a1a1; }
 
 .delete {
-  width: 13px;
-  height: 13px;
-  background: url(images/x.png);
-  float: left; }
+  background: url(../images/x.png); }
