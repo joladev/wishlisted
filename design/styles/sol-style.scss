@@ -1,4 +1,5 @@
 /* sol-style.scss */
+/* all the colororing with the solarized color scheme */
 
 /* variables */
 $body-background:     #fdf6e3;
@@ -14,12 +15,28 @@ $wishes-input-border: #93a1a1;
 $wish-color:          #d33682;
 $url-color:           #93a1a1;
 
+
 body{
   background:$body-background;
 }
 
+/* banner bar */
 .container{
   background-color: $banner-background;
+}
+
+.nav{
+  background:$banner-background;
+  li{
+    background:$banner-background;
+  }
+}
+/*drop down list */
+.navbar .nav li a{
+  color: $banner-link-color;
+  &:hover{
+    color: $banner-link-hover;
+  }
 }
 
 #logo{
@@ -51,19 +68,7 @@ a#create-wishlist{
   &:hover{border-bottom-width:2px;}
 }
 
-.nav{
-  background:$banner-background;
-  li{
-    background:$banner-background;
-  }
-}
-/*drop down list */
-.navbar .nav li a{
-  color: $banner-link-color;
-  &:hover{
-    color: $banner-link-hover;
-  }
-}
+
 
 /* wishes */
 ul.wishes{

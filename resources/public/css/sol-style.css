@@ -1,10 +1,23 @@
 /* sol-style.scss */
+/* all the colororing with the solarized color scheme */
 /* variables */
 body {
   background: #fdf6e3; }
 
+/* banner bar */
 .container {
   background-color: #93a1a1; }
+
+.nav {
+  background: #93a1a1; }
+  .nav li {
+    background: #93a1a1; }
+
+/*drop down list */
+.navbar .nav li a {
+  color: #586e75; }
+  .navbar .nav li a:hover {
+    color: #eee8d5; }
 
 #logo {
   background: #b58900; }
@@ -25,17 +38,6 @@ a#create-wishlist {
   border-bottom-color: #586e75; }
   #title-box input:hover {
     border-bottom-width: 2px; }
-
-.nav {
-  background: #93a1a1; }
-  .nav li {
-    background: #93a1a1; }
-
-/*drop down list */
-.navbar .nav li a {
-  color: #586e75; }
-  .navbar .nav li a:hover {
-    color: #eee8d5; }
 
 /* wishes */
 ul.wishes {

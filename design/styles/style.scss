@@ -13,15 +13,31 @@ $box-width:        670px;
 
 /* banner */
 
-.navbar-inner{
-
-}
-
 .container{
   margin:0px;
   width:100%;
 }
 
+/* banner bar, height and font size */
+.nav{
+  height:$banner-height;
+  li{
+    height:$banner-height;
+    a{font-weight:bold;}
+  }
+}
+
+.navbar .nav li a{
+  font-size: 110%;
+  font-weight:bold;
+}
+
+/* to get dropdown on hover */
+ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
+/*logo, so far with h1 */
 #logo{
   width:$logo-box-width;
   height:$banner-height;
@@ -34,7 +50,7 @@ $box-width:        670px;
   }
 }
 
-
+/* title box */
 #title-box{
   float: left;
   position:relative;
@@ -57,23 +73,9 @@ a#create-wishlist{
   font-size:18px;
 }
 
-.nav{
-  height:$banner-height;
-  li{
-    height:$banner-height;
-    a{font-weight:bold;}
-  }
-}
-.navbar .nav li a{
-  font-size: 110%;
-  font-weight:bold;
-}
 
-ul.nav li.dropdown:hover ul.dropdown-menu{
-    display: block;    
-}
 
-/* box */
+/* main box */
 #box{
   width:$box-width;
   margin: 130px auto 80px auto;
@@ -104,5 +106,5 @@ input.url{
   height:15px;
   margin-top:13px;
   float: left;
-background-repeat:no-repeat !important;
+  background-repeat:no-repeat !important;
 }
