@@ -28,8 +28,7 @@ body{
     color: $logo-text;
   }
 }
-#logo a{color:red;}
-#logo a:hover{color:red;}
+
 
 /* create link*/
 a#create-wishlist{
@@ -68,7 +67,7 @@ a#create-wishlist{
 
 /* wishes */
 ul.wishes {
-  list-style: url(../images/x.png);
+  list-style:none;
   list-style-position: inside;
   background:transparent;
   li{
@@ -92,4 +91,11 @@ input.description{
 }
 input.url{
   color:$url-color;
+}
+
+.delete{
+  width:13px;
+  height:13px;
+  background: url(images/x.png);
+  float: left;
 }

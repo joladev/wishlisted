@@ -56,7 +56,7 @@ a#create-wishlist {
 
 /* wishes */
 ul.wishes {
-  list-style-type: disc;
+  list-style-type: none;
   list-style-position: inside; }
   ul.wishes input {
     height: 25px;

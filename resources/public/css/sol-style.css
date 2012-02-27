@@ -11,12 +11,6 @@ body {
   #logo h1 {
     color: #fdf6e3; }
 
-#logo a {
-  color: red; }
-
-#logo a:hover {
-  color: red; }
-
 /* create link*/
 a#create-wishlist {
   color: #586e75; }
@@ -45,7 +39,7 @@ a#create-wishlist {
 
 /* wishes */
 ul.wishes {
-  list-style: url(../images/x.png);
+  list-style: none;
   list-style-position: inside;
   background: transparent; }
   ul.wishes li {
@@ -62,3 +56,9 @@ input.description {
 
 input.url {
   color: #93a1a1; }
+
+.delete {
+  width: 13px;
+  height: 13px;
+  background: url(images/x.png);
+  float: left; }
