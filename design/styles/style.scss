@@ -37,39 +37,51 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
     display: block;    
 }
 
+/* padding of dropdown */
+.dropdown-menu{
+
+  li{
+    padding: 5px;
+    height:135px;
+  }
+}
+
 /*logo, so far with h1 */
 #logo{
   width:$logo-box-width;
   height:$banner-height;
   float:left;
-  h1{
-    font-family:helvetica;
-    font-weight:normal;
-    margin-left:10px;
-    font-size:170%;
-  }
+  font-family:helvetica;
+  font-weight:normal;
+  font-size:170%;
+}
+#logo a{
+  position:relative;
+  top:8px;
+  left:10px;
 }
 
 /* title box */
 #title-box{
   float: left;
   position:relative;
-  left:20px;
+  left:7px;
   top:5px;
   font-size:90%;
 }
 
 #title-box input{
   font-size:120%;
-  height:18px;
+  height:15px;
+  width:150px;
 }
 
 /* create link */
 a#create-wishlist{
   float:left;
   position: relative;
-  top:10px;
-  left:0px;
+  top:9px;
+  left:-7px;
   font-size:18px;
 }
 
