@@ -66,24 +66,24 @@ a#create-wishlist{
 }
 
 /* wishes */
-ul.wishes {
+ul.wishes{
   list-style:none;
   list-style-position: inside;
   background:transparent;
   li{
     background:transparent;
   }
-    input{
-      background:transparent;
-      border:{
-        style:none;
-        color:transparent;
-        bottom:{
-          style:solid;
-          color: $wishes-input-border;
-        }
+  input{
+    background:transparent;
+    border:{
+      style:none;
+      color:transparent;
+      bottom:{
+        style:solid;
+        color: $wishes-input-border;
       }
-    }  
+    }
+  }  
 }
 
 input.description{
