@@ -51,7 +51,7 @@ a#create-wishlist {
 
 /* box */
 #box {
-  width: 700px;
+  width: 670px;
   margin: 130px auto 80px auto; }
 
 /* wishes */
@@ -63,7 +63,7 @@ ul.wishes {
     font-size: 120%; }
 
 input.description {
-  width: 350px; }
+  width: 330px; }
 
 input.url {
-  width: 295px; }
+  width: 275px; }

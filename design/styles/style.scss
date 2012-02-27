@@ -1,8 +1,9 @@
 /* style.scss */
 
 /* variables */
-$banner-height:   37px;
+$banner-height:    37px;
 $logo-box-width:   120px;
+$box-width:        670px; 
 
 * {
     margin: 0;
@@ -69,7 +70,7 @@ a#create-wishlist{
 }
 /* box */
 #box{
-  width:700px;
+  width:$box-width;
   margin: 130px auto 80px auto;
 }
 
@@ -84,10 +85,10 @@ ul.wishes {
 }
 
 input.description{
-  width:350px;
+  width:330px;
 }
 
 input.url{
-  width:295px;
+  width:275px;
 }
 

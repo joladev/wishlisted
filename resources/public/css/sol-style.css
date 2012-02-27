@@ -40,10 +40,12 @@ a#create-wishlist {
 /*drop down list */
 .navbar .nav li a {
   color: #586e75; }
+  .navbar .nav li a:hover {
+    color: #eee8d5; }
 
 /* wishes */
 ul.wishes {
-  list-style: url(../images/bullet_sol.png);
+  list-style: url(../images/x.png);
   list-style-position: inside;
   background: transparent; }
   ul.wishes li {
