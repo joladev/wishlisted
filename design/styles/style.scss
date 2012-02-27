@@ -120,3 +120,15 @@ input.url{
   float: left;
   background-repeat:no-repeat !important;
 }
+
+/*copyright box */
+#copyright{
+  position: fixed;
+  bottom:-7px;
+  right:0px;
+  padding: 3px 3px 0px 3px;
+  border:1px solid black;
+  p{
+    font-size:80%;
+  }
+}

@@ -18,6 +18,10 @@ $wishes-input-border: #93a1a1;
 $wish-color:          #d33682;
 $url-color:           #93a1a1;
 
+$copyright-background:#fde6a9;
+$copyright-border:    #adbebe;
+$copyright-color:     #586e75;
+
 
 body{
   background:$body-background;
@@ -129,4 +133,10 @@ input.url{
 
 .delete{
   background: url(../images/x.png);
+}
+
+#copyright{
+  background:$copyright-background;
+  border:1px solid $copyright-border;
+  color:$copyright-color;
 }

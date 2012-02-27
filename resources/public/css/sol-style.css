@@ -86,3 +86,8 @@ input.url {
 
 .delete {
   background: url(../images/x.png); }
+
+#copyright {
+  background: #fde6a9;
+  border: 1px solid #adbebe;
+  color: #586e75; }
