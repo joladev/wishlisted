@@ -11,6 +11,12 @@ body {
   #logo h1 {
     color: #fdf6e3; }
 
+#logo a {
+  color: red; }
+
+#logo a:hover {
+  color: red; }
+
 /* create link*/
 a#create-wishlist {
   color: #586e75; }
@@ -25,6 +31,15 @@ a#create-wishlist {
   border-bottom-color: #586e75; }
   #title-box input:hover {
     border-bottom-width: 2px; }
+
+.nav {
+  background: #93a1a1; }
+  .nav li {
+    background: #93a1a1; }
+
+/*drop down list */
+.navbar .nav li a {
+  color: #586e75; }
 
 /* wishes */
 ul.wishes {

@@ -27,6 +27,8 @@ body{
     color: $logo-text;
   }
 }
+#logo a{color:red;}
+#logo a:hover{color:red;}
 
 /* create link*/
 a#create-wishlist{
@@ -47,6 +49,17 @@ a#create-wishlist{
       }
   }
   &:hover{border-bottom-width:2px;}
+}
+
+.nav{
+  background:$banner-background;
+  li{
+    background:$banner-background;
+  }
+}
+/*drop down list */
+.navbar .nav li a{
+  color: $banner-link-color;
 }
 
 /* wishes */

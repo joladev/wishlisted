@@ -2,7 +2,7 @@
 
 /* variables */
 $banner-height:   37px;
-
+$logo-box-width:   120px;
 
 * {
     margin: 0;
@@ -22,13 +22,14 @@ $banner-height:   37px;
 }
 
 #logo{
-  width:150px;
+  width:$logo-box-width;
   height:$banner-height;
   float:left;
   h1{
     font-family:helvetica;
     font-weight:normal;
     margin-left:10px;
+    font-size:170%;
   }
 }
 
@@ -43,7 +44,7 @@ $banner-height:   37px;
 
 #title-box input{
   font-size:120%;
-  height:20px;
+  height:18px;
 }
 
 /* create link */
@@ -51,10 +52,21 @@ a#create-wishlist{
   float:left;
   position: relative;
   top:10px;
-  left:10px;
-  font-size:20px;
+  left:0px;
+  font-size:18px;
 }
 
+.nav{
+  height:$banner-height;
+  li{
+    height:$banner-height;
+    a{font-weight:bold;}
+  }
+}
+.navbar .nav li a{
+  font-size: 110%;
+  font-weight:bold;
+}
 /* box */
 #box{
   width:700px;

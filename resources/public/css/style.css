@@ -10,13 +10,14 @@
   width: 100%; }
 
 #logo {
-  width: 150px;
+  width: 120px;
   height: 37px;
   float: left; }
   #logo h1 {
     font-family: helvetica;
     font-weight: normal;
-    margin-left: 10px; }
+    margin-left: 10px;
+    font-size: 170%; }
 
 #title-box {
   float: left;
@@ -27,15 +28,26 @@
 
 #title-box input {
   font-size: 120%;
-  height: 20px; }
+  height: 18px; }
 
 /* create link */
 a#create-wishlist {
   float: left;
   position: relative;
   top: 10px;
-  left: 10px;
-  font-size: 20px; }
+  left: 0px;
+  font-size: 18px; }
+
+.nav {
+  height: 37px; }
+  .nav li {
+    height: 37px; }
+    .nav li a {
+      font-weight: bold; }
+
+.navbar .nav li a {
+  font-size: 110%;
+  font-weight: bold; }
 
 /* box */
 #box {
