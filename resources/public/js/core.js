@@ -96,7 +96,7 @@ app.prototype.newWishlist = function () {
 
 app.prototype.saveWishlist = function () {
   var _this = this;
-  var data = this.wishlist.wishlistFromHTML(this.$content);
+  var data = this.wishlist.wishlistFromHTML(this.$header,this.$content);
   this.wishlist.save(data, function() {});
 };
 
