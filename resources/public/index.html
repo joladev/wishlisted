@@ -5,8 +5,10 @@
 	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="/css/core.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="/css/sol-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/js/core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/bootstrap-dropdown.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
     var s = null;
     // Handle pops
@@ -29,30 +31,64 @@
     });
   </script>
 </head>
-<body>
-    </div>
-    <button id="create-wishlist" class="btn right">New</button>
-      <a href="#">
+<body>  
+  <!-- start navbar -->  
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+
+        <!-- logo -->
         <div id="logo">
+          <a href="#">
+            wishlisted
+          </a>
         </div>
+        <!-- end logo -->
 
-      </a>
+        <!-- navigation, dropdown -->
+        <ul class="nav">
+          <li class="dropdown">
+            <a href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown">
+              ?
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>Create your own wishlist with lots of wishes. Add optional url:s so that your friends can find them and make your wishes come true. Save the unique link to this page for future reference.</li>
+            </ul>
+          </li>
+        </ul>
+        <!-- end navigation, dropdown -->
 
+        <!-- create wishlist -->
+        <a id="create-wishlist">
+          new
+        </a>
+        <!-- end create wishlist -->
+
+        <!-- Input title box -->
+        <div id="title-box"></div>
+        <!-- End Input title box -->
+
+        <!-- copyright box -->
+        <div id="copyright">
+          <p>&copy; <a href="http://variadic.me/">Awesome Erik</a> | Nerd? <a href="">look at the code</a> </p>
+        </div>
+        <!-- end copyright box-->
+        
+      </div>
     </div>
   </div>
-  <!-- end header -->
+  <!-- end navbar -->
+  
+  <!-- main content -->
 
-  <!-- start main -->
-  <div id="main">
-    <div id="main-content">
-      
-      
+    <div id="box"></div>
 
-        <div id="box">
-        </div>
-     </div>
-
-  </div>
   <!-- end main -->
+
+  
+  
 
 </body>

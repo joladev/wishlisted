@@ -34,19 +34,23 @@ wishlist.prototype.wishlistAsHTML = function($header, $box) {
   if(this.data.wishes) {
     $.each(this.data.wishes, function (i, v) {
       var li = $('<li class="wish">');
+      var del = $('<div class="delete">');
       var desc = $('<input type="text" class="description">').val(v.description);
       var url = $('<input type="text" class="url">').val(v.url);
       ul.append(li);
+      li.append(del);
       li.append(desc);
       li.append(url);
     });    
   }
 
   // Make one last empty set of boxes
-  desc = $('<input type="text" class="description" value="">');
-  url = $('<input type="text" class="url">');
-  li = $('<li class="wish last">');
+  var desc = $('<input type="text" class="description" value="">');
+  var url = $('<input type="text" class="url">');
+  var li = $('<li class="wish last">');
+  var del = $('<div class="delete">');
   ul.append(li);
+  li.append(del);
   li.append(desc);
   li.append(url);
 
@@ -145,10 +149,12 @@ app.prototype.wishClickers = function () {
           _this.saveWishlist();
           
           if($(this).parent().hasClass('last')) {
-            desc = $('<input type="text" class="description" value="">');
-            url = $('<input type="text" class="url">');
-            li = $('<li class="wish last">');
+            var desc = $('<input type="text" class="description">');
+            var url = $('<input type="text" class="url">');
+            var li = $('<li class="wish last">');
+            var del = $('<div class="delete">');
             $(this).parent().after(li);
+            li.append(del);
             li.append(desc);
             li.append(url);
             _this.wishClickers();

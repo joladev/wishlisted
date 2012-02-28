@@ -1,0 +1,154 @@
+/* sol-style.scss */
+/* all the colororing with the solarized color scheme */
+
+/* variables */
+$body-background:     #fdf6e3;
+$banner-background:   #93a1a1;
+$logo-background:     #b58900;
+$logo-text:           #fde6a9;
+$logo-text-hover:     #fdf6e3;
+$banner-link-color:   #586e75;
+$banner-link-hover:   #eee8d5;
+$dropdown-box:        #fdf6e3;
+$dropdown-color:      #586e75;
+
+$title-input-bg:      #93a1a1;
+$title-input-border:  #586e75;
+$wishes-input-border: #93a1a1;
+$wish-color:          #d33682;
+$url-color:           #93a1a1;
+
+$copyright-background:#fde6a9;
+$copyright-border:    #adbebe;
+$copyright-color:     #586e75;
+
+
+body{
+  background:$body-background;
+}
+
+a{
+  text-decoration:none;
+  &:hover{text-decoration:none;}
+}
+
+/* banner bar */
+.container{
+  background-color: $banner-background;
+}
+
+.nav{
+  background:$banner-background;
+  li{
+    background:$banner-background;
+  }
+}
+/* coloring of drop down */
+.dropdown-menu{
+  background:$dropdown-box;
+  li{
+    background:$dropdown-box;
+    color: $dropdown-color;
+  }
+}
+li.dropdown-menu{
+    background:$dropdown-box;
+    color:red;
+  }
+
+/*drop down list */
+.navbar .nav li a{
+  color: $banner-link-color;
+  &:hover{
+    color: $banner-link-hover;
+  }
+}
+
+/* coloring of dropdown arrow */
+.navbar .dropdown-menu:after {
+  border-bottom: 6px solid $dropdown-box; 
+}
+.navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret{
+border-top-color: $banner-link-color;
+}
+
+/* coloring of logo */
+#logo{
+	background:$logo-background;
+	a{
+    color: $logo-text;
+    &:hover{color: $logo-text-hover;}
+  }
+}
+
+/* create link*/
+a#create-wishlist{
+  color: $banner-link-color;
+}
+
+/* title box*/
+#title-box input{
+  background:$title-input-bg;
+  color:$banner-link-color;
+  border:{
+    style:none;
+    color: transparent;
+    bottom:
+      {
+        style:solid;
+        color:$title-input-border;
+      }
+  }
+  &:hover{border-bottom-width:2px;}
+}
+
+
+
+/* wishes */
+ul.wishes{
+  list-style:none;
+  list-style-position: inside;
+  background:transparent;
+  li{
+    background:transparent;
+  }
+  input{
+    background:transparent;
+    border:{
+      style:none;
+      color:transparent;
+      bottom:{
+        style:solid;
+        color: $wishes-input-border;
+      }
+    }
+  }  
+}
+
+input.description{
+  color:$wish-color;
+}
+input.url{
+  color:$url-color;
+}
+
+/* delete x */
+.delete{
+  background: url(../images/x.png);
+}
+
+
+/*coloring of copyright box */
+#copyright{
+  background:transparent;
+  color:$banner-link-color;
+
+  a{
+    text-decoration:underline;
+    color:$banner-link-color;
+    &:hover{
+      text-decoration:none;
+
+    }
+  }
+}

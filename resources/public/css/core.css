@@ -3,8 +3,7 @@
 }
 
 #box {
-  min-height:400px;
-  padding:20px;
+  
   background-color:inherit;
 }
 
@@ -23,6 +22,11 @@ li input {
   background-color:rgb(105,105,105);
   border-color:black;
   color:white;
+}
+
+input{  
+  -webkit-appearance:none;
+  -webkit-box-shadow:none;
 }
 
 input:focus, input:active {

@@ -1,57 +1,130 @@
 /* style.scss */
 
 /* variables */
-$bg-darkpurple-dark: #28165f;
-$bg-darkpurple-light: #4b3985;
-$bg-main-purple-dark: #43145c;
-$bg-main-purple-light: #643280;
+$banner-height:    37px;
+$logo-box-width:   120px;
+$box-width:        670px; 
 
-$content-width: 720px; 
+* {
+    margin: 0;
+    padding: 0;
+  }
 
-body{
-	background-color: $bg-main-purple-dark
+
+/* banner */
+
+.container{
+  margin:0px;
+  width:100%;
 }
 
-/*header*/
-#header{
-	
-	background: $bg-darkpurple-dark  url(../images/bottom-shadow2.png);
-	
+/* banner bar, height and font size */
+.nav{
+  height:$banner-height;
+  li{
+    height:$banner-height;
+    a{font-weight:bold;}
+  }
 }
 
-#header-content{
-	width: $content-width;
-	height: 100px;
-	margin: auto;
-	background: $bg-darkpurple-light url(../images/bottom-shadow1.png);
-	position: relative;
+.navbar .nav li a{
+  font-size: 110%;
+  font-weight:bold;
 }
 
+/* to get dropdown on hover */
+ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
+/* padding of dropdown */
+.dropdown-menu{
+
+  li{
+    padding: 5px;
+    height:135px;
+  }
+}
+
+/*logo, so far with h1 */
 #logo{
-	position: absolute;
-	bottom: 10px;
-	right: -4px;
-	background: url(../images/logo.png) no-repeat;
-	height:65px;
-	width:323px;
-
+  width:$logo-box-width;
+  height:$banner-height;
+  float:left;
+  font-family:helvetica;
+  font-weight:normal;
+  font-size:170%;
+}
+#logo a{
+  position:relative;
+  top:8px;
+  left:10px;
 }
 
-/* main */
-#main{
-	background-color: $bg-main-purple-dark;
+/* title box */
+#title-box{
+  float: left;
+  position:relative;
+  left:7px;
+  top:5px;
+  font-size:90%;
 }
 
-#main-content{
-	width: $content-width;
-	margin: auto;
-	background-color: $bg-main-purple-light;
+#title-box input{
+  font-size:120%;
+  height:15px;
+  width:150px;
+}
+
+/* create link */
+a#create-wishlist{
+  float:left;
+  position: relative;
+  top:9px;
+  left:-7px;
+  font-size:18px;
+}
+
+/* main box */
+#box{
+  width:$box-width;
+  margin: 130px auto 80px auto;
 }
 
 /* wishes */
-.wishes{
-	
+ul.wishes {
+	list-style-type: none;
+  list-style-position: inside;
+	input{
+    height:25px;
+    font-size: 120%;
+	}
 }
 
+input.description{
+  width:330px;
+  margin-left:10px;
+}
 
+input.url{
+  width:275px;
+}
 
+/* delete bullet */
+.delete{
+  width:15px;
+  height:15px;
+  margin-top:13px;
+  float: left;
+  background-repeat:no-repeat !important;
+}
+
+/*copyright box */
+#copyright{
+  float: right;
+  padding: 3px 3px 0px 3px;
+  p{
+    font-size:90%;
+    margin: 7px 5px 0px 0px;
+  }
+}

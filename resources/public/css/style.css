@@ -1,34 +1,102 @@
 /* style.scss */
 /* variables */
-body {
-  background-color: #43145c; }
+* {
+  margin: 0;
+  padding: 0; }
 
-/*header*/
-#header {
-  background: #28165f url(../images/bottom-shadow2.png); }
+/* banner */
+.container {
+  margin: 0px;
+  width: 100%; }
 
-#header-content {
-  width: 720px;
-  height: 100px;
-  margin: auto;
-  background: #4b3985 url(../images/bottom-shadow1.png);
-  position: relative; }
+/* banner bar, height and font size */
+.nav {
+  height: 37px; }
+  .nav li {
+    height: 37px; }
+    .nav li a {
+      font-weight: bold; }
 
+.navbar .nav li a {
+  font-size: 110%;
+  font-weight: bold; }
+
+/* to get dropdown on hover */
+ul.nav li.dropdown:hover ul.dropdown-menu {
+  display: block; }
+
+/* padding of dropdown */
+.dropdown-menu li {
+  padding: 5px;
+  height: 135px; }
+
+/*logo, so far with h1 */
 #logo {
-  position: absolute;
-  bottom: 10px;
-  right: -4px;
-  background: url(../images/logo.png) no-repeat;
-  height: 65px;
-  width: 323px; }
+  width: 120px;
+  height: 37px;
+  float: left;
+  font-family: helvetica;
+  font-weight: normal;
+  font-size: 170%; }
 
-/* main */
-#main {
-  background-color: #43145c; }
+#logo a {
+  position: relative;
+  top: 8px;
+  left: 10px; }
 
-#main-content {
-  width: 720px;
-  margin: auto;
-  background-color: #643280; }
+/* title box */
+#title-box {
+  float: left;
+  position: relative;
+  left: 7px;
+  top: 5px;
+  font-size: 90%; }
+
+#title-box input {
+  font-size: 120%;
+  height: 15px;
+  width: 150px; }
+
+/* create link */
+a#create-wishlist {
+  float: left;
+  position: relative;
+  top: 9px;
+  left: -7px;
+  font-size: 18px; }
+
+/* main box */
+#box {
+  width: 670px;
+  margin: 130px auto 80px auto; }
 
 /* wishes */
+ul.wishes {
+  list-style-type: none;
+  list-style-position: inside; }
+  ul.wishes input {
+    height: 25px;
+    font-size: 120%; }
+
+input.description {
+  width: 330px;
+  margin-left: 10px; }
+
+input.url {
+  width: 275px; }
+
+/* delete bullet */
+.delete {
+  width: 15px;
+  height: 15px;
+  margin-top: 13px;
+  float: left;
+  background-repeat: no-repeat !important; }
+
+/*copyright box */
+#copyright {
+  float: right;
+  padding: 3px 3px 0px 3px; }
+  #copyright p {
+    font-size: 90%;
+    margin: 7px 5px 0px 0px; }
