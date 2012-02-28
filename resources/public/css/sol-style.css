@@ -91,7 +91,7 @@ input.url {
 .delete {
   background: url(../images/x.png); }
   .delete:hover {
-    background: url(../images/x-hover.png); }
+    background: url(../images/x-hover-red.png); }
 
 /*coloring of copyright box */
 #copyright {
