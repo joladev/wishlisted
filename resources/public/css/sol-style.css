@@ -42,6 +42,7 @@ li.dropdown-menu {
 .navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret {
   border-top-color: #586e75; }
 
+/* coloring of logo */
 #logo {
   background: #b58900; }
   #logo a {
@@ -84,14 +85,14 @@ input.description {
 input.url {
   color: #93a1a1; }
 
+/* delete x */
 .delete {
   background: url(../images/x.png); }
 
+/*coloring of copyright box */
 #copyright {
   background: transparent;
   color: #586e75; }
-  #copyright p {
-    margin: 7px 5px 0px 0px; }
   #copyright a {
     text-decoration: underline;
     color: #586e75; }

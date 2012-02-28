@@ -72,6 +72,7 @@ li.dropdown-menu{
 border-top-color: $banner-link-color;
 }
 
+/* coloring of logo */
 #logo{
 	background:$logo-background;
 	a{
@@ -131,16 +132,17 @@ input.url{
   color:$url-color;
 }
 
+/* delete x */
 .delete{
   background: url(../images/x.png);
 }
 
+
+/*coloring of copyright box */
 #copyright{
   background:transparent;
   color:$banner-link-color;
-  p{
-    margin: 7px 5px 0px 0px;
-  }
+
   a{
     text-decoration:underline;
     color:$banner-link-color;
