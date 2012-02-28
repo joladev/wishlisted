@@ -135,11 +135,20 @@ app.prototype.wishClickers = function () {
   });
   
   this.$content.find('.wish').each(function () {
+    var $del = $(this).find('.delete');
     var $desc = $(this).find('.description');
     var $url = $(this).find('.url');
     $desc.data('oldVal', $desc.val());
     $url.data('oldVal', $url.val());
     
+    $del.unbind('click');
+    $del.click(function () {
+      if(!$(this).parent().hasClass('last')) {
+        $(this).parent().remove();
+        _this.saveWishlist();
+      }
+    });
+
     $desc.unbind('change');
     $desc.change(function () {
       if ($(this).data('oldVal') !== $(this).val()) {
