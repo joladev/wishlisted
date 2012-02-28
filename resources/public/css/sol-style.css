@@ -53,6 +53,8 @@ li.dropdown-menu {
 /* create link*/
 a#create-wishlist {
   color: #586e75; }
+  a#create-wishlist:hover {
+    color: #eee8d5; }
 
 /* title box*/
 #title-box input {

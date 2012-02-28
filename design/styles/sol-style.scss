@@ -84,6 +84,9 @@ border-top-color: $banner-link-color;
 /* create link*/
 a#create-wishlist{
   color: $banner-link-color;
+  &:hover{
+    color: $banner-link-hover;  
+  }
 }
 
 /* title box*/
@@ -94,10 +97,10 @@ a#create-wishlist{
     style:none;
     color: transparent;
     bottom:
-      {
-        style:solid;
-        color:$title-input-border;
-      }
+    {
+      style:solid;
+      color:$title-input-border;
+    }
   }
   &:hover{border-bottom-width:2px;}
 }
