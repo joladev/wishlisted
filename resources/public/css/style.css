@@ -63,7 +63,8 @@ a#create-wishlist {
   position: relative;
   top: 9px;
   left: -7px;
-  font-size: 18px; }
+  font-size: 18px;
+  cursor: pointer; }
 
 /* main box */
 #box {
