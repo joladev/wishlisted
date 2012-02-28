@@ -92,7 +92,8 @@ input.url {
   height: 15px;
   margin-top: 13px;
   float: left;
-  background-repeat: no-repeat !important; }
+  background-repeat: no-repeat !important;
+  cursor: pointer; }
 
 /*copyright box */
 #copyright {

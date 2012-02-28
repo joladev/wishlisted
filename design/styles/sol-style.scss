@@ -7,8 +7,8 @@ $banner-background:   #93a1a1;
 $logo-background:     #b58900;
 $logo-text:           #fde6a9;
 $logo-text-hover:     #fdf6e3;
-$banner-link-color:   #586e75;
-$banner-link-hover:   #eee8d5;
+$banner-link-color:   #eee8d5;
+$banner-link-hover:   #fdf6e3;
 $dropdown-box:        #fdf6e3;
 $dropdown-color:      #586e75;
 
@@ -18,8 +18,7 @@ $wishes-input-border: #93a1a1;
 $wish-color:          #d33682;
 $url-color:           #93a1a1;
 
-$copyright-background:#fde6a9;
-$copyright-border:    #adbebe;
+$copyright-link-color:#586e75;
 $copyright-color:     #586e75;
 
 
@@ -138,17 +137,19 @@ input.url{
 /* delete x */
 .delete{
   background: url(../images/x.png);
+  &:hover{
+    background: url(../images/x-hover.png);
+  }
 }
-
 
 /*coloring of copyright box */
 #copyright{
   background:transparent;
-  color:$banner-link-color;
+  color:$copyright-color;
 
   a{
     text-decoration:underline;
-    color:$banner-link-color;
+    color:$copyright-link-color;
     &:hover{
       text-decoration:none;
 
