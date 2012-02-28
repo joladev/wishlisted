@@ -95,10 +95,7 @@ input.url {
 
 /*copyright box */
 #copyright {
-  position: fixed;
-  bottom: -7px;
-  right: 0px;
-  padding: 3px 3px 0px 3px;
-  border: 1px solid black; }
+  float: right;
+  padding: 3px 3px 0px 3px; }
   #copyright p {
-    font-size: 80%; }
+    font-size: 90%; }

@@ -136,7 +136,17 @@ input.url{
 }
 
 #copyright{
-  background:$copyright-background;
-  border:1px solid $copyright-border;
-  color:$copyright-color;
+  background:transparent;
+  color:$banner-link-color;
+  p{
+    margin: 7px 5px 0px 0px;
+  }
+  a{
+    text-decoration:underline;
+    color:$banner-link-color;
+    &:hover{
+      text-decoration:none;
+
+    }
+  }
 }

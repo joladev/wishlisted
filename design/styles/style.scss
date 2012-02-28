@@ -123,12 +123,9 @@ input.url{
 
 /*copyright box */
 #copyright{
-  position: fixed;
-  bottom:-7px;
-  right:0px;
+  float: right;
   padding: 3px 3px 0px 3px;
-  border:1px solid black;
   p{
-    font-size:80%;
+    font-size:90%;
   }
 }

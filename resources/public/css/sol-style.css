@@ -88,6 +88,12 @@ input.url {
   background: url(../images/x.png); }
 
 #copyright {
-  background: #fde6a9;
-  border: 1px solid #adbebe;
+  background: transparent;
   color: #586e75; }
+  #copyright p {
+    margin: 7px 5px 0px 0px; }
+  #copyright a {
+    text-decoration: underline;
+    color: #586e75; }
+    #copyright a:hover {
+      text-decoration: none; }
