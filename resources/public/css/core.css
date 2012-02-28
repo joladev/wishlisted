@@ -27,10 +27,14 @@ li input {
 input{  
   -webkit-appearance:none;
   -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -moz-transition:none;
 }
 
 input:focus, input:active {
   -webkit-appearance:none;
   -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -moz-transition:none;
   border-color:black;
 }
