@@ -19,7 +19,7 @@ wishlist.prototype.save = function(data, callback) {
 
 wishlist.prototype.createNew = function(callback) {
   var _this = this;
-  var def = { title : "Default" };
+  var def = { title : "Your wishlist title" };
 
   $.post("/wishlist/", def, function(data) {
     _this.data = data;
