@@ -42,33 +42,21 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
     display: block;    
 }
 
-
-/* padding of dropdown 
+/*divider*/
+.navbar .divider-vertical {
+  margin:0;
+}
+/* padding of dropdown */
 .dropdown-menu{
 
   li{
     padding: 5px;
-    height:135px;
+    /*height:135px;*/
   }
 }
-*/
 
 
-/*logo, so far with h1 
-#logo{
-  width:$logo-box-width;
-  height:$banner-height;
-  float:left;
-  font-family:helvetica;
-  font-weight:normal;
-  font-size:170%;
-}
-#logo a{
-  position:relative;
-  top:8px;
-  left:10px;
-}
-*/
+
 .navbar .brand{
   margin-left:-10px;
 }

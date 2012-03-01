@@ -4,6 +4,7 @@
 /* variables */
 $body-background:     #fdf6e3;
 $banner-background:   #93a1a1;
+$banner-bg-hover:     #9eadad;
 $logo-background:     #b58900;
 $logo-text:           #fde6a9;
 $logo-text-hover:     #fdf6e3;
@@ -11,6 +12,9 @@ $banner-link-color:   #eee8d5;
 $banner-link-hover:   #fdf6e3;
 $dropdown-box:        #fdf6e3;
 $dropdown-color:      #586e75;
+
+$divider-background:  #657b83;
+$divider-border:      #76919b;
 
 $title-input-bg:      #93a1a1;
 $title-input-border:  #586e75;
@@ -36,44 +40,58 @@ a{
   background-color: $banner-background;
 }
 
-/*.nav{
+.nav{
   background:$banner-background;
   li{
     background:$banner-background;
-  }
-}*/
-
-/* coloring of drop down 
-.dropdown-menu{
-  background:$dropdown-box;
-  li{
-    background:$dropdown-box;
-    color: $dropdown-color;
+    &:hover{
+      background-color: $banner-bg-hover;
+    }
   }
 }
-li.dropdown-menu{
-    background:$dropdown-box;
-    color:red;
-  }
-*/
-/*drop down list 
+
+/*drop down list */
 .navbar .nav li a{
   color: $banner-link-color;
   &:hover{
     color: $banner-link-hover;
   }
 }
-*/
-/* coloring of dropdown arrow 
+
+
+/*divider*/
+.navbar .divider-vertical {
+  background-color: $divider-background;
+  border-right: 1px solid $divider-border;
+}
+
+/* coloring of drop down */
+.dropdown-menu{
+  background:$dropdown-box;
+  li{
+    background:$dropdown-box;
+    color: $dropdown-color;
+    &:hover{
+      background: $dropdown-box;
+    }
+  }
+}
+li.dropdown-menu{
+    background:$dropdown-box;
+    color:red;
+  }
+
+
+
+/* coloring of dropdown arrow */
 .navbar .dropdown-menu:after {
   border-bottom: 6px solid $dropdown-box; 
 }
 .navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret{
 border-top-color: $banner-link-color;
 }
-*/
-/* coloring of logo */
 
+/* coloring of logo */
 .navbar .brand{
   background:$logo-background;
   color: $logo-text;
