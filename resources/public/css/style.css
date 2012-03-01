@@ -41,6 +41,9 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
   padding: 5px;
   /*height:135px;*/ }
 
+.btn {
+  margin-bottom: -3px; }
+
 .navbar .brand {
   margin-left: -10px; }
 

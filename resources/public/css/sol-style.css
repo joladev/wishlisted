@@ -17,8 +17,11 @@ a {
   background: #93a1a1; }
   .nav li {
     background: #93a1a1; }
-    .nav li:hover {
-      background-color: #9eadad; }
+
+li input {
+  background-color: #fdf6e3;
+  border-color: #586e75;
+  color: #d33682; }
 
 /*drop down list */
 .navbar .nav li a {
@@ -41,8 +44,7 @@ a {
       background: #fdf6e3; }
 
 li.dropdown-menu {
-  background: #fdf6e3;
-  color: red; }
+  background: #fdf6e3; }
 
 /* coloring of dropdown arrow */
 .navbar .dropdown-menu:after {
@@ -108,18 +110,12 @@ input.url {
   .delete:hover {
     background: url(../images/x-hover-red.png); }
 
-/*coloring of copyright box 
-#copyright{
-  background:transparent;
-  color:$copyright-color;
-
-  a{
-    text-decoration:underline;
-    color:$copyright-link-color;
-    &:hover{
-      text-decoration:none;
-
-    }
-  }
-}
-*/
+/*coloring of copyright box */
+#copyright {
+  background: transparent;
+  color: #eee8d5; }
+  #copyright a {
+    text-decoration: underline;
+    color: #eee8d5; }
+    #copyright a:hover {
+      text-decoration: none; }

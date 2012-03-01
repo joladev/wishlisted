@@ -16,14 +16,16 @@ $dropdown-color:      #586e75;
 $divider-background:  #657b83;
 $divider-border:      #76919b;
 
-$title-input-bg:      #93a1a1;
+$title-input-bg:      #fdf6e3;
 $title-input-border:  #586e75;
+$title-input-color:   #d33682;
+
 $wishes-input-border: #93a1a1;
 $wish-color:          #d33682;
 $url-color:           #93a1a1;
 
 $copyright-link-color:#eee8d5;
-$copyright-color:     #d4ccb4;
+$copyright-color:     #eee8d5;
 
 
 body{
@@ -44,10 +46,13 @@ a{
   background:$banner-background;
   li{
     background:$banner-background;
-    &:hover{
-      background-color: $banner-bg-hover;
-    }
   }
+}
+
+li input {
+  background-color: $title-input-bg;
+  border-color: $title-input-border;
+  color: $title-input-color;
 }
 
 /*drop down list */
@@ -78,9 +83,10 @@ a{
 }
 li.dropdown-menu{
     background:$dropdown-box;
-    color:red;
   }
+.dropdown-menu .hover-bg{
 
+}
 
 
 /* coloring of dropdown arrow */
@@ -160,7 +166,7 @@ input.url{
   }
 }
 
-/*coloring of copyright box 
+/*coloring of copyright box */
 #copyright{
   background:transparent;
   color:$copyright-color;
@@ -174,4 +180,3 @@ input.url{
     }
   }
 }
-*/
