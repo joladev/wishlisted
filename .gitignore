@@ -6,3 +6,4 @@ pom.xml
 .cake
 .DS_Store
 .sass-cache
+.lein-plugins
