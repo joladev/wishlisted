@@ -1,6 +1,6 @@
 (ns wishlistd.client.main
   (:require [crate.core :as crate])
-  (:use [jayq.core :only [$ append delegate data]])
+  (:use [jayq.core :only [$ append empty delegate data]])
   (:use-macros [crate.macros :only [defpartial]]))
 
 (def $create ($ "#create-wishlist"))
