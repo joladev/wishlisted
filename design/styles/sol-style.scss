@@ -134,6 +134,7 @@ a#create-wishlist{
 .btn{
   border:1px solid $btn-border;
   color: $btn-color;
+  background-color:#eee8d5;
   background-image: linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
   background-image: -o-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
   background-image: -moz-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
@@ -147,6 +148,33 @@ a#create-wishlist{
     color-stop(0.08, rgb(205,198,177)),
     color-stop(0.54, rgb(229,223,204)),
     color-stop(0.77, rgb(253,246,227))
+  );
+}
+.btn:hover {
+  background-color: #eee8d5;
+  background-position: 0px;
+  -webkit-transition: background-position 0s linear;
+  -moz-transition: background-position 0s linear;
+  -ms-transition: background-position 0s linear;
+  -o-transition: background-position 0s linear;
+  transition: background-position 0s linear;
+
+
+  border:1px solid $btn-border;
+  color: $btn-color;
+  background-image: linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+  background-image: -o-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+  background-image: -moz-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+  background-image: -webkit-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+  background-image: -ms-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.08, rgb(212,207,190)),
+    color-stop(0.54, rgb(235,230,217)),
+    color-stop(0.77, rgb(250,245,232))
   );
 }
 

@@ -87,12 +87,30 @@ a#create-wishlist{
 .btn {
   border: 1px solid #657b83;
   color: #073642;
+  background-color: #eee8d5;
   background-image: linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
   background-image: -o-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
   background-image: -moz-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
   background-image: -webkit-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
   background-image: -ms-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.08, #cdc6b1), color-stop(0.54, #e5dfcc), color-stop(0.77, #fdf6e3)); }
+
+.btn:hover {
+  background-color: #eee8d5;
+  background-position: 0px;
+  -webkit-transition: background-position 0s linear;
+  -moz-transition: background-position 0s linear;
+  -ms-transition: background-position 0s linear;
+  -o-transition: background-position 0s linear;
+  transition: background-position 0s linear;
+  border: 1px solid #657b83;
+  color: #073642;
+  background-image: linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
+  background-image: -o-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
+  background-image: -moz-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
+  background-image: -webkit-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
+  background-image: -ms-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.08, #d4cfbe), color-stop(0.54, #ebe6d9), color-stop(0.77, #faf5e8)); }
 
 /* wishes */
 ul.wishes {
