@@ -8,6 +8,8 @@
 (def $create ($ "#create-wishlist"))
 (def $content ($ "#box"))
 (def $header ($ "#title-box"))
+
+(defpartial wish-li [{:keys [desc url]}]
   [:li.wish
    [:div.delete]
    [:input {:type "text" :class "description" :value desc}]
