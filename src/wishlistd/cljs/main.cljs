@@ -7,7 +7,7 @@
 (def $content ($ "#box"))
 (def $header ($ "#title-box"))
 
-(defpartial wish-li [{:keys [desc url]}]
+(defpartial wish-li [{:keys [description url]}]
   [:li.wish
    [:div.delete]
    [:input {:type "text" :class "description" :value desc}]
