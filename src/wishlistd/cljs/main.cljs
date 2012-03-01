@@ -1,4 +1,5 @@
 (ns overtoneinterface.client.main
+(ns wishlistd.client.main
   (:require [crate.core :as crate])
   (:use-macros [crate.macros :only [defpartial]]))
 
