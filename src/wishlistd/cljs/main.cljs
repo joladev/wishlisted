@@ -54,4 +54,6 @@
    :wishes (wishes-from-html)
    :code   (get-path)})
 
-
+(defn create-wishlist-rem []
+  (letrem [wishlist (create-wishlist {:title "Default"})]
+    (show-wishlist wishlist)))
