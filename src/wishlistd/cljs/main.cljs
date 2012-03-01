@@ -10,7 +10,7 @@
 (defpartial wish-li [{:keys [description url]}]
   [:li.wish
    [:div.delete]
-   [:input {:type "text" :class "description" :value desc}]
+   [:input {:type "text" :class "description" :value description}]
    [:input {:type "text" :class "url" :value url}]])
 
 (defpartial wish-li-last []
