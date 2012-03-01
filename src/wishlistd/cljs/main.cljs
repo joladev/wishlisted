@@ -2,7 +2,6 @@
   (:require [crate.core :as crate]
             [fetch.remotes :as remotes])
   (:use [jayq.core :only [$ append empty delegate data]])
-  (:use-macros [crate.macros :only [defpartial]]))
   (:use-macros [crate.macros :only [defpartial]]
                [fetch.macros :only [letrem]]))
 
