@@ -96,9 +96,9 @@ input.url {
 /*coloring of copyright box */
 #copyright {
   background: transparent;
-  color: #586e75; }
+  color: #d4ccb4; }
   #copyright a {
     text-decoration: underline;
-    color: #586e75; }
+    color: #eee8d5; }
     #copyright a:hover {
       text-decoration: none; }
