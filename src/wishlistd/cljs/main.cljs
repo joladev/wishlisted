@@ -19,3 +19,9 @@
    [:input {:type "text" :class "description" :value desc}]
    [:input {:type "text" :class "url" :value url}]])
 
+(defpartial wish-ul [wishes]
+  [:ul.wishes
+    (for [wish wishes]
+      (wish-li wish))
+    (wish-li-last)])
+
