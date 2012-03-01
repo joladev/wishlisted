@@ -28,4 +28,9 @@
 (defpartial wishlist-title [title]
   [:input {:type "text" :class "title" :value title}])
 
+(defn show-wishlist [{:keys [wishes title] :as wishlist}]
+  (empty $content)
+  (empty $header)
+  (append $content (wish-ul wishes))
+  (append $header (wishlist-title title)))
 
