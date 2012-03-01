@@ -161,7 +161,7 @@ a#create-wishlist{
 
 
   border:1px solid $btn-border;
-  color: $btn-color;
+  color: lighten($btn-color, 10%);
   background-image: linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
   background-image: -o-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
   background-image: -moz-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);

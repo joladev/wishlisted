@@ -104,7 +104,7 @@ a#create-wishlist{
   -o-transition: background-position 0s linear;
   transition: background-position 0s linear;
   border: 1px solid #657b83;
-  color: #073642;
+  color: #0c5c70;
   background-image: linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
   background-image: -o-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
   background-image: -moz-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
