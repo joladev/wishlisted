@@ -1,6 +1,7 @@
 (ns overtoneinterface.client.main
 (ns wishlistd.client.main
   (:require [crate.core :as crate])
+  (:use [jayq.core :only [$ append delegate data]])
   (:use-macros [crate.macros :only [defpartial]]))
 
 (defpartial wish-li [desc url]
