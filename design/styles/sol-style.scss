@@ -36,13 +36,14 @@ a{
   background-color: $banner-background;
 }
 
-.nav{
+/*.nav{
   background:$banner-background;
   li{
     background:$banner-background;
   }
-}
-/* coloring of drop down */
+}*/
+
+/* coloring of drop down 
 .dropdown-menu{
   background:$dropdown-box;
   li{
@@ -54,41 +55,40 @@ li.dropdown-menu{
     background:$dropdown-box;
     color:red;
   }
-
-/*drop down list */
+*/
+/*drop down list 
 .navbar .nav li a{
   color: $banner-link-color;
   &:hover{
     color: $banner-link-hover;
   }
 }
-
-/* coloring of dropdown arrow */
+*/
+/* coloring of dropdown arrow 
 .navbar .dropdown-menu:after {
   border-bottom: 6px solid $dropdown-box; 
 }
 .navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret{
 border-top-color: $banner-link-color;
 }
-
+*/
 /* coloring of logo */
-#logo{
-	background:$logo-background;
-	a{
-    color: $logo-text;
-    &:hover{color: $logo-text-hover;}
-  }
+
+.navbar .brand{
+  background:$logo-background;
+  color: $logo-text;
+  &:hover{color: $logo-text-hover;}
 }
 
-/* create link*/
+/* create link
 a#create-wishlist{
   color: $banner-link-color;
   &:hover{
     color: $banner-link-hover;  
   }
 }
-
-/* title box*/
+*/
+/* title box
 #title-box input{
   background:$title-input-bg;
   color:$banner-link-color;
@@ -103,7 +103,7 @@ a#create-wishlist{
   }
   &:hover{border-bottom-width:2px;}
 }
-
+*/
 
 
 /* wishes */
@@ -142,7 +142,7 @@ input.url{
   }
 }
 
-/*coloring of copyright box */
+/*coloring of copyright box 
 #copyright{
   background:transparent;
   color:$copyright-color;
@@ -156,3 +156,4 @@ input.url{
     }
   }
 }
+*/
