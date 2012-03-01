@@ -38,4 +38,9 @@
   (append $content (wish-ul wishes))
   (append $header  (wishlist-title title)))
 
+(defn wishlist-from-html []
+  {:title (title-from-html)
+   :wishes (wishes-from-html)
+   :code (get-path)})
+
 
