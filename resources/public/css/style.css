@@ -45,7 +45,8 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
   margin-bottom: -3px; }
 
 .navbar .brand {
-  margin-left: -10px; }
+  margin-left: -10px;
+  font-size: 160%; }
 
 /* title box 
 

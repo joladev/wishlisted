@@ -20,6 +20,9 @@ $title-input-bg:      #eee8d5;
 $title-input-border:  #586e75;
 $title-input-color:   #b58900;
 
+$btn-color:           #073642;
+$btn-border:           #657b83;
+
 $wishes-input-border: #93a1a1;
 $wish-color:          #d33682;
 $url-color:           #93a1a1;
@@ -128,7 +131,24 @@ a#create-wishlist{
   &:hover{border-bottom-width:2px;}
 }
 */
+.btn{
+  border:1px solid $btn-border;
+  color: $btn-color;
+  background-image: linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
+  background-image: -o-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
+  background-image: -moz-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
+  background-image: -webkit-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
+  background-image: -ms-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
 
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.08, rgb(205,198,177)),
+    color-stop(0.54, rgb(229,223,204)),
+    color-stop(0.77, rgb(253,246,227))
+  );
+}
 
 /* wishes */
 ul.wishes{

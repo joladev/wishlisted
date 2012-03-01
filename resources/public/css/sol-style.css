@@ -84,6 +84,16 @@ a#create-wishlist{
   &:hover{border-bottom-width:2px;}
 }
 */
+.btn {
+  border: 1px solid #657b83;
+  color: #073642;
+  background-image: linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
+  background-image: -o-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
+  background-image: -moz-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
+  background-image: -webkit-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
+  background-image: -ms-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.08, #cdc6b1), color-stop(0.54, #e5dfcc), color-stop(0.77, #fdf6e3)); }
+
 /* wishes */
 ul.wishes {
   list-style: none;
