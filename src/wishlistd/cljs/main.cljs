@@ -5,10 +5,13 @@
   (:use-macros [crate.macros :only [defpartial]]
                [fetch.macros :only [letrem]]))
 
+; ACCESS VARIABLES FOR IMPORTANT ELEMENTS
 
 (def $create  ($ "#create-wishlist"))
 (def $content ($ "#box"))
 (def $header  ($ "#title-box"))
+
+; HTML PARTIALS
 
 (defpartial wish-li [{:keys [description url]}]
   [:li.wish
@@ -30,6 +33,8 @@
 
 (defpartial wishlist-title [title]
   [:input {:type "text" :class "title" :value title}])
+
+; GETTING AND SETTING
 
 (defn get-path []
   (.pop 
