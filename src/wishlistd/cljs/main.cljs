@@ -28,6 +28,10 @@
 (defpartial wishlist-title [title]
   [:input {:type "text" :class "title" :value title}])
 
+(defn get-path []
+  (.pop 
+    (.split js/window.location.pathname "/")))
+
 (defn show-wishlist [{:keys [wishes title] :as wishlist}]
   (empty $content)
   (empty $header)
