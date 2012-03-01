@@ -3,9 +3,9 @@
   (:use [jayq.core :only [$ append empty delegate data]])
   (:use-macros [crate.macros :only [defpartial]]))
 
-(def $create ($ "#create-wishlist"))
+(def $create  ($ "#create-wishlist"))
 (def $content ($ "#box"))
-(def $header ($ "#title-box"))
+(def $header  ($ "#title-box"))
 
 (defpartial wish-li [{:keys [description url]}]
   [:li.wish
