@@ -26,5 +26,6 @@
     (wish-li-last)])
 
 (defpartial wishlist-title [title]
-  [:input {:type "text" :class "title"}])
+  [:input {:type "text" :class "title" :value title}])
+
 
