@@ -36,5 +36,6 @@
   (empty $content)
   (empty $header)
   (append $content (wish-ul wishes))
-  (append $header (wishlist-title title)))
+  (append $header  (wishlist-title title)))
+
 
