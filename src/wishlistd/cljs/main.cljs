@@ -77,9 +77,10 @@
   (letrem [neu (create-wishlist {:title "Default"})]
     (show-wishlist! neu)))
 
-(defn update-wishlist-rem [wishlist]
-  (letrem [neu (update-wishlist wishlist)]
-    (show-wishlist! neu)))
+(defn update-wishlist-rem []
+  (let [wishlist (wishlist-from-html)]
+    (letrem [neu (update-wishlist wishlist)]
+      (show-wishlist! neu))))
 
 ; DELEGATES
 
