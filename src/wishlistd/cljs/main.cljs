@@ -75,3 +75,9 @@
   (delegate $body "#create-wishlist" :click
     (fn [e]
       (create-wishlist-rem))))
+
+(defn wishlist-title-changer []
+  (delegate $header wishlist-title :change
+    (fn [e]
+      (let [wishlist (wishlist-from-html)]
+        (update-wishlist-rem wishlist)))))
