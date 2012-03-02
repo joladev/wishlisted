@@ -94,3 +94,13 @@
   (delegate $header wishlist-title :change
     (fn [e]
       (update-wishlist-rem))))
+
+(defn wishlist-wish-description-changer []
+  (delegate $content ".description" :change
+    (fn [e]
+      (this-as me
+        (when (value-changed?! me)
+          (when (empty? (val me))
+            (remove (.parent me)))
+          (update-wishlist-rem))))))
+
