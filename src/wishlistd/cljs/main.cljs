@@ -40,7 +40,7 @@
   (.pop 
     (.split js/window.location.pathname "/")))
 
-(defn show-wishlist [{:keys [wishes title] :as wishlist}]
+(defn show-wishlist! [{:keys [wishes title] :as wishlist}]
   (empty $content)
   (empty $header)
   (append $content (wish-ul wishes))
@@ -56,4 +56,4 @@
 
 (defn create-wishlist-rem []
   (letrem [wishlist (create-wishlist {:title "Default"})]
-    (show-wishlist wishlist)))
+    (show-wishlist! wishlist)))
