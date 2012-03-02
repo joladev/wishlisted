@@ -87,6 +87,7 @@
 (defn create-wishlist-clicker []
   (delegate $body "#create-wishlist" :click
     (fn [e]
+      (.preventDefault e)
       (create-wishlist-rem))))
 
 (defn wishlist-title-changer []
