@@ -41,13 +41,15 @@
   (.pop 
     (.split js/window.location.pathname "/")))
 
-(defn show-wishlist! [{:keys [wishes title] :as wishlist}]
 (defn set-path! [code]
   (.pushState js/window.history nil "lol" code))
+
+(defn show-wishlist! [{:keys [wishes title code] :as wishlist}]
   (empty $content)
   (empty $header)
   (append $content (wish-ul wishes))
-  (append $header  (wishlist-title title)))
+  (append $header  (wishlist-title title))
+  (set-path! code))
 
 (defn title-from-html []
   (val wishlist-title))
