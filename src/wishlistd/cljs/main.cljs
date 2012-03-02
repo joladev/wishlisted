@@ -10,6 +10,7 @@
 (def $create  ($ "#create-wishlist"))
 (def $content ($ "#box"))
 (def $header  ($ "#title-box"))
+(def $body    ($ "body"))
 
 ; HTML PARTIALS
 
