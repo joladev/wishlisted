@@ -69,3 +69,8 @@
   (letrem [neu (update-wishlist wishlist)]
     (show-wishlist! neu)))
 
+; DELEGATES
+
+(defn create-wishlist-clicker []
+  (delegate $body "#create-wishlist" :click
+    create-wishlist-rem))
