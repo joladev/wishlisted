@@ -42,6 +42,8 @@
     (.split js/window.location.pathname "/")))
 
 (defn show-wishlist! [{:keys [wishes title] :as wishlist}]
+(defn set-path! [code]
+  (.pushState js/window.history nil "lol" code))
   (empty $content)
   (empty $header)
   (append $content (wish-ul wishes))
