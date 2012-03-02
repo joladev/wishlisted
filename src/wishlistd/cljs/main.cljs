@@ -73,4 +73,5 @@
 
 (defn create-wishlist-clicker []
   (delegate $body "#create-wishlist" :click
-    create-wishlist-rem))
+    (fn [e]
+      (create-wishlist-rem))))
