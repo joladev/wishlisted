@@ -54,6 +54,11 @@
 (defn title-from-html []
   (val wishlist-title))
 
+(defn wishes-from-html []
+  (for [el wish-li]
+    {:description (val (find el ".description"))
+     :url (val (find el ".url"))}))
+
 (defn wishlist-from-html []
   {:title  (title-from-html)
    :wishes (wishes-from-html)
