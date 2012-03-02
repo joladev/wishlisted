@@ -104,3 +104,9 @@
             (remove (.parent me)))
           (update-wishlist-rem))))))
 
+(defn wishlist-wish-url-changer []
+  (delegate $content ".url" :change
+    (fn [e]
+      (this-as me
+        (when-not (empty? (val me)) 
+          (update-wishlist-rem))))))
