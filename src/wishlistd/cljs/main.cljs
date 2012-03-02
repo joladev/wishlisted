@@ -59,6 +59,8 @@
    :wishes (wishes-from-html)
    :code   (get-path)})
 
+; REMOTES
+
 (defn create-wishlist-rem []
-  (letrem [wishlist (create-wishlist {:title "Default"})]
-    (show-wishlist! wishlist)))
+  (letrem [neu (create-wishlist {:title "Default"})]
+    (show-wishlist! neu)))
