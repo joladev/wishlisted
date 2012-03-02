@@ -64,6 +64,13 @@
    :wishes (wishes-from-html)
    :code   (get-path)})
 
+(defn value-changed?! [$this]
+  (if (= (data $this :old-val) (val $this))
+    false
+    (do
+      (data $this :old-val (val $this))
+      true)))
+
 ; REMOTES
 
 (defn create-wishlist-rem []
