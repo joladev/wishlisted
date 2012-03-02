@@ -23,8 +23,8 @@
 (defpartial wish-li-last []
   [:li.wish.last
    [:div.delete]
-   [:input {:type "text" :class "description last"}]
-   [:input {:type "text" :class "url last"}]])
+   [:input {:type "text" :class "description"}]
+   [:input {:type "text" :class "url"}]])
 
 (defpartial wish-ul [wishes]
   [:ul.wishes
