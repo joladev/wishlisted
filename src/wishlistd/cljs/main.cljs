@@ -64,3 +64,8 @@
 (defn create-wishlist-rem []
   (letrem [neu (create-wishlist {:title "Default"})]
     (show-wishlist! neu)))
+
+(defn update-wishlist-rem [wishlist]
+  (letrem [neu (update-wishlist wishlist)]
+    (show-wishlist! neu)))
+
