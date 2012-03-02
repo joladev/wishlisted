@@ -93,5 +93,4 @@
 (defn wishlist-title-changer []
   (delegate $header wishlist-title :change
     (fn [e]
-      (let [wishlist (wishlist-from-html)]
-        (update-wishlist-rem wishlist)))))
+      (update-wishlist-rem))))
