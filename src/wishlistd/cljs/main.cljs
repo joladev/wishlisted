@@ -101,7 +101,8 @@
       (this-as me
         (when (value-changed?! me)
           (when (empty? (val me))
-            (remove (.parent me)))
+            (when-not (.hasClass "last" (.parent me))
+              (remove (.parent me))))
           (update-wishlist-rem))))))
 
 (defn wishlist-wish-url-changer []
