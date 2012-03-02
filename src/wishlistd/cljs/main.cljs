@@ -111,3 +111,12 @@
       (this-as me
         (when-not (empty? (val me)) 
           (update-wishlist-rem))))))
+
+(defn wishlist-delete-clicker []
+  (delegate $content ".delete" :click
+    (fn []
+      (this-as me
+        (remove (.parent me))
+        (update-wishlist-rem)))))
+
+
