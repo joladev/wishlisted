@@ -17,6 +17,12 @@
   (pk :code)
   (has-many wish {:fk "wishlist_code"}))
 
+(defn wish-fields [query]
+  (fields query :url :description))
+
+(defn wishlist-fields [query]
+  (fields query :code :title))
+
 ;;;; HELPER
 
 (defn- new-code []
