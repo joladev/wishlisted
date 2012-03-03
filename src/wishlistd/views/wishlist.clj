@@ -20,3 +20,9 @@
 
 (defremote create-wishlist [wishlist]
   (model/create-wishlist wishlist))
+
+(defremote update-wishlist [wishlist]
+  (model/update-wishlist wishlist))
+
+(defremote read-wishlist [code]
+  (model/read-wishlist code))
