@@ -52,7 +52,7 @@
   (set-path! code))
 
 (defn title-from-html []
-  (val wishlist-title))
+  (val ($ ".title")))
 
 (defn wishes-from-html []
   (for [el wish-li]
