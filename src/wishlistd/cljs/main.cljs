@@ -118,9 +118,9 @@
 
 (defn wishlist-delete-clicker []
   (delegate $content ".delete" :click
-    (fn []
+    (fn [e]
       (this-as me
-        (remove (.parent me))
+        (remove (.parent ($ me)))
         (update-wishlist-rem)))))
 
 
