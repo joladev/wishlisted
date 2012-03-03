@@ -123,4 +123,10 @@
         (remove (.parent ($ me)))
         (update-wishlist-rem)))))
 
+; START IT UP
+
+(let [code (get-path)]
+  (when-not (empty? code)
+    (read-wishlist-rem code)))
+
 
