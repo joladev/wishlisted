@@ -82,6 +82,10 @@
     (letrem [neu (update-wishlist wishlist)]
       (show-wishlist! neu))))
 
+(defn read-wishlist-rem [code]
+  (letrem [neu (read-wishlist code)]
+    (show-wishlist! neu)))
+
 ; DELEGATES
 
 (defn create-wishlist-clicker []
