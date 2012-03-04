@@ -66,8 +66,8 @@
 
 (defn update-wish [{:keys [id] :as w}]
   (update wish
-    (where {:id id})))
     (set-fields (dissoc w :wishlist_code :id))
+    (where {:id (Integer/parseInt id)})))
 
 (defn delete-wish [id]
   (delete wish
