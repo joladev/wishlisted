@@ -122,11 +122,16 @@
   (delegate $content ".description" :change
     (fn [e]
       (this-as me
-        (when (value-changed?! me)
-          (when (empty? (val me))
-            (when-not (.hasClass (.parent me) "last")
-              (remove (.parent me))))
-          (update-wishlist-rem))))))
+        (let [$me ($ me)
+              parent (.parent $me)]
+          (when (value-changed?! $me)
+            (if (empty? (val $me))
+              (when-not (.hasClass parent "last")
+                (remove parent)
+                (delete-wish-rem parent))
+              (if (.hasClass parent "last")
+                (create-wish-last-rem parent)
+                (update-wish-rem parent)))))))))
 
 (defn wishlist-wish-url-changer []
   (delegate $content ".url" :change
