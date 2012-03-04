@@ -137,7 +137,7 @@
   (delegate $content ".url" :change
     (fn [e]
       (this-as me
-        (when-not (empty? (val me)) 
+        (when-not (empty? (val ($ me))) 
           (update-wishlist-rem))))))
 
 (defn wishlist-delete-clicker []
