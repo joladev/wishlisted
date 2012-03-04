@@ -54,7 +54,7 @@
   (val (find $header ".title")))
 
 (defn wish-from-elem [$elem]
-  {:id (data $elem :id)
+  {:id (.attr $elem "id")
    :description (val (find $elem ".description"))
    :url (val (find $elem ".url"))
    :wishlist_code (get-path)})
