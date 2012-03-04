@@ -1,7 +1,7 @@
 (ns wishlistd.client.main
   (:require [crate.core :as crate]
             [fetch.remotes :as remotes])
-  (:use [jayq.core :only [$ append empty find val delegate data]])
+  (:use [jayq.core :only [$ remove append empty find val delegate data]])
   (:use-macros [crate.macros :only [defpartial]]
                [fetch.macros :only [letrem]]))
 
