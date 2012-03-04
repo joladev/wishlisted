@@ -105,7 +105,7 @@
 (defn wishlist-title-changer []
   (delegate $header wishlist-title :change
     (fn [e]
-      (update-wishlist-rem))))
+      (update-wishlist-title-rem))))
 
 (defn wishlist-wish-description-changer []
   (delegate $content ".description" :change
