@@ -53,6 +53,11 @@
 (defn title-from-html []
   (val (find $header ".title")))
 
+(defn wish-from-elem [$elem]
+  {:id (data $elem :id)
+   :description (val (find $elem ".description"))
+   :url (val (find $elem ".url"))
+   :wishlist_code (get-path)})
 
 (defn value-changed?! [$this]
   (if (= (data $this :old-val) (val $this))
