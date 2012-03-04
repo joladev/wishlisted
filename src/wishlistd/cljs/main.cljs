@@ -93,6 +93,10 @@
     (letrem [neu (create-wish clean)]
       (read-wishlist-rem (get-path)))))
 
+(defn update-wish-rem [$elem]
+  (let [wish (wish-from-elem $elem)]
+    (letrem [neu (update-wish wish)]
+      (fn [e] nil))))
 
 
 ; DELEGATES
