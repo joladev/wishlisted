@@ -42,9 +42,10 @@
       (values neu))))
 
 (defn read-wishlist [code]
-  (select wishlist (wishlist-fields)
-    (with wish (wish-fields))
-    (where {:code code})))
+  (first
+    (select wishlist (wishlist-fields)
+      (with wish (wish-fields))
+      (where {:code code}))))
 
 (defn update-wishlist [{:keys [code] :as wl}]
   (update wishlist
