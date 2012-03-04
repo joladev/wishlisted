@@ -105,7 +105,7 @@
       (this-as me
         (when (value-changed?! me)
           (when (empty? (val me))
-            (when-not (.hasClass "last" (.parent me))
+            (when-not (.hasClass (.parent me) "last")
               (remove (.parent me))))
           (update-wishlist-rem))))))
 
