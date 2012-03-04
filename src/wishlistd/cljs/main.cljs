@@ -144,8 +144,10 @@
   (delegate $content ".delete" :click
     (fn [e]
       (this-as me
-        (remove (.parent ($ me)))
-        (update-wishlist-rem)))))
+        (let [$me ($ me)]
+          (when-not (.hasClass (.parent $me) "last")
+            (remove (.parent $me))
+            (delete-wish-rem (.parent $me))))))))
 
 ; START IT UP
 
