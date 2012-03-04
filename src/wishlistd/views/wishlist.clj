@@ -20,6 +20,10 @@
 (defremote read-wishlist [code] ; doesn't need dissoc date
   (model/read-wishlist code))
 
+(defremote create-wish [wish]
+  (dissoc-date
+    (model/create-wish wish)))
+
 (defremote update-wish [wish]
   (dissoc-date
     (model/update-wish wish)))
