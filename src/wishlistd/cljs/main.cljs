@@ -87,6 +87,12 @@
     (letrem [neu (create-wish clean)]
       (fn [e] nil))))
 
+(defn create-wish-last-rem [$elem]
+  (let [wish (wish-from-elem $elem)
+        clean (dissoc wish :id)]
+    (letrem [neu (create-wish clean)]
+      (read-wishlist-rem (get-path)))))
+
 
 
 ; DELEGATES
