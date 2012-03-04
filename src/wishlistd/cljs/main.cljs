@@ -98,6 +98,10 @@
     (letrem [neu (update-wish wish)]
       (fn [e] nil))))
 
+(defn delete-wish-rem [$elem]
+  (let [id (.attr $elem "id")]
+    (letrem [neu (delete-wish id)]
+      (fn [e] nil))))
 
 ; DELEGATES
 
