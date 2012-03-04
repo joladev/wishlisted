@@ -63,7 +63,7 @@
   (val ($ ".title")))
 
 (defn wishes-from-html []
-  (for [el wish-li]
+  (for [el ($ wish-li)]
     {:description (val (find el ".description"))
      :url (val (find el ".url"))}))
 
