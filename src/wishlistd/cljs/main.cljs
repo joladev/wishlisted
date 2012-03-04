@@ -42,7 +42,7 @@
     (.split js/window.location.pathname "/")))
 
 (defn set-path! [code]
-  (.pushState js/window.history nil "lol" code))
+  (.pushState js/window.history nil "" code))
 
 (defn show-wishlist! [{:keys [wishes title code] :as wishlist}]
   (empty $content)
