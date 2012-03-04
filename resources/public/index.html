@@ -7,29 +7,7 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="/css/sol-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="/js/core.js" type="text/javascript" charset="utf-8"></script>
   <script src="/js/bootstrap-dropdown.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-    var s = null;
-    // Handle pops
-    var handlePop = function(evt) {
-      var path = evt.target.location.pathname;
-      if (path !== '/') { s.loadWishlist(path.substring(1,path.length)); }
-    };
-    // Set up the pop state to handle loads, skipping the first load
-    // to make chrome behave like others:
-    // http://code.google.com/p/chromium/issues/detail?id=63040
-    setTimeout(function() {
-      window.onpopstate = function(evt) {
-        try { handlePop(evt); } catch(err) { /* not loaded yet */ }
-      };
-    }, 1000);
-    // Construct s and load initial path
-    $(function() {
-      s = new app();
-      handlePop({ target: window });
-    });
-  </script>
 </head>
 <body>  
   <!-- start navbar -->  
