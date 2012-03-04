@@ -14,8 +14,8 @@
 
 ; HTML PARTIALS
 
-(defpartial wish-li [{:keys [description url]}]
-  [:li.wish
+(defpartial wish-li [{:keys [id description url]}]
+  [:li {:class "wish" :id id}
    [:div.delete]
    [:input {:type "text" :class "description" :value description}]
    [:input {:type "text" :class "url" :value url}]])
