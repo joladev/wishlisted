@@ -51,6 +51,10 @@
   (append $header  (wishlist-title title))
   (set-path! code))
 
+(defn show-wishlist-title! [{:keys [title]}]
+  (empty $header)
+  (append $header (wishlist-title title)))
+
 (defn title-from-html []
   (val ($ ".title")))
 
