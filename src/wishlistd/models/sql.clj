@@ -71,4 +71,4 @@
 
 (defn delete-wish [id]
   (delete wish
-    (where {:id id})))
+    (where {:id (Integer/parseInt id)})))
