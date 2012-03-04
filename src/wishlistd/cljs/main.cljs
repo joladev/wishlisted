@@ -47,7 +47,7 @@
 (defn show-wishlist! [{:keys [wish title code] :as wishlist}]
   (empty $content)
   (empty $header)
-  (append $content (wish-ul wishes))
+  (append $content (wish-ul wish))
   (append $header  (wishlist-title title))
   (set-path! code))
 
