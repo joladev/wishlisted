@@ -69,7 +69,7 @@
 
 (defn wishlist-from-html []
   {:title  (title-from-html)
-   :wishes (wishes-from-html)
+   :wish   (wishes-from-html)
    :code   (get-path)})
 
 (defn value-changed?! [$this]
