@@ -51,7 +51,7 @@
   (set-path! code))
 
 (defn title-from-html []
-  (val ($ ".title")))
+  (val (find $header ".title")))
 
 (defn wishes-from-html []
   (for [el ($ wish-li)]
