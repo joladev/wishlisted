@@ -55,6 +55,10 @@
   (empty $header)
   (append $header (wishlist-title title)))
 
+(defn show-wishlist-wish! [{:keys [description url]} $wish]
+  (val (find $wish ".description") description)
+  (val (find $wish ".url") url))
+
 (defn title-from-html []
   (val ($ ".title")))
 
