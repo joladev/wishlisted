@@ -85,10 +85,10 @@
   (letrem [neu (create-wishlist {:title "Default"})]
     (show-wishlist! neu)))
 
-(defn update-wishlist-rem []
-  (let [wishlist (wishlist-from-html)]
+(defn update-wishlist-title-rem []
+  (let [wishlist {:code (get-path) :title (title-from-html)}]
     (letrem [neu (update-wishlist wishlist)]
-      (show-wishlist! neu))))
+      (fn [e] nil))))
 
 (defn read-wishlist-rem [code]
   (letrem [neu (read-wishlist code)]
