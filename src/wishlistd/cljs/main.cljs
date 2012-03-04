@@ -38,8 +38,7 @@
 ; GETTING AND SETTING
 
 (defn get-path []
-  (.pop 
-    (.split js/window.location.pathname "/")))
+  (.pop (.split js/window.location.pathname "/")))
 
 (defn set-path! [code]
   (.pushState js/window.history nil "" code))
@@ -50,10 +49,6 @@
   (append $content (wish-ul wish))
   (append $header  (wishlist-title title))
   (set-path! code))
-
-(defn show-wishlist-title! [{:keys [title]}]
-  (empty $header)
-  (append $header (wishlist-title title)))
 
 (defn show-wishlist-wish! [{:keys [description url]} $wish]
   (val (find $wish ".description") description)
@@ -85,14 +80,16 @@
   (letrem [neu (create-wishlist {:title "Default"})]
     (show-wishlist! neu)))
 
+(defn read-wishlist-rem [code]
+  (letrem [neu (read-wishlist code)]
+    (show-wishlist! neu)))
+
 (defn update-wishlist-title-rem []
   (let [wishlist {:code (get-path) :title (title-from-html)}]
     (letrem [neu (update-wishlist wishlist)]
       (fn [e] nil))))
 
-(defn read-wishlist-rem [code]
-  (letrem [neu (read-wishlist code)]
-    (show-wishlist! neu)))
+
 
 ; DELEGATES
 
