@@ -106,49 +106,45 @@
 
 ; DELEGATES
 
-(defn create-wishlist-clicker []
-  (delegate $body "#create-wishlist" :click
-    (fn [e]
-      (.preventDefault e)
-      (create-wishlist-rem))))
+(delegate $body "#create-wishlist" :click
+  (fn [e]
+    (.preventDefault e)
+    (create-wishlist-rem)))
 
-(defn wishlist-title-changer []
-  (delegate $header wishlist-title :change
-    (fn [e]
-      (this-as me
-        (when-not (empty? (val ($ me)))
-          (update-wishlist-title-rem))))))
+(delegate $header wishlist-title :change
+  (fn [e]
+    (this-as me
+      (when-not (empty? (val ($ me)))
+        (update-wishlist-title-rem)))))
 
-(defn wishlist-wish-description-changer []
-  (delegate $content ".description" :change
-    (fn [e]
-      (this-as me
-        (let [$me ($ me)
-              parent (.parent $me)]
-          (when (value-changed?! $me)
-            (if (empty? (val $me))
-              (when-not (.hasClass parent "last")
-                (remove parent)
-                (delete-wish-rem parent))
-              (if (.hasClass parent "last")
-                (create-wish-rem parent)
-                (update-wish-rem parent)))))))))
+(delegate $content ".description" :change
+  (fn [e]
+    (this-as me
+      (let [$me ($ me)
+            parent (.parent $me)]
+        (when (value-changed?! $me)
+          (if (empty? (val $me))
+            (when-not (.hasClass parent "last")
+              (remove parent)
+              (delete-wish-rem parent))
+            (if (.hasClass parent "last")
+              (create-wish-rem parent)
+              (update-wish-rem parent))))))))
 
-(defn wishlist-wish-url-changer []
-  (delegate $content ".url" :change
-    (fn [e]
-      (this-as me
-        (when-not (empty? (.attr (.parent ($ me)) "id"))
-          (update-wish-rem (.parent ($ me))))))))
+(delegate $content ".url" :change
+  (fn [e]
+    (this-as me
+      (let [$parent (.parent ($ me))]
+        (when-not (empty? (.attr $parent "id"))
+          (update-wish-rem $parent))))))
 
-(defn wishlist-delete-clicker []
-  (delegate $content ".delete" :click
-    (fn [e]
-      (this-as me
-        (let [$me ($ me)]
-          (when-not (.hasClass (.parent $me) "last")
-            (remove (.parent $me))
-            (delete-wish-rem (.parent $me))))))))
+(delegate $content ".delete" :click
+  (fn [e]
+    (this-as me
+      (let [$parent (.parent ($ me))]
+        (when-not (.hasClass $parent "last")
+          (remove $parent)
+          (delete-wish-rem $parent))))))
 
 ; START IT UP
 
