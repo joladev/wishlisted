@@ -59,6 +59,11 @@
    :url (val (find $elem ".url"))
    :wishlist_code (get-path)})
 
+(defn update-last! [wish $elem]
+  (.attr $elem "id" (:id wish))
+  (.removeClass $elem "last")
+  (append ($ wish-ul) (wish-li-last)))
+
 (defn value-changed?! [$this]
   (if (= (data $this :old-val) (val $this))
     false
@@ -85,13 +90,8 @@
   (let [wish (wish-from-elem $elem)
         clean (dissoc wish :id)]
     (letrem [neu (create-wish clean)]
-      (fn [e] nil))))
-
-(defn create-wish-last-rem [$elem]
-  (let [wish (wish-from-elem $elem)
-        clean (dissoc wish :id)]
-    (letrem [neu (create-wish clean)]
-      (read-wishlist-rem (get-path)))))
+      (when (.hasClass $elem "last") 
+        (update-last! neu $elem)))))
 
 (defn update-wish-rem [$elem]
   (let [wish (wish-from-elem $elem)]
