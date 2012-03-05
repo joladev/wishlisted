@@ -42,9 +42,10 @@
       (values neu))))
 
 (defn read-wishlist [code]
-  (select wishlist (wishlist-fields)
-    (with wish (wish-fields))
-    (where {:code code})))
+  (first
+    (select wishlist (wishlist-fields)
+      (with wish (wish-fields))
+      (where {:code code}))))
 
 (defn update-wishlist [{:keys [code] :as wl}]
   (update wishlist
@@ -65,9 +66,9 @@
 
 (defn update-wish [{:keys [id] :as w}]
   (update wish
-    (set-fields w)
-    (where {:id id})))
+    (set-fields (dissoc w :wishlist_code :id))
+    (where {:id (Integer/parseInt id)})))
 
 (defn delete-wish [id]
   (delete wish
-    (where {:id id})))
+    (where {:id (Integer/parseInt id)})))

@@ -1,18 +1,33 @@
 (ns wishlistd.views.wishlist
   (:require [wishlistd.views.common :as common]
-            [wishlistd.json :as response])
-  (:use wishlistd.models.redis))
+            [wishlistd.models.sql :as model])
+  (:use noir.fetch.remotes))
 
 (defn main-page []
   (common/new-layout))
 
-(defn create-wishlist-json [wishlist]
-  (let [wishlist (create-wishlist wishlist)]
-    (response/json wishlist)))
+(defn- dissoc-date [wl]
+  (dissoc wl :created_at))
 
-(defn get-wishlist-json [code]
-  (let [wishlist (read-wishlist code)]
-    (response/json wishlist)))
+(defremote create-wishlist [wishlist]
+  (dissoc-date 
+    (model/create-wishlist wishlist)))
 
-(defn update-wishlist-json [wishlist]
-  (response/json (update-wishlist wishlist)))
+(defremote update-wishlist [wishlist]
+  (dissoc-date
+    (model/update-wishlist wishlist)))
+
+(defremote read-wishlist [code]
+  (model/read-wishlist code))
+
+(defremote create-wish [wish]
+  (dissoc-date
+    (model/create-wish wish)))
+
+(defremote update-wish [wish]
+  (dissoc-date
+    (model/update-wish wish)))
+
+(defremote delete-wish [id]
+  (dissoc-date
+    (model/delete-wish id)))
