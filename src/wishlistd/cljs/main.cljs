@@ -130,7 +130,7 @@
                 (remove parent)
                 (delete-wish-rem parent))
               (if (.hasClass parent "last")
-                (create-wish-last-rem parent)
+                (create-wish-rem parent)
                 (update-wish-rem parent)))))))))
 
 (defn wishlist-wish-url-changer []
