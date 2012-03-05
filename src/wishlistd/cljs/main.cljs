@@ -44,6 +44,8 @@
   (.pushState js/window.history nil "" code))
 
 (defn show-wishlist! [{:keys [wish title code] :as wishlist}]
+  "Clears the areas used for displaying wishlists, uses given wishlist to 
+  generate the html to fill them again and sets the path."
   (empty $content)
   (empty $header)
   (append $content (wish-ul wish))
@@ -51,20 +53,25 @@
   (set-path! code))
 
 (defn title-from-html []
+  "Gets the current page title."
   (val (find $header ".title")))
 
 (defn wish-from-elem [$elem]
+  "Extracts a wish object from the given element."
   {:id (.attr $elem "id")
    :description (val (find $elem ".description"))
    :url (val (find $elem ".url"))
    :wishlist_code (get-path)})
 
 (defn update-last! [wish $elem]
+  "Adds the id attribute to the formerly last wish and appends a new last wish to list."
   (.attr $elem "id" (:id wish))
   (.removeClass $elem "last")
   (append ($ wish-ul) (wish-li-last)))
 
 (defn value-changed?! [$this]
+  "Keeps track of changes. Returns true if the key :old-val in the JQuery data object on the element
+  has changed and updates :old-val. Otherwise returns false."
   (if (= (data $this :old-val) (val $this))
     false
     (do
