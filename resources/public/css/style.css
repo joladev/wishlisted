@@ -58,7 +58,8 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 }
 */
 #title-box input {
-  margin-top: 5px; }
+  margin-top: 5px;
+  margin-left: 10px; }
 
 /* create link
 a#create-wishlist{
@@ -106,3 +107,8 @@ input.url {
   #copyright p {
     font-size: 90%;
     margin: 7px 5px 0px 0px; }
+
+#create-wishlist {
+  margin-top: 5px;
+  margin-right: 5px;
+  cursor: pointer; }
