@@ -17,7 +17,7 @@
   (dissoc-date
     (model/update-wishlist wishlist)))
 
-(defremote read-wishlist [code] ; doesn't need dissoc date
+(defremote read-wishlist [code]
   (model/read-wishlist code))
 
 (defremote create-wish [wish]
