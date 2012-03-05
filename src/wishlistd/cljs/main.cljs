@@ -79,7 +79,8 @@
 
 (defn read-wishlist-rem [code]
   (letrem [neu (read-wishlist code)]
-    (show-wishlist! neu)))
+    (when-not (nil? neu) 
+      (show-wishlist! neu))))
 
 (defn update-wishlist-title-rem []
   (let [wishlist {:code (get-path) :title (title-from-html)}]
