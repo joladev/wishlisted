@@ -6,6 +6,11 @@
 (defn main-page []
   (common/new-layout))
 
+; REMOTES
+;
+; Note, fetch is unable to encode Timespan as JSON, 
+; so we have to make sure to remove it.
+
 (defn- dissoc-date [wl]
   (dissoc wl :created_at))
 
