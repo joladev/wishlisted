@@ -1,5 +1,6 @@
 (defproject wishlistd "0.1.0-SNAPSHOT"
-            :description "FIXME: write this!"
+            :description "Simple application using Clojure, Noir, ClojureScript, Jayq, Fetch, Crate 
+                          and Korma to handle easy creation of wishlists in the browser."
             :dependencies [[org.clojure/clojure "1.3.0"]
                            [noir "1.3.0-alpha10"]
                            [jayq "0.1.0-SNAPSHOT"]
