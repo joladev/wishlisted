@@ -5,5 +5,5 @@
 (defpage "/" []
   (main-page))
 
-(defpage "/:dontcare" [] ; catchall! kinda...
+(defpage "/:ajax" [] ; catchall! kinda...
   (main-page))
