@@ -25,9 +25,10 @@ li input {
 
 /*drop down list */
 .navbar .nav li a {
-  color: #eee8d5; }
+  color: #eee8d5;
+  text-shadow: none; }
   .navbar .nav li a:hover {
-    color: #fdf6e3; }
+    color: #eee8d5; }
 
 /*divider*/
 .navbar .divider-vertical {
@@ -60,14 +61,12 @@ li.dropdown-menu {
   .navbar .brand:hover {
     color: #fdf6e3; }
 
-/* create link
-a#create-wishlist{
-  color: $banner-link-color;
-  &:hover{
-    color: $banner-link-hover;  
-  }
-}
-*/
+/* create link*/
+#create-wishlist {
+  background: url(../images/new1.png); }
+  #create-wishlist:hover {
+    background: url(../images/new4_hover.png); }
+
 /* title box
 #title-box input{
   background:$title-input-bg;

@@ -111,4 +111,6 @@ input.url {
 #create-wishlist {
   margin-top: 5px;
   margin-right: 5px;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 29px;
+  height: 30px; }

@@ -61,8 +61,9 @@ li input {
 /*drop down list */
 .navbar .nav li a{
   color: $banner-link-color;
+  text-shadow:none;
   &:hover{
-    color: $banner-link-hover;
+    color: $banner-link-color;
   }
 }
 
@@ -107,14 +108,14 @@ border-top-color: $banner-link-color;
   &:hover{color: $logo-text-hover;}
 }
 
-/* create link
-a#create-wishlist{
-  color: $banner-link-color;
+/* create link*/
+#create-wishlist{
+  background: url(../images/new1.png);
   &:hover{
-    color: $banner-link-hover;  
+    background: url(../images/new4_hover.png);
   }
 }
-*/
+
 /* title box
 #title-box input{
   background:$title-input-bg;
