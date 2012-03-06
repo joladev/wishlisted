@@ -110,10 +110,7 @@ border-top-color: $banner-link-color;
 
 /* create link*/
 #create-wishlist{
-  background: url(../images/new1.png);
-  &:hover{
-    background: url(../images/new4_hover.png);
-  }
+ 
 }
 
 /* title box
@@ -214,5 +211,21 @@ input.url{
       text-decoration:none;
 
     }
+  }
+}
+
+#icon-new{
+    background: url(../images/new1.png);
+    background-repeat: no-repeat;
+    &:hover{
+      background: url(../images/new5_hover.png);
+    }
+}
+
+#icon-question{
+  background: url(../images/question1.png);
+  background-repeat: no-repeat;
+  &:hover{
+    background: url(../images/question1_hover.png);
   }
 }

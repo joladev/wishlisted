@@ -7,7 +7,8 @@ $box-width:        670px;
 */
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-repeat: no-repeat; }
 
 /* banner */
 .container {
@@ -108,9 +109,7 @@ input.url {
     font-size: 90%;
     margin: 7px 5px 0px 0px; }
 
-#create-wishlist {
-  margin-top: 5px;
-  margin-right: 5px;
-  cursor: pointer;
-  width: 29px;
-  height: 30px; }
+.icon {
+  margin: 7px 6px 0 6px;
+  height: 25px;
+  width: 24px; }

@@ -62,11 +62,6 @@ li.dropdown-menu {
     color: #fdf6e3; }
 
 /* create link*/
-#create-wishlist {
-  background: url(../images/new1.png); }
-  #create-wishlist:hover {
-    background: url(../images/new4_hover.png); }
-
 /* title box
 #title-box input{
   background:$title-input-bg;
@@ -141,3 +136,15 @@ input.url {
     color: #eee8d5; }
     #copyright a:hover {
       text-decoration: none; }
+
+#icon-new {
+  background: url(../images/new1.png);
+  background-repeat: no-repeat; }
+  #icon-new:hover {
+    background: url(../images/new5_hover.png); }
+
+#icon-question {
+  background: url(../images/question1.png);
+  background-repeat: no-repeat; }
+  #icon-question:hover {
+    background: url(../images/question1_hover.png); }
