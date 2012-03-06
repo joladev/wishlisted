@@ -19,8 +19,8 @@
     (model/create-wishlist wishlist)))
 
 (defremote update-wishlist [wishlist]
-  (dissoc-date
-    (model/update-wishlist wishlist)))
+  (not (nil?
+    (model/update-wishlist wishlist))))
 
 (defremote read-wishlist [code]
   (model/read-wishlist code))
@@ -30,9 +30,9 @@
     (model/create-wish wish)))
 
 (defremote update-wish [wish]
-  (dissoc-date
-    (model/update-wish wish)))
+  (not (nil?
+    (model/update-wish wish))))
 
 (defremote delete-wish [id]
-  (dissoc-date
-    (model/delete-wish id)))
+  (not (nil?
+    (model/delete-wish id))))
