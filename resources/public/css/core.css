@@ -14,7 +14,7 @@ ul {
 
 li {
   background-color:#333;
-  margin-bottom:5px;
+
 }
 
 li input {
@@ -27,10 +27,14 @@ li input {
 input{  
   -webkit-appearance:none;
   -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -moz-transition:none;
 }
 
 input:focus, input:active {
   -webkit-appearance:none;
   -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -moz-transition:none;
   border-color:black;
 }

@@ -1,10 +1,15 @@
 /* style.scss */
 
 /* variables */
+
 $banner-height:    37px;
 $logo-box-width:   120px;
 $box-width:        670px; 
-
+/*
+$banner-height:    1.7em;
+$logo-box-width:   120px;
+$box-width:        670px;
+*/
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +23,7 @@ $box-width:        670px;
   width:100%;
 }
 
-/* banner bar, height and font size */
+/* banner bar, height and font size 
 .nav{
   height:$banner-height;
   li{
@@ -29,39 +34,38 @@ $box-width:        670px;
 
 .navbar .nav li a{
   font-size: 110%;
-  font-weight:bold;
+  font-weight:normal;
 }
-
+*/
 /* to get dropdown on hover */
 ul.nav li.dropdown:hover ul.dropdown-menu{
     display: block;    
 }
 
+/*divider*/
+.navbar .divider-vertical {
+  margin:0;
+}
 /* padding of dropdown */
 .dropdown-menu{
 
   li{
     padding: 5px;
-    height:135px;
+    /*height:135px;*/
   }
 }
 
-/*logo, so far with h1 */
-#logo{
-  width:$logo-box-width;
-  height:$banner-height;
-  float:left;
-  font-family:helvetica;
-  font-weight:normal;
-  font-size:170%;
-}
-#logo a{
-  position:relative;
-  top:8px;
-  left:10px;
+.btn{
+  margin-bottom:-3px;
 }
 
-/* title box */
+.navbar .brand{
+  margin-left:-10px;
+
+}
+
+/* title box 
+
 #title-box{
   float: left;
   position:relative;
@@ -69,22 +73,21 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
   top:5px;
   font-size:90%;
 }
-
+*/
 #title-box input{
-  font-size:120%;
-  height:15px;
-  width:150px;
+  margin-top:5px;
 }
 
-/* create link */
+/* create link
 a#create-wishlist{
   float:left;
   position: relative;
-  top:9px;
+  top:10px;
   left:-7px;
-  font-size:18px;
+  font-size:1.1em;
+  cursor: pointer;
 }
-
+ */
 /* main box */
 #box{
   width:$box-width;
@@ -117,6 +120,7 @@ input.url{
   margin-top:13px;
   float: left;
   background-repeat:no-repeat !important;
+  cursor: pointer;
 }
 
 /*copyright box */

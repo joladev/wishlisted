@@ -4,23 +4,31 @@
 /* variables */
 $body-background:     #fdf6e3;
 $banner-background:   #93a1a1;
+$banner-bg-hover:     #9eadad;
 $logo-background:     #b58900;
 $logo-text:           #fde6a9;
 $logo-text-hover:     #fdf6e3;
-$banner-link-color:   #586e75;
-$banner-link-hover:   #eee8d5;
+$banner-link-color:   #eee8d5;
+$banner-link-hover:   #fdf6e3;
 $dropdown-box:        #fdf6e3;
 $dropdown-color:      #586e75;
 
-$title-input-bg:      #93a1a1;
+$divider-background:  #657b83;
+$divider-border:      #76919b;
+
+$title-input-bg:      #eee8d5;
 $title-input-border:  #586e75;
+$title-input-color:   #b58900;
+
+$btn-color:           #073642;
+$btn-border:           #657b83;
+
 $wishes-input-border: #93a1a1;
 $wish-color:          #d33682;
 $url-color:           #93a1a1;
 
-$copyright-background:#fde6a9;
-$copyright-border:    #adbebe;
-$copyright-color:     #586e75;
+$copyright-link-color:#eee8d5;
+$copyright-color:     #eee8d5;
 
 
 body{
@@ -43,18 +51,12 @@ a{
     background:$banner-background;
   }
 }
-/* coloring of drop down */
-.dropdown-menu{
-  background:$dropdown-box;
-  li{
-    background:$dropdown-box;
-    color: $dropdown-color;
-  }
+
+li input {
+  background-color: $title-input-bg;
+  border-color: $title-input-border;
+  color: $title-input-color;
 }
-li.dropdown-menu{
-    background:$dropdown-box;
-    color:red;
-  }
 
 /*drop down list */
 .navbar .nav li a{
@@ -63,6 +65,32 @@ li.dropdown-menu{
     color: $banner-link-hover;
   }
 }
+
+
+/*divider*/
+.navbar .divider-vertical {
+  background-color: $divider-background;
+  border-right: 1px solid $divider-border;
+}
+
+/* coloring of drop down */
+.dropdown-menu{
+  background:$dropdown-box;
+  li{
+    background:$dropdown-box;
+    color: $dropdown-color;
+    &:hover{
+      background: $dropdown-box;
+    }
+  }
+}
+li.dropdown-menu{
+    background:$dropdown-box;
+  }
+.dropdown-menu .hover-bg{
+
+}
+
 
 /* coloring of dropdown arrow */
 .navbar .dropdown-menu:after {
@@ -73,20 +101,21 @@ border-top-color: $banner-link-color;
 }
 
 /* coloring of logo */
-#logo{
-	background:$logo-background;
-	a{
-    color: $logo-text;
-    &:hover{color: $logo-text-hover;}
-  }
+.navbar .brand{
+  background:$logo-background;
+  color: $logo-text;
+  &:hover{color: $logo-text-hover;}
 }
 
-/* create link*/
+/* create link
 a#create-wishlist{
   color: $banner-link-color;
+  &:hover{
+    color: $banner-link-hover;  
+  }
 }
-
-/* title box*/
+*/
+/* title box
 #title-box input{
   background:$title-input-bg;
   color:$banner-link-color;
@@ -94,15 +123,60 @@ a#create-wishlist{
     style:none;
     color: transparent;
     bottom:
-      {
-        style:solid;
-        color:$title-input-border;
-      }
+    {
+      style:solid;
+      color:$title-input-border;
+    }
   }
   &:hover{border-bottom-width:2px;}
 }
+*/
+.btn{
+  border:1px solid $btn-border;
+  color: $btn-color;
+  background-color:#eee8d5;
+  background-image: linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
+  background-image: -o-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
+  background-image: -moz-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
+  background-image: -webkit-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
+  background-image: -ms-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.08, rgb(205,198,177)),
+    color-stop(0.54, rgb(229,223,204)),
+    color-stop(0.77, rgb(253,246,227))
+  );
+}
+.btn:hover {
+  background-color: #eee8d5;
+  background-position: 0px;
+  -webkit-transition: background-position 0s linear;
+  -moz-transition: background-position 0s linear;
+  -ms-transition: background-position 0s linear;
+  -o-transition: background-position 0s linear;
+  transition: background-position 0s linear;
 
 
+  border:1px solid $btn-border;
+  color: lighten($btn-color, 10%);
+  background-image: linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+  background-image: -o-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+  background-image: -moz-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+  background-image: -webkit-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+  background-image: -ms-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.08, rgb(212,207,190)),
+    color-stop(0.54, rgb(235,230,217)),
+    color-stop(0.77, rgb(250,245,232))
+  );
+}
 
 /* wishes */
 ul.wishes{
@@ -135,17 +209,19 @@ input.url{
 /* delete x */
 .delete{
   background: url(../images/x.png);
+  &:hover{
+    background: url(../images/x-hover-red.png);
+  }
 }
-
 
 /*coloring of copyright box */
 #copyright{
   background:transparent;
-  color:$banner-link-color;
+  color:$copyright-color;
 
   a{
     text-decoration:underline;
-    color:$banner-link-color;
+    color:$copyright-link-color;
     &:hover{
       text-decoration:none;
 
