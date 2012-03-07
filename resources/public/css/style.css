@@ -137,3 +137,11 @@ input.url {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px; }
+
+#info-close {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  height: 29px;
+  width: 29px;
+  z-index: 3001; }
