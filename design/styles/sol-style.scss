@@ -30,6 +30,8 @@ $url-color:           #93a1a1;
 $copyright-link-color:#eee8d5;
 $copyright-color:     #eee8d5;
 
+$opacity-bg:          #001419;
+$info-box-bg:         #fdf6e3;
 
 body{
   background:$body-background;
@@ -228,4 +230,12 @@ input.url{
   &:hover{
     background: url(../images/question1_hover.png);
   }
+}
+
+#info-container{
+  background: $opacity-bg;
+}
+
+#info-box{
+  background: $info-box-bg;
 }

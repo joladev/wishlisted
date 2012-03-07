@@ -148,3 +148,9 @@ input.url {
   background-repeat: no-repeat; }
   #icon-question:hover {
     background: url(../images/question1_hover.png); }
+
+#info-container {
+  background: #001419; }
+
+#info-box {
+  background: #fdf6e3; }
