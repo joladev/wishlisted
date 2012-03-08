@@ -32,6 +32,7 @@ $copyright-color:     #eee8d5;
 
 $opacity-bg:          #001419;
 $info-box-bg:         #fdf6e3;
+$info-text:           #268bd2;
 
 body{
   background:$body-background;
@@ -217,18 +218,20 @@ input.url{
 }
 
 #icon-new{
-    background: url(../images/new1.png);
+    background: url(../images/new_icon.png);
     background-repeat: no-repeat;
     &:hover{
-      background: url(../images/new5_hover.png);
+      background: url(../images/new_icon_hover.png);
+      background-repeat: no-repeat;
     }
 }
 
 #icon-question{
-  background: url(../images/question1.png);
+  background: url(../images/question.png);
   background-repeat: no-repeat;
   &:hover{
-    background: url(../images/question1_hover.png);
+    background: url(../images/question_hover.png);
+    background-repeat: no-repeat;
   }
 }
 
@@ -242,4 +245,8 @@ input.url{
 
 #info-close{
   background: url(../images/close1.png);
+}
+
+#info-text{
+  color:$info-text;
 }

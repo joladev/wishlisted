@@ -5,8 +5,10 @@
 $banner-height:    37px;
 $logo-box-width:   120px;
 $box-width:        670px; 
+
+$banner-height:    50px;
+
 /*
-$banner-height:    1.7em;
 $logo-box-width:   120px;
 $box-width:        670px;
 */
@@ -24,20 +26,11 @@ $box-width:        670px;
   width:100%;
 }
 
-/* banner bar, height and font size 
-.nav{
-  height:$banner-height;
-  li{
-    height:$banner-height;
-    a{font-weight:bold;}
-  }
+#icon-new{
+  margin-left:15px;
 }
 
-.navbar .nav li a{
-  font-size: 110%;
-  font-weight:normal;
-}
-*/
+
 /* to get dropdown on hover */
 ul.nav li.dropdown:hover ul.dropdown-menu{
     display: block;    
@@ -46,6 +39,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 /*divider*/
 .navbar .divider-vertical {
   margin:0;
+  height:47px;
 }
 /* padding of dropdown */
 .dropdown-menu{
@@ -61,8 +55,8 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 }
 
 .navbar .brand{
-  margin-left:-10px;
-
+  margin-left:-7px;
+ font-size:27px;
 }
 
 /* title box 
@@ -135,15 +129,13 @@ input.url{
   }
 }
 
-#create-wishlist{
 
-}
 
 .icon{
-  margin: 7px 6px 0 6px;
+  margin: 10px 6px 0 6px;
   height:25px;
   width:24px;
-
+  cursor: pointer;
 }
 
 /*giant info box*/
@@ -157,6 +149,7 @@ input.url{
   opacity: 0.4;
   -moz-opacity: 0.4;
   filter:alpha(opacity=4);
+  visibility: hidden;
 }
 
 #info-box{
@@ -165,11 +158,11 @@ input.url{
   /*margin left half of width to center box*/
   margin-left:-150px;
   width:300px;
-  height:300px;
   z-index:3000;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
+  visibility: hidden;
 }
 
 #info-close{
@@ -179,6 +172,10 @@ input.url{
   height:29px;
   width:29px;
   z-index:3001;
+}
+
+#info-text{
+  padding: 20px 20px 20px 20px;
 }
 
 

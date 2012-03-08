@@ -138,16 +138,18 @@ input.url {
       text-decoration: none; }
 
 #icon-new {
-  background: url(../images/new1.png);
+  background: url(../images/new_icon.png);
   background-repeat: no-repeat; }
   #icon-new:hover {
-    background: url(../images/new5_hover.png); }
+    background: url(../images/new_icon_hover.png);
+    background-repeat: no-repeat; }
 
 #icon-question {
-  background: url(../images/question1.png);
+  background: url(../images/question.png);
   background-repeat: no-repeat; }
   #icon-question:hover {
-    background: url(../images/question1_hover.png); }
+    background: url(../images/question_hover.png);
+    background-repeat: no-repeat; }
 
 #info-container {
   background: #001419; }
@@ -157,3 +159,6 @@ input.url {
 
 #info-close {
   background: url(../images/close1.png); }
+
+#info-text {
+  color: #268bd2; }
