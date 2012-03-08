@@ -59,7 +59,8 @@ li.dropdown-menu {
   background: #b58900;
   color: #fde6a9; }
   .navbar .brand:hover {
-    color: #fdf6e3; }
+    color: #fdf6e3;
+    background: #b58900; }
 
 /* create link*/
 /* title box
@@ -78,29 +79,6 @@ li.dropdown-menu {
   &:hover{border-bottom-width:2px;}
 }
 */
-.btn {
-  border: 1px solid #657b83;
-  color: #fdf6e3;
-  background: #93a1a1;
-  text-shadow: none; }
-
-.btn:hover {
-  background-color: #eee8d5;
-  background-position: 0px;
-  -webkit-transition: background-position 0s linear;
-  -moz-transition: background-position 0s linear;
-  -ms-transition: background-position 0s linear;
-  -o-transition: background-position 0s linear;
-  transition: background-position 0s linear;
-  border: 1px solid #657b83;
-  color: white;
-  background-image: linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -o-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -moz-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -webkit-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -ms-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.08, #d4cfbe), color-stop(0.54, #ebe6d9), color-stop(0.77, #faf5e8)); }
-
 /* wishes */
 ul.wishes {
   list-style: none;

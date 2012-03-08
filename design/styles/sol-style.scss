@@ -5,9 +5,12 @@
 $body-background:     #fdf6e3;
 $banner-background:   #93a1a1;
 $banner-bg-hover:     #9eadad;
+
 $logo-background:     #b58900;
 $logo-text:           #fde6a9;
 $logo-text-hover:     #fdf6e3;
+$logo-bg-hover:       #b58900;
+
 $banner-link-color:   #eee8d5;
 $banner-link-hover:   #fdf6e3;
 $dropdown-box:        #fdf6e3;
@@ -108,7 +111,10 @@ border-top-color: $banner-link-color;
 .navbar .brand{
   background:$logo-background;
   color: $logo-text;
-  &:hover{color: $logo-text-hover;}
+  &:hover{
+    color: $logo-text-hover;
+    background: $logo-bg-hover;
+  }
 }
 
 /* create link*/
@@ -132,39 +138,7 @@ border-top-color: $banner-link-color;
   &:hover{border-bottom-width:2px;}
 }
 */
-.btn{
-  border:1px solid $btn-border;
-  color: $btn-color;
-  background:$banner-background;
-  text-shadow:none;
-}
-.btn:hover {
-  background-color: #eee8d5;
-  background-position: 0px;
-  -webkit-transition: background-position 0s linear;
-  -moz-transition: background-position 0s linear;
-  -ms-transition: background-position 0s linear;
-  -o-transition: background-position 0s linear;
-  transition: background-position 0s linear;
 
-
-  border:1px solid $btn-border;
-  color: lighten($btn-color, 10%);
-  background-image: linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
-  background-image: -o-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
-  background-image: -moz-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
-  background-image: -webkit-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
-  background-image: -ms-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
-
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.08, rgb(212,207,190)),
-    color-stop(0.54, rgb(235,230,217)),
-    color-stop(0.77, rgb(250,245,232))
-  );
-}
 
 /* wishes */
 ul.wishes{
