@@ -49,7 +49,9 @@
   "Selects one wishlist row and all corresponding wish rows for a given code."
   (first
     (select wishlist (wishlist-fields)
-      (with wish (wish-fields))
+      (with wish 
+        (wish-fields)
+        (order :id :asc))
       (where {:code code}))))
 
 (defn update-wishlist [{:keys [code] :as wl}]
