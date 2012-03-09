@@ -55,13 +55,6 @@ li input {
 li.dropdown-menu {
   background: #fdf6e3; }
 
-/* removes arrow from dropdown */
-.navbar .dropdown-menu:before {
-  display: none; }
-
-.navbar .dropdown-menu:after {
-  display: none; }
-
 /* coloring of logo */
 .navbar .brand {
   background: #b58900;

@@ -17,6 +17,9 @@ $box-width:        670px;
 #icon-new {
   margin-left: 15px; }
 
+.navbar .nav > li > a {
+  padding-bottom: 0px; }
+
 /* to get dropdown on hover */
 ul.nav li.dropdown:hover ul.dropdown-menu {
   display: block; }
