@@ -41,7 +41,8 @@
   (.pop (.split js/window.location.pathname "/")))
 
 (defn set-path! [code]
-  (.pushState js/window.history nil "" code))
+  (when-not (= code (get-path))
+    (.pushState js/window.history nil "" code)))
 
 (defn show-wishlist! [{:keys [wish title code] :as wishlist}]
   "Clears the areas used for displaying wishlists, uses given wishlist to 
@@ -155,8 +156,12 @@
 
 ; START IT UP
 
-(let [code (get-path)]
-  (when-not (empty? code)
-    (read-wishlist-rem code)))
+(defn start-up []
+  (let [code (get-path)]
+    (when-not (empty? code)
+      (read-wishlist-rem code))))
 
+(set! js/window.onpopstate
+  (fn [e]
+    (start-up)))
 
