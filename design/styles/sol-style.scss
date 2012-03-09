@@ -82,9 +82,12 @@ li input {
 
 /* coloring of drop down */
 .dropdown-menu{
-  background:$dropdown-box;
+  background:transparent;
+  box-shadow:none;
+  border:none;
   li{
-    background:$dropdown-box;
+    background:url(../images/create.png);
+    background-repeat:no-repeat;
     color: $dropdown-color;
     &:hover{
       background: $dropdown-box;
@@ -101,10 +104,14 @@ li.dropdown-menu{
 
 /* coloring of dropdown arrow */
 .navbar .dropdown-menu:after {
-  border-bottom: 6px solid $dropdown-box; 
+  border-bottom: 6px solid transparent; 
 }
 .navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret{
-border-top-color: $banner-link-color;
+border-top-color: transparent;
+}
+
+a.menu:after, .dropdown-toggle:after {
+    content: none;
 }
 
 /* coloring of logo */

@@ -28,8 +28,8 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 
 /* padding of dropdown */
 .dropdown-menu li {
-  padding: 5px;
-  /*height:135px;*/ }
+  padding: 0px;
+  height: 40px; }
 
 .btn {
   margin-bottom: -3px; }

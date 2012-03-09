@@ -37,9 +37,12 @@ li input {
 
 /* coloring of drop down */
 .dropdown-menu {
-  background: #fdf6e3; }
+  background: transparent;
+  box-shadow: none;
+  border: none; }
   .dropdown-menu li {
-    background: #fdf6e3;
+    background: url(../images/create.png);
+    background-repeat: no-repeat;
     color: #586e75; }
     .dropdown-menu li:hover {
       background: #fdf6e3; }
@@ -49,10 +52,13 @@ li.dropdown-menu {
 
 /* coloring of dropdown arrow */
 .navbar .dropdown-menu:after {
-  border-bottom: 6px solid #fdf6e3; }
+  border-bottom: 6px solid transparent; }
 
 .navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret {
-  border-top-color: #eee8d5; }
+  border-top-color: transparent; }
+
+a.menu:after, .dropdown-toggle:after {
+  content: none; }
 
 /* coloring of logo */
 .navbar .brand {
