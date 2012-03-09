@@ -50,9 +50,16 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
   }
 }
 
-.btn{
-  margin-bottom:-3px;
+
+/* removes arrow from dropdown */
+.navbar .dropdown-menu:before {
+  display: none;
 }
+.navbar .dropdown-menu:after {
+    display: none;
+}
+
+
 
 .navbar .brand{
   margin-left:-7px;

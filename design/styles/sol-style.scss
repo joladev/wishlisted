@@ -94,6 +94,15 @@ li input {
     }
   }
 }
+/*sets a different background on about*/
+.about{
+  li{
+    background: url(../images/about.png);
+    background-repeat:no-repeat;
+  }
+}
+
+
 li.dropdown-menu{
     background:$dropdown-box;
   }
@@ -102,16 +111,12 @@ li.dropdown-menu{
 }
 
 
-/* coloring of dropdown arrow */
+/* removes arrow from dropdown */
+.navbar .dropdown-menu:before {
+  display: none;
+}
 .navbar .dropdown-menu:after {
-  border-bottom: 6px solid transparent; 
-}
-.navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret{
-border-top-color: transparent;
-}
-
-a.menu:after, .dropdown-toggle:after {
-    content: none;
+    display: none;
 }
 
 /* coloring of logo */
