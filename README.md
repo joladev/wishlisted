@@ -1,16 +1,13 @@
-# wishlistd
+# wishlisted
 
-A wishlist sharing site written in noir, heavily influenced by [hastebin][hastebin]. 
-
-## Usage
-
-```bash
-lein deps
-lein run
-```
+Simple application using Clojure, Noir, ClojureScript, Jayq, Fetch, Crate and Korma to handle easy creation and sharing of wishlists in the browser.
 
 ## License
 
-Copyright (C) 2011 Erik Kronberg
+### Code
 
-[hastebin]: http://hastebin.com
+Copyright (C) 2012 Erik Kronberg
+
+### Design
+
+Copyright (C) 2012 Stina Qvarnström
