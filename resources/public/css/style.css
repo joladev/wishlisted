@@ -18,7 +18,9 @@ $box-width:        670px;
   margin-left: 15px; }
 
 .navbar .nav > li > a {
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 3px; }
 
 /* to get dropdown on hover */
 ul.nav li.dropdown:hover ul.dropdown-menu {
