@@ -4,10 +4,8 @@
 body {
   background: #fdf6e3; }
 
-a {
+a:hover {
   text-decoration: none; }
-  a:hover {
-    text-decoration: none; }
 
 /* banner bar */
 .container {
@@ -22,13 +20,6 @@ li input {
   background-color: #eee8d5;
   border-color: #586e75;
   color: #b58900; }
-
-/*drop down list */
-.navbar .nav li a {
-  color: #eee8d5;
-  text-shadow: none; }
-  .navbar .nav li a:hover {
-    color: #eee8d5; }
 
 /*divider*/
 .navbar .divider-vertical {
@@ -52,70 +43,6 @@ li input {
   background: url(../images/about.png);
   background-repeat: no-repeat; }
 
-li.dropdown-menu {
-  background: #fdf6e3; }
-
-/* coloring of logo */
-.navbar .brand {
-  background: #b58900;
-  color: #fde6a9; }
-  .navbar .brand:hover {
-    color: #fdf6e3;
-    background: #b58900; }
-
-/* create link*/
-/* title box
-#title-box input{
-  background:$title-input-bg;
-  color:$banner-link-color;
-  border:{
-    style:none;
-    color: transparent;
-    bottom:
-    {
-      style:solid;
-      color:$title-input-border;
-    }
-  }
-  &:hover{border-bottom-width:2px;}
-}
-*/
-/* wishes */
-ul.wishes {
-  list-style: none;
-  list-style-position: inside;
-  background: transparent; }
-  ul.wishes li {
-    background: transparent; }
-  ul.wishes input {
-    background: transparent;
-    border-style: none;
-    border-color: transparent;
-    border-bottom-style: solid;
-    border-bottom-color: #93a1a1; }
-
-input.description {
-  color: #d33682; }
-
-input.url {
-  color: #93a1a1; }
-
-/* delete x */
-.delete {
-  background: url(../images/x.png); }
-  .delete:hover {
-    background: url(../images/x-hover-red.png); }
-
-/*coloring of copyright box */
-#copyright {
-  background: transparent;
-  color: #eee8d5; }
-  #copyright a {
-    text-decoration: underline;
-    color: #eee8d5; }
-    #copyright a:hover {
-      text-decoration: none; }
-
 #icon-new {
   background: url(../images/new_icon.png);
   background-repeat: no-repeat; }
@@ -129,6 +56,51 @@ input.url {
   #icon-question:hover {
     background: url(../images/question_hover.png);
     background-repeat: no-repeat; }
+
+li.dropdown-menu {
+  background: #fdf6e3; }
+
+/* coloring of logo */
+.navbar .brand {
+  background: #b58900;
+  color: #fde6a9; }
+  .navbar .brand:hover {
+    color: #fdf6e3;
+    background: #b58900; }
+
+/*coloring of copyright box */
+#copyright {
+  background: transparent;
+  color: #eee8d5; }
+  #copyright a {
+    text-decoration: underline;
+    color: #eee8d5; }
+    #copyright a:hover {
+      text-decoration: none; }
+
+/* wishes */
+ul.wishes {
+  background: transparent;
+  box-shadow: none; }
+  ul.wishes li {
+    background: transparent; }
+  ul.wishes input {
+    background: transparent;
+    box-shadow: none;
+    border-color: transparent;
+    border-bottom-color: #93a1a1; }
+
+input.description {
+  color: #d33682; }
+
+input.url {
+  color: #93a1a1; }
+
+/* delete x */
+.delete {
+  background: url(../images/x.png); }
+  .delete:hover {
+    background: url(../images/x-hover-red.png); }
 
 #info-container {
   background: #001419; }

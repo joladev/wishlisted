@@ -12,8 +12,11 @@ $banner-height:    50px;
     margin: 0;
     padding: 0;
     background-repeat:no-repeat;
-  }
+}
 
+a{
+  text-decoration:none;
+}
 
 /* banner/navbar elemetns */
 
@@ -99,6 +102,21 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 }
 
 /* wishes */
+
+/* wishes */
+ul.wishes{
+  list-style:none;
+  list-style-position: inside;
+  input{
+    border:{
+      style:none;
+      bottom:{
+        style:solid;
+      }
+    }
+  }  
+}
+
 ul.wishes {
 	list-style-type: none;
   list-style-position: inside;

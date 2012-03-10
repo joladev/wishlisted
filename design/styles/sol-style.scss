@@ -2,47 +2,42 @@
 /* all the colororing with the solarized color scheme */
 
 /* variables */
-$body-background:     #fdf6e3;
-$banner-background:   #93a1a1;
-$banner-bg-hover:     #9eadad;
+$body-background      :     #fdf6e3;
+$banner-background    :     #93a1a1;
 
-$logo-background:     #b58900;
-$logo-text:           #fde6a9;
-$logo-text-hover:     #fdf6e3;
-$logo-bg-hover:       #b58900;
+$logo-background      :     #b58900;
+$logo-text            :     #fde6a9;
+$logo-text-hover      :     #fdf6e3;
+$logo-bg-hover        :     #b58900;
 
-$banner-link-color:   #eee8d5;
-$banner-link-hover:   #fdf6e3;
-$dropdown-box:        #fdf6e3;
-$dropdown-color:      #586e75;
+$dropdown-box         :     #fdf6e3;
+$dropdown-color       :     #586e75;
 
-$divider-background:  #657b83;
-$divider-border:      #76919b;
+$divider-background   :     #657b83;
+$divider-border       :     #76919b;
 
-$title-input-bg:      #eee8d5;
-$title-input-border:  #586e75;
-$title-input-color:   #b58900;
+$title-input-bg       :     #eee8d5;
+$title-input-border   :     #586e75;
+$title-input-color    :     #b58900;
 
-$btn-color:           #fdf6e3;
-$btn-border:          #657b83;
+$wishes-input-border  :     #93a1a1;
+$wish-color           :     #d33682;
+$url-color            :     #93a1a1;
 
-$wishes-input-border: #93a1a1;
-$wish-color:          #d33682;
-$url-color:           #93a1a1;
+$copyright-link-color :     #eee8d5;
+$copyright-color      :     #eee8d5;
 
-$copyright-link-color:#eee8d5;
-$copyright-color:     #eee8d5;
+$opacity-bg           :     #001419;
+$info-box-bg          :     #fdf6e3;
+$info-text            :     #268bd2;
 
-$opacity-bg:          #001419;
-$info-box-bg:         #fdf6e3;
-$info-text:           #268bd2;
+
 
 body{
   background:$body-background;
 }
 
 a{
-  text-decoration:none;
   &:hover{text-decoration:none;}
 }
 
@@ -64,16 +59,6 @@ li input {
   color: $title-input-color;
 }
 
-/*drop down list */
-.navbar .nav li a{
-  color: $banner-link-color;
-  text-shadow:none;
-  &:hover{
-    color: $banner-link-color;
-  }
-}
-
-
 /*divider*/
 .navbar .divider-vertical {
   background-color: $divider-background;
@@ -94,105 +79,12 @@ li input {
     }
   }
 }
+
 /*sets a different background on about*/
 .about{
   li{
     background: url(../images/about.png);
     background-repeat:no-repeat;
-  }
-}
-
-
-li.dropdown-menu{
-    background:$dropdown-box;
-  }
-.dropdown-menu .hover-bg{
-
-}
-
-
-
-/* coloring of logo */
-.navbar .brand{
-  background:$logo-background;
-  color: $logo-text;
-  &:hover{
-    color: $logo-text-hover;
-    background: $logo-bg-hover;
-  }
-}
-
-/* create link*/
-#create-wishlist{
- 
-}
-
-/* title box
-#title-box input{
-  background:$title-input-bg;
-  color:$banner-link-color;
-  border:{
-    style:none;
-    color: transparent;
-    bottom:
-    {
-      style:solid;
-      color:$title-input-border;
-    }
-  }
-  &:hover{border-bottom-width:2px;}
-}
-*/
-
-
-/* wishes */
-ul.wishes{
-  list-style:none;
-  list-style-position: inside;
-  background:transparent;
-  li{
-    background:transparent;
-  }
-  input{
-    background:transparent;
-    border:{
-      style:none;
-      color:transparent;
-      bottom:{
-        style:solid;
-        color: $wishes-input-border;
-      }
-    }
-  }  
-}
-
-input.description{
-  color:$wish-color;
-}
-input.url{
-  color:$url-color;
-}
-
-/* delete x */
-.delete{
-  background: url(../images/x.png);
-  &:hover{
-    background: url(../images/x-hover-red.png);
-  }
-}
-
-/*coloring of copyright box */
-#copyright{
-  background:transparent;
-  color:$copyright-color;
-
-  a{
-    text-decoration:underline;
-    color:$copyright-link-color;
-    &:hover{
-      text-decoration:none;
-
-    }
   }
 }
 
@@ -214,6 +106,73 @@ input.url{
   }
 }
 
+li.dropdown-menu{
+    background:$dropdown-box;
+  }
+
+
+/* coloring of logo */
+.navbar .brand{
+  background:$logo-background;
+  color: $logo-text;
+  &:hover{
+    color: $logo-text-hover;
+    background: $logo-bg-hover;
+  }
+}
+
+/*coloring of copyright box */
+#copyright{
+  background:transparent;
+  color:$copyright-color;
+  a{
+    text-decoration:underline;
+    color:$copyright-link-color;
+    &:hover{
+      text-decoration:none;
+    }
+  }
+}
+
+
+
+
+
+/* wishes */
+ul.wishes{
+  background:transparent;
+  box-shadow:none;
+  li{
+    background:transparent;
+  }
+  input{
+    background:transparent;
+    box-shadow:none;
+    border:{
+      color:transparent;
+      bottom:{
+        color: $wishes-input-border;
+      }
+    }
+  }  
+}
+
+input.description{
+  color:$wish-color;
+}
+input.url{
+  color:$url-color;
+}
+
+/* delete x */
+.delete{
+  background: url(../images/x.png);
+  &:hover{
+    background: url(../images/x-hover-red.png);
+  }
+}
+
+
 #info-container{
   background: $opacity-bg;
 }
@@ -221,6 +180,8 @@ input.url{
 #info-box{
   background: $info-box-bg;
 }
+
+
 
 #info-close{
   background: url(../images/close1.png);

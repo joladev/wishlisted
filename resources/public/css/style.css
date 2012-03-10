@@ -5,6 +5,9 @@
   padding: 0;
   background-repeat: no-repeat; }
 
+a {
+  text-decoration: none; }
+
 /* banner/navbar elemetns */
 .container {
   margin: 0px;
@@ -71,6 +74,14 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
   margin: 130px auto 80px auto; }
 
 /* wishes */
+/* wishes */
+ul.wishes {
+  list-style: none;
+  list-style-position: inside; }
+  ul.wishes input {
+    border-style: none;
+    border-bottom-style: solid; }
+
 ul.wishes {
   list-style-type: none;
   list-style-position: inside; }
