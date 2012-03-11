@@ -13,7 +13,7 @@
               {:builds
                [{:source-path "src",
                  :compiler
-                 {:output-dir "resources/public/cljs/",
+                 {:output-dir "cljs/",
                   :output-to "resources/public/cljs/cljs.js",
                   :optimizations :simple,
                   :pretty-print true}}]}

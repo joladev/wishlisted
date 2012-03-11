@@ -7,4 +7,4 @@ pom.xml
 .DS_Store
 .sass-cache
 .lein-plugins
-/resources/public/cljs
+cljs
