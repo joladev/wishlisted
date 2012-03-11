@@ -29,9 +29,8 @@
     (sql/drop-table :wish)
     (sql/drop-table :wishlist)))
 
-(defn -main []
-  (print "Migrating database...") (flush)
-  (drop-tables)
+(defn -main [cmd]
+  (when (= cmd "drop" (drop-tables))) ; optionally drop tables before creating
   (create-wishlist)
   (create-wish)
-  (println " done"))
+  (println "Done!"))
