@@ -24,9 +24,12 @@ $wishes-input-border  :     #93a1a1;
 $wish-color           :     #d33682;
 $url-color            :     #93a1a1;
 
-$copyright-link-color :     #eee8d5;
-$copyright-color      :     #eee8d5;
+$code-link-color      :     #eee8d5;
+$code-color           :     #eee8d5;
 $label-text           :     #b58900;
+
+$copyright-link-color :     #b58900;
+$copyright-color      :     #93a1a1;
 
 $opacity-bg           :     #001419;
 $info-box-bg          :     #fdf6e3;
@@ -123,30 +126,26 @@ li.dropdown-menu{
 }
 
 /*coloring of copyright box */
-#copyright{
+#code{
   background:transparent;
-  color:$copyright-color;
+  color:$code-color;
   .links{
-    color:$copyright-link-color;
+    color:$code-link-color;
   }
   a{
-    text-decoration:underline;
+    text-decoration:none;
     &:hover{
-      text-decoration:none;
+      text-decoration:underline;
     }
   }
 }
 
 .label{
-  background:$copyright-link-color;
+  background:$code-link-color;
   a{
     color: $label-text;
   }
 }
-
-
-
-
 
 
 /* wishes */
@@ -182,6 +181,15 @@ input.url{
     background: url(../images/x-hover-red.png);
   }
 }
+
+#copyright{
+  color: $copyright-color;
+  a{
+    color: $copyright-link-color;
+  }
+}
+
+
 
 
 #info-container{

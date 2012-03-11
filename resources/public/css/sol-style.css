@@ -69,15 +69,15 @@ li.dropdown-menu {
     background: #b58900; }
 
 /*coloring of copyright box */
-#copyright {
+#code {
   background: transparent;
   color: #eee8d5; }
-  #copyright .links {
+  #code .links {
     color: #eee8d5; }
-  #copyright a {
-    text-decoration: underline; }
-    #copyright a:hover {
-      text-decoration: none; }
+  #code a {
+    text-decoration: none; }
+    #code a:hover {
+      text-decoration: underline; }
 
 .label {
   background: #eee8d5; }
@@ -107,6 +107,11 @@ input.url {
   background: url(../images/x.png); }
   .delete:hover {
     background: url(../images/x-hover-red.png); }
+
+#copyright {
+  color: #93a1a1; }
+  #copyright a {
+    color: #b58900; }
 
 #info-container {
   background: #001419; }

@@ -86,7 +86,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 
 
 /*copyright box */
-#copyright{
+#code{
   float: right;
   padding: 6px 3px 0px 3px;
   p{
@@ -146,6 +146,15 @@ input.url{
   cursor: pointer;
 }
 
+#copyright{
+  position: fixed;
+  bottom:2px;
+  right:10px;
+  text-align: right;
+  p{
+    font-size:90%;
+  }
+}
 
 /*giant info box*/
 #info-container{
