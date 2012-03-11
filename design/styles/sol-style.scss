@@ -2,33 +2,36 @@
 /* all the colororing with the solarized color scheme */
 
 /* variables */
-$body-background:     #fdf6e3;
-$banner-background:   #93a1a1;
-$banner-bg-hover:     #9eadad;
-$logo-background:     #b58900;
-$logo-text:           #fde6a9;
-$logo-text-hover:     #fdf6e3;
-$banner-link-color:   #eee8d5;
-$banner-link-hover:   #fdf6e3;
-$dropdown-box:        #fdf6e3;
-$dropdown-color:      #586e75;
+$body-background      :     #fdf6e3;
+$banner-background    :     #93a1a1;
 
-$divider-background:  #657b83;
-$divider-border:      #76919b;
+$logo-background      :     #b58900;
+$logo-text            :     #fde6a9;
+$logo-text-hover      :     #fdf6e3;
+$logo-bg-hover        :     #b58900;
 
-$title-input-bg:      #eee8d5;
-$title-input-border:  #586e75;
-$title-input-color:   #b58900;
+$dropdown-box         :     #fdf6e3;
+$dropdown-color       :     #586e75;
 
-$btn-color:           #073642;
-$btn-border:           #657b83;
+$divider-background   :     #657b83;
+$divider-border       :     #76919b;
 
-$wishes-input-border: #93a1a1;
-$wish-color:          #d33682;
-$url-color:           #93a1a1;
+$title-input-bg       :     #eee8d5;
+$title-input-border   :     #eee8d5;
+$title-input-color    :     #b58900;
 
-$copyright-link-color:#eee8d5;
-$copyright-color:     #eee8d5;
+$wishes-input-border  :     #93a1a1;
+$wish-color           :     #d33682;
+$url-color            :     #93a1a1;
+
+$copyright-link-color :     #eee8d5;
+$copyright-color      :     #eee8d5;
+$label-text           :     #b58900;
+
+$opacity-bg           :     #001419;
+$info-box-bg          :     #fdf6e3;
+$info-text            :     #268bd2;
+
 
 
 body{
@@ -36,7 +39,6 @@ body{
 }
 
 a{
-  text-decoration:none;
   &:hover{text-decoration:none;}
 }
 
@@ -58,15 +60,6 @@ li input {
   color: $title-input-color;
 }
 
-/*drop down list */
-.navbar .nav li a{
-  color: $banner-link-color;
-  &:hover{
-    color: $banner-link-hover;
-  }
-}
-
-
 /*divider*/
 .navbar .divider-vertical {
   background-color: $divider-background;
@@ -75,124 +68,100 @@ li input {
 
 /* coloring of drop down */
 .dropdown-menu{
-  background:$dropdown-box;
+  background:transparent;
+  box-shadow:none;
+  border:none;
   li{
-    background:$dropdown-box;
+    background:url(../images/create.png);
+    background-repeat:no-repeat;
     color: $dropdown-color;
     &:hover{
       background: $dropdown-box;
     }
   }
 }
+
+/*sets a different background on about*/
+.about{
+  li{
+    background: url(../images/about.png);
+    background-repeat:no-repeat;
+  }
+}
+
+#icon-new{
+    background: url(../images/new_icon.png);
+    background-repeat: no-repeat;
+    &:hover{
+      background: url(../images/new_icon_hover.png);
+      background-repeat: no-repeat;
+    }
+}
+
+#icon-question{
+  background: url(../images/question.png);
+  background-repeat: no-repeat;
+  &:hover{
+    background: url(../images/question_hover.png);
+    background-repeat: no-repeat;
+  }
+}
+
 li.dropdown-menu{
     background:$dropdown-box;
   }
-.dropdown-menu .hover-bg{
 
-}
-
-
-/* coloring of dropdown arrow */
-.navbar .dropdown-menu:after {
-  border-bottom: 6px solid $dropdown-box; 
-}
-.navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret{
-border-top-color: $banner-link-color;
-}
 
 /* coloring of logo */
 .navbar .brand{
   background:$logo-background;
   color: $logo-text;
-  &:hover{color: $logo-text-hover;}
-}
-
-/* create link
-a#create-wishlist{
-  color: $banner-link-color;
   &:hover{
-    color: $banner-link-hover;  
+    color: $logo-text-hover;
+    background: $logo-bg-hover;
   }
 }
-*/
-/* title box
-#title-box input{
-  background:$title-input-bg;
-  color:$banner-link-color;
-  border:{
-    style:none;
-    color: transparent;
-    bottom:
-    {
-      style:solid;
-      color:$title-input-border;
+
+/*coloring of copyright box */
+#copyright{
+  background:transparent;
+  color:$copyright-color;
+  .links{
+    color:$copyright-link-color;
+  }
+  a{
+    text-decoration:underline;
+    &:hover{
+      text-decoration:none;
     }
   }
-  &:hover{border-bottom-width:2px;}
 }
-*/
-.btn{
-  border:1px solid $btn-border;
-  color: $btn-color;
-  background-color:#eee8d5;
-  background-image: linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
-  background-image: -o-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
-  background-image: -moz-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
-  background-image: -webkit-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
-  background-image: -ms-linear-gradient(bottom, rgb(205,198,177) 8%, rgb(229,223,204) 54%, rgb(253,246,227) 77%);
 
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.08, rgb(205,198,177)),
-    color-stop(0.54, rgb(229,223,204)),
-    color-stop(0.77, rgb(253,246,227))
-  );
+.label{
+  background:$copyright-link-color;
+  a{
+    color: $label-text;
+  }
 }
-.btn:hover {
-  background-color: #eee8d5;
-  background-position: 0px;
-  -webkit-transition: background-position 0s linear;
-  -moz-transition: background-position 0s linear;
-  -ms-transition: background-position 0s linear;
-  -o-transition: background-position 0s linear;
-  transition: background-position 0s linear;
 
 
-  border:1px solid $btn-border;
-  color: lighten($btn-color, 10%);
-  background-image: linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
-  background-image: -o-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
-  background-image: -moz-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
-  background-image: -webkit-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
-  background-image: -ms-linear-gradient(bottom, rgb(212,207,190) 8%, rgb(235,230,217) 54%, rgb(250,245,232) 77%);
 
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.08, rgb(212,207,190)),
-    color-stop(0.54, rgb(235,230,217)),
-    color-stop(0.77, rgb(250,245,232))
-  );
-}
+
+
 
 /* wishes */
 ul.wishes{
-  list-style:none;
-  list-style-position: inside;
   background:transparent;
+  box-shadow:none;
   li{
     background:transparent;
   }
   input{
     background:transparent;
+    box-shadow:none;
     border:{
-      style:none;
       color:transparent;
       bottom:{
-        style:solid;
         color: $wishes-input-border;
       }
     }
@@ -214,17 +183,21 @@ input.url{
   }
 }
 
-/*coloring of copyright box */
-#copyright{
-  background:transparent;
-  color:$copyright-color;
 
-  a{
-    text-decoration:underline;
-    color:$copyright-link-color;
-    &:hover{
-      text-decoration:none;
+#info-container{
+  background: $opacity-bg;
+}
 
-    }
-  }
+#info-box{
+  background: $info-box-bg;
+}
+
+
+
+#info-close{
+  background: url(../images/close1.png);
+}
+
+#info-text{
+  color:$info-text;
 }

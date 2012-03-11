@@ -1,42 +1,56 @@
 /* style.scss */
+/* by stinaq */
 
 /* variables */
-
 $banner-height:    37px;
 $logo-box-width:   120px;
 $box-width:        670px; 
-/*
-$banner-height:    1.7em;
-$logo-box-width:   120px;
-$box-width:        670px;
-*/
+
+$banner-height:    50px;
+
+
 * {
     margin: 0;
     padding: 0;
-  }
+    background-repeat:no-repeat;
+}
 
+a{
+  text-decoration:none;
+}
 
-/* banner */
+/* banner/navbar elemetns */
 
 .container{
   margin:0px;
   width:100%;
 }
 
-/* banner bar, height and font size 
-.nav{
-  height:$banner-height;
-  li{
-    height:$banner-height;
-    a{font-weight:bold;}
-  }
+/*logo/brand*/
+.navbar .brand{
+  margin-left:-7px;
+ font-size:27px;
 }
 
-.navbar .nav li a{
-  font-size: 110%;
-  font-weight:normal;
+/*icons*/
+#icon-new{
+  margin-left:15px;
 }
-*/
+
+.icon{
+  margin: 10px 6px 0 6px;
+  height:25px;
+  width:24px;
+  cursor: pointer;
+}
+
+/*to get elemetents closer together*/
+.navbar .nav > li > a {
+  padding-bottom:0px;
+  padding-right:0px;
+  padding-left:3px;
+}
+
 /* to get dropdown on hover */
 ul.nav li.dropdown:hover ul.dropdown-menu{
     display: block;    
@@ -45,49 +59,43 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 /*divider*/
 .navbar .divider-vertical {
   margin:0;
+  height:47px;
 }
 /* padding of dropdown */
 .dropdown-menu{
-
   li{
-    padding: 5px;
-    /*height:135px;*/
+    padding: 0px;
+    height: 40px;
   }
 }
 
-.btn{
-  margin-bottom:-3px;
+
+/* removes arrow from dropdown */
+.navbar .dropdown-menu:before {
+  display: none;
+}
+.navbar .dropdown-menu:after {
+    display: none;
 }
 
-.navbar .brand{
-  margin-left:-10px;
-
-}
-
-/* title box 
-
-#title-box{
-  float: left;
-  position:relative;
-  left:7px;
-  top:5px;
-  font-size:90%;
-}
-*/
+/*input for title*/
 #title-box input{
-  margin-top:5px;
+  margin-top:9px;
+  margin-left:10px;
 }
 
-/* create link
-a#create-wishlist{
-  float:left;
-  position: relative;
-  top:10px;
-  left:-7px;
-  font-size:1.1em;
-  cursor: pointer;
+
+/*copyright box */
+#copyright{
+  float: right;
+  padding: 6px 3px 0px 3px;
+  p{
+    font-size:90%;
+    margin: 7px 5px 0px 0px;
+  }
 }
- */
+
+
 /* main box */
 #box{
   width:$box-width;
@@ -95,6 +103,21 @@ a#create-wishlist{
 }
 
 /* wishes */
+
+/* wishes */
+ul.wishes{
+  list-style:none;
+  list-style-position: inside;
+  input{
+    border:{
+      style:none;
+      bottom:{
+        style:solid;
+      }
+    }
+  }  
+}
+
 ul.wishes {
 	list-style-type: none;
   list-style-position: inside;
@@ -123,12 +146,46 @@ input.url{
   cursor: pointer;
 }
 
-/*copyright box */
-#copyright{
-  float: right;
-  padding: 3px 3px 0px 3px;
-  p{
-    font-size:90%;
-    margin: 7px 5px 0px 0px;
-  }
+
+/*giant info box*/
+#info-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  z-index:2000;
+  opacity: 0.4;
+  -moz-opacity: 0.4;
+  filter:alpha(opacity=4);
+  visibility: hidden;
 }
+
+#info-box{
+  position: absolute;
+  left:50%;
+  /*margin left half of width to center box*/
+  margin-left:-150px;
+  width:300px;
+  z-index:3000;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  visibility: hidden;
+}
+
+#info-close{
+  position: absolute;
+  top:-7px;
+  right:-7px;
+  height:29px;
+  width:29px;
+  z-index:3001;
+}
+
+#info-text{
+  padding: 20px 20px 20px 20px;
+}
+
+
+

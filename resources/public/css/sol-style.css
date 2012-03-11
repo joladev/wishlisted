@@ -4,10 +4,8 @@
 body {
   background: #fdf6e3; }
 
-a {
+a:hover {
   text-decoration: none; }
-  a:hover {
-    text-decoration: none; }
 
 /* banner bar */
 .container {
@@ -20,14 +18,8 @@ a {
 
 li input {
   background-color: #eee8d5;
-  border-color: #586e75;
+  border-color: #eee8d5;
   color: #b58900; }
-
-/*drop down list */
-.navbar .nav li a {
-  color: #eee8d5; }
-  .navbar .nav li a:hover {
-    color: #fdf6e3; }
 
 /*divider*/
 .navbar .divider-vertical {
@@ -36,94 +28,72 @@ li input {
 
 /* coloring of drop down */
 .dropdown-menu {
-  background: #fdf6e3; }
+  background: transparent;
+  box-shadow: none;
+  border: none; }
   .dropdown-menu li {
-    background: #fdf6e3;
+    background: url(../images/create.png);
+    background-repeat: no-repeat;
     color: #586e75; }
     .dropdown-menu li:hover {
       background: #fdf6e3; }
 
+/*sets a different background on about*/
+.about li {
+  background: url(../images/about.png);
+  background-repeat: no-repeat; }
+
+#icon-new {
+  background: url(../images/new_icon.png);
+  background-repeat: no-repeat; }
+  #icon-new:hover {
+    background: url(../images/new_icon_hover.png);
+    background-repeat: no-repeat; }
+
+#icon-question {
+  background: url(../images/question.png);
+  background-repeat: no-repeat; }
+  #icon-question:hover {
+    background: url(../images/question_hover.png);
+    background-repeat: no-repeat; }
+
 li.dropdown-menu {
   background: #fdf6e3; }
-
-/* coloring of dropdown arrow */
-.navbar .dropdown-menu:after {
-  border-bottom: 6px solid #fdf6e3; }
-
-.navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret {
-  border-top-color: #eee8d5; }
 
 /* coloring of logo */
 .navbar .brand {
   background: #b58900;
   color: #fde6a9; }
   .navbar .brand:hover {
-    color: #fdf6e3; }
+    color: #fdf6e3;
+    background: #b58900; }
 
-/* create link
-a#create-wishlist{
-  color: $banner-link-color;
-  &:hover{
-    color: $banner-link-hover;  
-  }
-}
-*/
-/* title box
-#title-box input{
-  background:$title-input-bg;
-  color:$banner-link-color;
-  border:{
-    style:none;
-    color: transparent;
-    bottom:
-    {
-      style:solid;
-      color:$title-input-border;
-    }
-  }
-  &:hover{border-bottom-width:2px;}
-}
-*/
-.btn {
-  border: 1px solid #657b83;
-  color: #073642;
-  background-color: #eee8d5;
-  background-image: linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
-  background-image: -o-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
-  background-image: -moz-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
-  background-image: -webkit-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
-  background-image: -ms-linear-gradient(bottom, #cdc6b1 8%, #e5dfcc 54%, #fdf6e3 77%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.08, #cdc6b1), color-stop(0.54, #e5dfcc), color-stop(0.77, #fdf6e3)); }
+/*coloring of copyright box */
+#copyright {
+  background: transparent;
+  color: #eee8d5; }
+  #copyright .links {
+    color: #eee8d5; }
+  #copyright a {
+    text-decoration: underline; }
+    #copyright a:hover {
+      text-decoration: none; }
 
-.btn:hover {
-  background-color: #eee8d5;
-  background-position: 0px;
-  -webkit-transition: background-position 0s linear;
-  -moz-transition: background-position 0s linear;
-  -ms-transition: background-position 0s linear;
-  -o-transition: background-position 0s linear;
-  transition: background-position 0s linear;
-  border: 1px solid #657b83;
-  color: #0c5c70;
-  background-image: linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -o-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -moz-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -webkit-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -ms-linear-gradient(bottom, #d4cfbe 8%, #ebe6d9 54%, #faf5e8 77%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.08, #d4cfbe), color-stop(0.54, #ebe6d9), color-stop(0.77, #faf5e8)); }
+.label {
+  background: #eee8d5; }
+  .label a {
+    color: #b58900; }
 
 /* wishes */
 ul.wishes {
-  list-style: none;
-  list-style-position: inside;
-  background: transparent; }
+  background: transparent;
+  box-shadow: none; }
   ul.wishes li {
     background: transparent; }
   ul.wishes input {
     background: transparent;
-    border-style: none;
+    box-shadow: none;
     border-color: transparent;
-    border-bottom-style: solid;
     border-bottom-color: #93a1a1; }
 
 input.description {
@@ -138,12 +108,14 @@ input.url {
   .delete:hover {
     background: url(../images/x-hover-red.png); }
 
-/*coloring of copyright box */
-#copyright {
-  background: transparent;
-  color: #eee8d5; }
-  #copyright a {
-    text-decoration: underline;
-    color: #eee8d5; }
-    #copyright a:hover {
-      text-decoration: none; }
+#info-container {
+  background: #001419; }
+
+#info-box {
+  background: #fdf6e3; }
+
+#info-close {
+  background: url(../images/close1.png); }
+
+#info-text {
+  color: #268bd2; }
