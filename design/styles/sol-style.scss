@@ -26,6 +26,7 @@ $url-color            :     #93a1a1;
 
 $copyright-link-color :     #eee8d5;
 $copyright-color      :     #eee8d5;
+$label-text           :     #d33682;
 
 $opacity-bg           :     #001419;
 $info-box-bg          :     #fdf6e3;
@@ -125,14 +126,24 @@ li.dropdown-menu{
 #copyright{
   background:transparent;
   color:$copyright-color;
+  .links{
+    color:$copyright-link-color;
+  }
   a{
     text-decoration:underline;
-    color:$copyright-link-color;
     &:hover{
       text-decoration:none;
     }
   }
 }
+
+.label{
+  background:$copyright-link-color;
+  a{
+    color: $label-text;
+  }
+}
+
 
 
 
