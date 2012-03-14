@@ -2,8 +2,8 @@
   (:require [wishlistd.models.sql :as model])
   (:use noir.fetch.remotes))
 
-(def layout (slurp "resources/public/index.html"))
-(defn main-page [] layout)
+(defn layout [] (slurp "resources/public/index.html"))
+(defn main-page [] (layout))
 
 ; REMOTES
 ;
