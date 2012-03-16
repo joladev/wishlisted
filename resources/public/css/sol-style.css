@@ -32,16 +32,11 @@ li input {
   box-shadow: none;
   border: none; }
   .dropdown-menu li {
-    background: url(../images/create.png);
+    background: url(../images/text-create.png);
     background-repeat: no-repeat;
     color: #586e75; }
     .dropdown-menu li:hover {
       background: #fdf6e3; }
-
-/*sets a different background on about*/
-.about li {
-  background: url(../images/about.png);
-  background-repeat: no-repeat; }
 
 #create-wishlist {
   background: url(../images/icon-new.png);
@@ -66,6 +61,19 @@ li input {
   background: url(../images/icon-refresh.png); }
   #icon-refresh:hover {
     background: url(../images/icon-refresh-hover.png); }
+
+/*sets a different background on about*/
+.about li {
+  background: url(../images/text-about.png);
+  background-repeat: no-repeat; }
+
+.save li {
+  background: url(../images/text-save.png);
+  background-repeat: no-repeat; }
+
+.refresh li {
+  background: url(../images/text-refresh.png);
+  background-repeat: no-repeat; }
 
 li.dropdown-menu {
   background: #fdf6e3; }

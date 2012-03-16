@@ -75,7 +75,7 @@ li input {
   box-shadow:none;
   border:none;
   li{
-    background:url(../images/create.png);
+    background:url(../images/text-create.png);
     background-repeat:no-repeat;
     color: $dropdown-color;
     &:hover{
@@ -84,13 +84,7 @@ li input {
   }
 }
 
-/*sets a different background on about*/
-.about{
-  li{
-    background: url(../images/about.png);
-    background-repeat:no-repeat;
-  }
-}
+
 
 #create-wishlist{
     background: url(../images/icon-new.png);
@@ -120,6 +114,26 @@ li input {
   background:url(../images/icon-refresh.png);
   &:hover{
     background:url(../images/icon-refresh-hover.png)
+  }
+}
+
+/*sets a different background on about*/
+.about{
+  li{
+    background: url(../images/text-about.png);
+    background-repeat:no-repeat;
+  }
+}
+.save{
+  li{
+    background: url(../images/text-save.png);
+    background-repeat:no-repeat;
+  }
+}
+.refresh{
+  li{
+    background: url(../images/text-refresh.png);
+    background-repeat:no-repeat;
   }
 }
 
