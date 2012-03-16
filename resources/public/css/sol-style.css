@@ -43,19 +43,29 @@ li input {
   background: url(../images/about.png);
   background-repeat: no-repeat; }
 
-#icon-new {
-  background: url(../images/new_icon.png);
+#create-wishlist {
+  background: url(../images/icon-new.png);
   background-repeat: no-repeat; }
-  #icon-new:hover {
-    background: url(../images/new_icon_hover.png);
+  #create-wishlist:hover {
+    background: url(../images/icon-new-hover.png);
     background-repeat: no-repeat; }
 
-#icon-question {
-  background: url(../images/question.png);
+#icon-about {
+  background: url(../images/icon-about.png);
   background-repeat: no-repeat; }
-  #icon-question:hover {
-    background: url(../images/question_hover.png);
+  #icon-about:hover {
+    background: url(../images/icon-about-hover.png);
     background-repeat: no-repeat; }
+
+#icon-save {
+  background: url(../images/icon-save.png); }
+  #icon-save:hover {
+    background: url(../images/icon-save-hover.png); }
+
+#icon-refresh {
+  background: url(../images/icon-refresh.png); }
+  #icon-refresh:hover {
+    background: url(../images/icon-refresh-hover.png); }
 
 li.dropdown-menu {
   background: #fdf6e3; }
