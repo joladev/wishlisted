@@ -131,6 +131,16 @@ input.url {
   #copyright a {
     color: #b58900; }
 
+#startinfo-container {
+  background: url(../images/arrow.png);
+  background-repeat: no-repeat; }
+
+#startinfo-text {
+  border: 1px solid #999;
+  -webkit-box-shadow: 5px 5px 5px 2px #838173;
+  -moz-box-shadow: 5px 5px 5px 2px #838173;
+  box-shadow: 5px 5px 5px 2px #838173; }
+
 #info-container {
   background: #001419; }
 

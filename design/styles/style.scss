@@ -36,10 +36,6 @@ a{
 }
 
 /*icons*/
-#icon-new{
-  margin-left:15px;
-}
-
 .icon{
   height:$icon-height;
   width:$icon-width;
@@ -197,6 +193,30 @@ input.url{
 #info-text{
   padding: 20px 20px 20px 20px;
 }
+$startinfo-position-top: 150px;
+$startinfo-position-left: 50px;
 
+
+/*startinfo-box, with arrow*/
+#startinfo-container{
+  position: absolute;
+  left:$startinfo-position-top;
+  top:$startinfo-position-left;
+  height:300px;
+  width:400px;
+
+}
+
+#startinfo-text{
+  position: absolute;
+  left:90px;
+  top:$startinfo-position-left + 30px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  p{
+    padding:20px;
+  }
+}
 
 
