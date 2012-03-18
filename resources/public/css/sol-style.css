@@ -36,7 +36,7 @@ li input {
     background-repeat: no-repeat;
     color: #586e75; }
     .dropdown-menu li:hover {
-      background: #fdf6e3; }
+      background: transparent; }
 
 #create-wishlist {
   background: url(../images/icon-new.png);
@@ -133,13 +133,18 @@ input.url {
 
 #startinfo-container {
   background: url(../images/arrow.png);
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  z-index: 10000; }
 
 #startinfo-text {
   border: 1px solid #999;
   -webkit-box-shadow: 5px 5px 5px 2px #838173;
   -moz-box-shadow: 5px 5px 5px 2px #838173;
   box-shadow: 5px 5px 5px 2px #838173; }
+  #startinfo-text p {
+    color: #073642; }
+  #startinfo-text a {
+    color: #268bd2; }
 
 #info-container {
   background: #001419; }

@@ -11,6 +11,9 @@ $box-width:        670px;
 
 $banner-height:    50px;
 
+$startinfo-position-top: 80px;
+$startinfo-position-left: 145px;
+
 
 * {
     margin: 0;
@@ -193,15 +196,14 @@ input.url{
 #info-text{
   padding: 20px 20px 20px 20px;
 }
-$startinfo-position-top: 150px;
-$startinfo-position-left: 50px;
+
 
 
 /*startinfo-box, with arrow*/
 #startinfo-container{
   position: absolute;
-  left:$startinfo-position-top;
-  top:$startinfo-position-left;
+  left:$startinfo-position-left;
+  top:$startinfo-position-top;
   height:300px;
   width:400px;
 
@@ -210,7 +212,7 @@ $startinfo-position-left: 50px;
 #startinfo-text{
   position: absolute;
   left:90px;
-  top:$startinfo-position-left + 30px;
+  top:80px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;

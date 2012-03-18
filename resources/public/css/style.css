@@ -149,8 +149,8 @@ input.url {
 /*startinfo-box, with arrow*/
 #startinfo-container {
   position: absolute;
-  left: 150px;
-  top: 50px;
+  left: 145px;
+  top: 80px;
   height: 300px;
   width: 400px; }
 

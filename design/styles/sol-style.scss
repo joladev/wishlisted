@@ -35,6 +35,8 @@ $opacity-bg           :     #001419;
 $info-box-bg          :     #fdf6e3;
 $info-text            :     #268bd2;
 
+$info-container-color :     #073642;
+$info-container-a     :     #268bd2;
 
 
 body{
@@ -79,7 +81,7 @@ li input {
     background-repeat:no-repeat;
     color: $dropdown-color;
     &:hover{
-      background: $dropdown-box;
+      background: transparent;
     }
   }
 }
@@ -219,12 +221,19 @@ input.url{
 #startinfo-container{
   background: url(../images/arrow.png);
   background-repeat:no-repeat;
+  z-index:10000;
 }
 #startinfo-text{
   border: 1px solid #999;
--webkit-box-shadow: 5px 5px 5px 2px #838173;
--moz-box-shadow: 5px 5px 5px 2px #838173;
-box-shadow: 5px 5px 5px 2px #838173;
+  -webkit-box-shadow: 5px 5px 5px 2px #838173;
+  -moz-box-shadow: 5px 5px 5px 2px #838173;
+  box-shadow: 5px 5px 5px 2px #838173;
+  p{
+    color:$info-container-color;
+  }
+  a{
+    color:$info-container-a;
+  }
 }
 
 
