@@ -133,6 +133,9 @@ input.url {
   -moz-border-radius: 20px;
   border-radius: 20px; }
 
+#info-outer {
+  position: absolute; }
+
 #info-close {
   position: absolute;
   top: -7px;
