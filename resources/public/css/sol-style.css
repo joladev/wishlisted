@@ -159,3 +159,5 @@ input.url {
 
 #info-text {
   color: #268bd2; }
+  #info-text a {
+    text-decoration: underline; }

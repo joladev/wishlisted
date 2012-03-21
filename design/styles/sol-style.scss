@@ -256,4 +256,7 @@ input.url{
 
 #info-text{
   color:$info-text;
+  a{
+    text-decoration:underline;
+  }
 }
