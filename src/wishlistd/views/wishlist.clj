@@ -1,5 +1,5 @@
 (ns wishlistd.views.wishlist
-  (:require x[wishlistd.models.sql :as model])
+  (:require [wishlistd.models.sql :as model])
   (:use noir.fetch.remotes))
 
 (def layout (slurp "resources/public/index.html"))
