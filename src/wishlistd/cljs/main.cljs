@@ -192,6 +192,12 @@
   (fn [e]
     (hide-info!)))
 
+(delegate $body "#icon-refresh" :click
+  (fn [e]
+    (let [code (get-path)]
+      (when-not (empty? code)
+        (read-wishlist-rem code)))))
+
 ; START IT UP
 
 (defn start-up []
