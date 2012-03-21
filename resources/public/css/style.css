@@ -139,7 +139,8 @@ input.url {
   right: -7px;
   height: 29px;
   width: 29px;
-  z-index: 3001; }
+  z-index: 3001;
+  cursor: pointer; }
 
 #info-text {
   padding: 20px 20px 20px 20px; }
