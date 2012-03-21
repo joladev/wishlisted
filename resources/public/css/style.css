@@ -124,6 +124,7 @@ input.url {
 
 #info-box {
   position: absolute;
+  top: 120px;
   left: 50%;
   /*margin left half of width to center box*/
   margin-left: -150px;
@@ -132,9 +133,6 @@ input.url {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px; }
-
-#info-outer {
-  position: absolute; }
 
 #info-close {
   position: absolute;
