@@ -120,8 +120,7 @@ input.url {
   z-index: 2000;
   opacity: 0.4;
   -moz-opacity: 0.4;
-  filter: alpha(opacity=4);
-  visibility: hidden; }
+  filter: alpha(opacity=4); }
 
 #info-box {
   position: absolute;
@@ -132,8 +131,7 @@ input.url {
   z-index: 3000;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  border-radius: 20px;
-  visibility: hidden; }
+  border-radius: 20px; }
 
 #info-close {
   position: absolute;
