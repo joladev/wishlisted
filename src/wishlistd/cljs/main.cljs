@@ -62,19 +62,22 @@
   generate the html to fill them again and sets the path."
   (empty $content)
   (empty $header)
-  (remove ($ "#startinfo-container"))
+  (hide-arrow!)
   (append $content (wish-ul wish))
   (append $header  (wishlist-title title))
   (set-path! code))
 
 (defn show-info! []
-  (append $body ($ info-box)))
+  (append $body (info-box)))
 
 (defn hide-info! []
   (remove ($ info-box)))
 
 (defn show-arrow! []
   (append $body (arrow)))
+
+(defn hide-arrow! []
+  (remove ($ arrow)))
 
 (defn title-from-html []
   "Gets the current page title."
@@ -179,7 +182,7 @@
 
 (delegate $body "#icon-about" :click
   (fn [e]
-    (when-not (empty? ($ info-box))
+    (when (empty? ($ info-box))
       (show-info!))))
 
 (delegate $body "#info-close" :click
