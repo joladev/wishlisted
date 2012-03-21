@@ -83,7 +83,7 @@
 ; REMOTES
 
 (defn create-wishlist-rem []
-  (letrem [neu (create-wishlist {:title "Default"})]
+  (letrem [neu (create-wishlist {:title "Name your wishlist!"})]
     (show-wishlist! neu)))
 
 (defn read-wishlist-rem [code]
