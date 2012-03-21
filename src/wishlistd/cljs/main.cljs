@@ -47,7 +47,7 @@
    [:div#info-box
     [:div#info-close]
     [:div#info-text [:p "Wishlisted.org gives you a single place for all your wishlists, no signup required. Simply create a wishlist and add some wishes and optionally URLs. You will be automatically assigned your own unique URL and you can use this to return to your wishlist at any time. Anyone else with the link will also be able to view and update it."]
-                    [:p "The site was built using a combination of open source technologies by " [:a {:href "http://variadic.me"} "Erik Kronberg"] " and " [:a {:href "http://stinaq.se"} "Stina Qvarnström"] "."]]]
+                    [:p "The site was built by " [:a {:href "http://variadic.me"} "Erik Kronberg"] " and " [:a {:href "http://stinaq.se"} "Stina Qvarnström"] ", using a combination of open source technologies. To see the actual source code, " [:a {:href "https://github.com/eakron/wishlistd"} "click here"] "."]]]
    [:div#info-container]])
 
 ; GETTING AND SETTING
