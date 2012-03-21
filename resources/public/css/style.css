@@ -20,13 +20,9 @@ a {
   font-size: 27px; }
 
 /*icons*/
-#icon-new {
-  margin-left: 15px; }
-
 .icon {
-  margin: 10px 6px 0 6px;
-  height: 25px;
-  width: 24px;
+  height: 47px;
+  width: 40px;
   cursor: pointer; }
 
 /*to get elemetents closer together*/
@@ -149,3 +145,21 @@ input.url {
 
 #info-text {
   padding: 20px 20px 20px 20px; }
+
+/*startinfo-box, with arrow*/
+#startinfo-container {
+  position: absolute;
+  left: 145px;
+  top: 80px;
+  height: 300px;
+  width: 400px; }
+
+#startinfo-text {
+  position: absolute;
+  left: 90px;
+  top: 80px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+  #startinfo-text p {
+    padding: 20px; }

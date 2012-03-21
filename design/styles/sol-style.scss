@@ -35,6 +35,8 @@ $opacity-bg           :     #001419;
 $info-box-bg          :     #fdf6e3;
 $info-text            :     #268bd2;
 
+$info-container-color :     #073642;
+$info-container-a     :     #268bd2;
 
 
 body{
@@ -75,38 +77,65 @@ li input {
   box-shadow:none;
   border:none;
   li{
-    background:url(../images/create.png);
+    background:url(../images/text-create.png);
     background-repeat:no-repeat;
     color: $dropdown-color;
     &:hover{
-      background: $dropdown-box;
+      background: transparent;
     }
+  }
+}
+
+
+
+#create-wishlist{
+    background: url(../images/icon-new.png);
+    background-repeat: no-repeat;
+    &:hover{
+      background: url(../images/icon-new-hover.png);
+      background-repeat: no-repeat;
+    }
+}
+
+#icon-about{
+  background: url(../images/icon-about.png);
+  background-repeat: no-repeat;
+  &:hover{
+    background: url(../images/icon-about-hover.png);
+    background-repeat: no-repeat;
+  }
+}
+#icon-save{
+  background:url(../images/icon-save.png);
+  &:hover{
+    background:url(../images/icon-save-hover.png);
+  }
+}
+
+#icon-refresh{
+  background:url(../images/icon-refresh.png);
+  &:hover{
+    background:url(../images/icon-refresh-hover.png)
   }
 }
 
 /*sets a different background on about*/
 .about{
   li{
-    background: url(../images/about.png);
+    background: url(../images/text-about.png);
     background-repeat:no-repeat;
   }
 }
-
-#icon-new{
-    background: url(../images/new_icon.png);
-    background-repeat: no-repeat;
-    &:hover{
-      background: url(../images/new_icon_hover.png);
-      background-repeat: no-repeat;
-    }
+.save{
+  li{
+    background: url(../images/text-save.png);
+    background-repeat:no-repeat;
+  }
 }
-
-#icon-question{
-  background: url(../images/question.png);
-  background-repeat: no-repeat;
-  &:hover{
-    background: url(../images/question_hover.png);
-    background-repeat: no-repeat;
+.refresh{
+  li{
+    background: url(../images/text-refresh.png);
+    background-repeat:no-repeat;
   }
 }
 
@@ -189,7 +218,23 @@ input.url{
   }
 }
 
-
+#startinfo-container{
+  background: url(../images/arrow.png);
+  background-repeat:no-repeat;
+  z-index:10000;
+}
+#startinfo-text{
+  border: 1px solid #999;
+  -webkit-box-shadow: 5px 5px 5px 2px #838173;
+  -moz-box-shadow: 5px 5px 5px 2px #838173;
+  box-shadow: 5px 5px 5px 2px #838173;
+  p{
+    color:$info-container-color;
+  }
+  a{
+    color:$info-container-a;
+  }
+}
 
 
 #info-container{
