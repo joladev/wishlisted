@@ -42,6 +42,12 @@
           browsers address field to visit and update the wishlist. Share it with your friends so that they can get you all the things
           you wish for!"]]])
 
+(defpartial info-box []
+  [:div [:div#info-box
+   [:div#info-close]
+   [:p#info-text "Wishlist is created by Stina Qvarnström and Erik Kronberg. Bla bla. osv."]]
+  [:div#info-container]])
+
 ; GETTING AND SETTING
 
 (defn get-path []
@@ -60,6 +66,12 @@
   (append $content (wish-ul wish))
   (append $header  (wishlist-title title))
   (set-path! code))
+
+(defn show-info! []
+  (append $body ($ info-box)))
+
+(defn hide-info! []
+  (remove ($ info-box)))
 
 (defn show-arrow! []
   (append $body (arrow)))
@@ -164,6 +176,15 @@
         (when-not (.hasClass $parent "last")
           (remove $parent)
           (delete-wish-rem $parent))))))
+
+(delegate $body "#icon-about" :click
+  (fn [e]
+    (when-not (empty? ($ info-box))
+      (show-info!))))
+
+(delegate $body "#info-close" :click
+  (fn [e]
+    (hide-info!)))
 
 ; START IT UP
 
