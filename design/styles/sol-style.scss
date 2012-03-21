@@ -3,6 +3,7 @@
 
 /* variables */
 $body-background      :     #fdf6e3;
+$p-color              :     #3f5565;
 $banner-background    :     #93a1a1;
 
 $logo-background      :     #b58900;
@@ -45,6 +46,10 @@ body{
 
 a{
   &:hover{text-decoration:none;}
+}
+
+p{
+  color:$p-color;
 }
 
 /* banner bar */
@@ -228,9 +233,6 @@ input.url{
   -webkit-box-shadow: 5px 5px 5px 2px #838173;
   -moz-box-shadow: 5px 5px 5px 2px #838173;
   box-shadow: 5px 5px 5px 2px #838173;
-  p{
-    color:$info-container-color;
-  }
   a{
     color:$info-container-a;
   }

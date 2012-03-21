@@ -7,6 +7,9 @@ body {
 a:hover {
   text-decoration: none; }
 
+p {
+  color: #3f5565; }
+
 /* banner bar */
 .container {
   background-color: #93a1a1; }
@@ -141,8 +144,6 @@ input.url {
   -webkit-box-shadow: 5px 5px 5px 2px #838173;
   -moz-box-shadow: 5px 5px 5px 2px #838173;
   box-shadow: 5px 5px 5px 2px #838173; }
-  #startinfo-text p {
-    color: #073642; }
   #startinfo-text a {
     color: #268bd2; }
 
