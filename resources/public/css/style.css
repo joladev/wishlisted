@@ -153,12 +153,12 @@ input.url {
   height: 300px;
   width: 400px; }
 
-.startinfo-text {
+#startinfo-text {
   position: absolute;
   left: 90px;
   top: 80px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px; }
-  .startinfo-text p {
+  #startinfo-text p {
     padding: 20px; }
