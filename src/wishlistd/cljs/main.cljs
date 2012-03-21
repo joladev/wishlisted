@@ -43,10 +43,11 @@
           you wish for!"]]])
 
 (defpartial info-box []
-  [:div [:div#info-box
-   [:div#info-close]
-   [:p#info-text "Wishlist is created by Stina Qvarnström and Erik Kronberg. Bla bla. osv."]]
-  [:div#info-container]])
+  [:div 
+   [:div#info-box
+    [:div#info-close]
+    [:p#info-text "Wishlist is created by Stina Qvarnström and Erik Kronberg. Bla bla. osv."]]
+   [:div#info-container]])
 
 ; GETTING AND SETTING
 
@@ -67,17 +68,19 @@
   (append $header  (wishlist-title title))
   (set-path! code))
 
-(defn show-info! []
-  (append $body (info-box)))
-
-(defn hide-info! []
-  (remove ($ info-box)))
-
 (defn show-arrow! []
   (append $body (arrow)))
 
 (defn hide-arrow! []
   (remove ($ arrow)))
+
+(defn show-info! []
+  (hide-arrow!)
+  (append $body (info-box)))
+
+(defn hide-info! []
+  (show-arrow!)
+  (remove ($ info-box)))
 
 (defn title-from-html []
   "Gets the current page title."
