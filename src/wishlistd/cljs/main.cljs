@@ -80,7 +80,8 @@
   (append $body (info-box)))
 
 (defn hide-info! []
-  (show-arrow!)
+  (when (empty? (get-path))
+    (show-arrow!))
   (remove ($ info-box)))
 
 (defn title-from-html []
