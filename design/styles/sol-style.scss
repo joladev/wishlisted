@@ -249,6 +249,9 @@ input.url{
 
 #info-close{
   background: url(../images/close1.png);
+  &:hover{
+    background: url(../images/close-hover.png);
+  }
 }
 
 #info-text{
