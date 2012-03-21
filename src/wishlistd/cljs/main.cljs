@@ -192,6 +192,10 @@
   (fn [e]
     (hide-info!)))
 
+(delegate $body "#info-container" :click
+  (fn [e]
+    (hide-info!)))
+
 (delegate $body "#icon-refresh" :click
   (fn [e]
     (let [code (get-path)]
