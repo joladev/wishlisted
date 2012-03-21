@@ -47,8 +47,8 @@
    [:div#info-box
     [:div#info-close]
     [:div#info-text [:p "Wishlisted.org gives you a single place for all your wishlists, no signup required. Simply create a wishlist and add some wishes and optionally URLs. You will be automatically assigned your own unique URL that you can use to return to your wishlist at any time. Anyone else with the link will also be able to view and update it."]
-                    [:p "The site was built using a combination of open source technologies by Erik Kronberg and Stina Qvarnström."]]
-   [:div#info-container]]])
+                    [:p "The site was built using a combination of open source technologies by Erik Kronberg and Stina Qvarnström."]]]
+   [:div#info-container]])
 
 ; GETTING AND SETTING
 
