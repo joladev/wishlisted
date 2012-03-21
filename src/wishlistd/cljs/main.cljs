@@ -35,6 +35,13 @@
 (defpartial wishlist-title [title]
   [:input {:type "text" :class "title" :value title}])
 
+(defpartial arrow []
+  [:div#startinfo-container
+   [:div#startinfo-text
+    [:p "Create your wishlist by clicking the icon above. Add wished and url to the page. Save the unique link in your 
+          browsers address field to visit and update the wishlist. Share it with your friends so that they can get you all the things
+          you wish for!"]]])
+
 ; GETTING AND SETTING
 
 (defn get-path []
@@ -53,6 +60,9 @@
   (append $content (wish-ul wish))
   (append $header  (wishlist-title title))
   (set-path! code))
+
+(defn show-arrow! []
+  (append $body (arrow)))
 
 (defn title-from-html []
   "Gets the current page title."
@@ -159,8 +169,9 @@
 
 (defn start-up []
   (let [code (get-path)]
-    (when-not (empty? code)
-      (read-wishlist-rem code))))
+    (if-not (empty? code)
+      (read-wishlist-rem code)
+      (show-arrow!))))
 
 (set! js/window.onpopstate
   (fn [e]
