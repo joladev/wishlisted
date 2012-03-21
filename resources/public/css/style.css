@@ -162,4 +162,5 @@ input.url {
   -moz-border-radius: 20px;
   border-radius: 20px; }
   #startinfo-text p {
-    padding: 20px; }
+    padding: 20px;
+    padding-bottom: 10px; }
