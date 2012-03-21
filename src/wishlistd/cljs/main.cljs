@@ -38,8 +38,8 @@
 (defpartial arrow []
   [:div#startinfo-container
    [:div#startinfo-text
-    [:p "Create your wishlist by clicking the icon above. Add wished and url to the page. Save the unique link in your 
-          browsers address field to visit and update the wishlist. Share it with your friends so that they can get you all the things
+    [:p "Create your wishlist by clicking the icon above. Add wishes and URLs to your wishlist. Save the unique link in your 
+          browser address field to return to and update the wishlist. Share it with your friends so that they can get you all the things
           you wish for!"]]])
 
 (defpartial info-box []
