@@ -49,6 +49,7 @@
   generate the html to fill them again and sets the path."
   (empty $content)
   (empty $header)
+  (remove ($ "#startinfo-container"))
   (append $content (wish-ul wish))
   (append $header  (wishlist-title title))
   (set-path! code))
