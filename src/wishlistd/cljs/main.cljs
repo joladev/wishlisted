@@ -39,8 +39,8 @@
   [:div#startinfo-container
    [:div#startinfo-text
     [:p "Create your wishlist by clicking the icon above. Add wishes and URLs to your wishlist. Save the unique link in your 
-          browser address field to return to and update the wishlist. Share it with your friends so that they can get you all the things
-          you wish for!"]]])
+         browser address field to return to and update the wishlist. Share it with your friends so that they can get you all the things
+         you wish for!"]]])
 
 (defpartial info-box []
   [:div 
@@ -174,6 +174,7 @@
               (create-wish-rem parent)
               (update-wish-rem parent))))))))
 
+; URL is simpler, we just check whether or not it is changed, and update.
 (delegate $content ".url" :change
   (fn [e]
     (this-as me
@@ -181,6 +182,7 @@
         (when-not (empty? (.attr $parent "id"))
           (update-wish-rem $parent))))))
 
+; Only delete if the wish is not "last".
 (delegate $content ".delete" :click
   (fn [e]
     (this-as me
@@ -198,6 +200,7 @@
   (fn [e]
     (hide-info!)))
 
+; Don't allow refresh unless a wishlist is chosen.
 (delegate $body "#icon-refresh" :click
   (fn [e]
     (let [code (get-path)]
