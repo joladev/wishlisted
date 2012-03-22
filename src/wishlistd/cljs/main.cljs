@@ -212,7 +212,6 @@
       (read-wishlist-rem code)
       (show-arrow!))))
 
-(empty $content) ; Clear the "Please activate JavaScript" message
 (set! js/window.onpopstate
   (fn [e]
     (start-up)))
