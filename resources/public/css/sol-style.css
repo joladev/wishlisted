@@ -8,7 +8,7 @@ a:hover {
   text-decoration: none; }
 
 p {
-  color: #3f5565; }
+  color: #b58900; }
 
 /*change color of selected text */
 ::selection {
@@ -149,7 +149,7 @@ input.url {
   z-index: 10000; }
 
 #startinfo-text {
-  border: 1px solid #999;
+  border: 1px solid #cfc9b7;
   -webkit-box-shadow: 5px 5px 5px 2px #838173;
   -moz-box-shadow: 5px 5px 5px 2px #838173;
   box-shadow: 5px 5px 5px 2px #838173; }
