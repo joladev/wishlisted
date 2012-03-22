@@ -194,11 +194,7 @@
     (when (empty? ($ info-box))
       (show-info!))))
 
-(delegate $body "#info-close" :click
-  (fn [e]
-    (hide-info!)))
-
-(delegate $body "#info-container" :click
+(delegate $body "#info-close,#info-container" :click
   (fn [e]
     (hide-info!)))
 
