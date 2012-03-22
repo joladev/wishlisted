@@ -1,6 +1,6 @@
 (ns wishlistd.server
   (:require [noir.server :as server]
-  	        [noir.fetch.remotes :as remotes]))
+            [noir.fetch.remotes :as remotes]))
 
 (server/load-views "src/wishlistd/views/")
 (server/add-middleware remotes/wrap-remotes)
@@ -10,4 +10,3 @@
         port (Integer. (get (System/getenv) "PORT" "8080"))]
     (server/start port {:mode mode
                         :ns 'wishlistd})))
-
