@@ -147,7 +147,6 @@
 
 (delegate $body "#create-wishlist" :click
   (fn [e]
-    (.preventDefault e)
     (create-wishlist-rem)))
 
 (delegate $header wishlist-title :change
