@@ -149,12 +149,17 @@
   (fn [e]
     (create-wishlist-rem)))
 
+; When wishlist title is changed and not empty, update the title on remote.
 (delegate $header wishlist-title :change
   (fn [e]
     (this-as me
       (when-not (empty? (val ($ me)))
         (update-wishlist-title-rem)))))
 
+; When the value has changed (we keep track of this using the JQuery data
+; object), check whether or not this is the last wish on the page and
+; update or create accordingly. Also remove wishes with empty descriptions
+; unless they are children of a li.last. 
 (delegate $content ".description" :change
   (fn [e]
     (this-as me
