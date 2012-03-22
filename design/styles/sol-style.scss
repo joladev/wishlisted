@@ -6,6 +6,8 @@ $body-background      :     #fdf6e3;
 $p-color              :     #3f5565;
 $banner-background    :     #93a1a1;
 
+$bg-selected-text     :     #fdcbe3;
+
 $logo-background      :     #b58900;
 $logo-text            :     #fde6a9;
 $logo-text-hover      :     #fdf6e3;
@@ -50,6 +52,15 @@ a{
 
 p{
   color:$p-color;
+}
+
+
+/*change color of selected text */
+::selection {
+  background: $bg-selected-text; /* Safari */
+  }
+::-moz-selection {
+  background: $bg-selected-text; /* Firefox */
 }
 
 /* banner bar */
