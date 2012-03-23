@@ -109,6 +109,8 @@ input.url {
   text-align: right; }
   #copyright p {
     font-size: 90%; }
+  #copyright a:hover {
+    text-decoration: underline; }
 
 /*giant info box*/
 #info-container {

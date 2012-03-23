@@ -3,8 +3,10 @@
 
 /* variables */
 $body-background      :     #fdf6e3;
-$p-color              :     #3f5565;
+$p-color              :     #b58900;
 $banner-background    :     #93a1a1;
+
+$bg-selected-text     :     #fdcbe3;
 
 $logo-background      :     #b58900;
 $logo-text            :     #fde6a9;
@@ -39,6 +41,8 @@ $info-text            :     #268bd2;
 $info-container-color :     #073642;
 $info-container-a     :     #268bd2;
 
+$startinfo-border     :     #cfc9b7;
+
 
 body{
   background:$body-background;
@@ -50,6 +54,15 @@ a{
 
 p{
   color:$p-color;
+}
+
+
+/*change color of selected text */
+::selection {
+  background: $bg-selected-text; /* Safari */
+  }
+::-moz-selection {
+  background: $bg-selected-text; /* Firefox */
 }
 
 /* banner bar */
@@ -229,7 +242,7 @@ input.url{
   z-index:10000;
 }
 #startinfo-text{
-  border: 1px solid #999;
+  border: 1px solid $startinfo-border;
   -webkit-box-shadow: 5px 5px 5px 2px #838173;
   -moz-box-shadow: 5px 5px 5px 2px #838173;
   box-shadow: 5px 5px 5px 2px #838173;
