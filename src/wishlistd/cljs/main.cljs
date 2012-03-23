@@ -20,17 +20,19 @@
    return to and update the wishlist. Share it with your friends so that 
    they can get you all the things you wish for!")
 
-(def info-text
-  [[:p "Wishlisted.org gives you a single place for all your wishlists, no 
+(def info-text-p1
+  [:p "Wishlisted.org gives you a single place for all your wishlists, no 
        signup required. Simply create a wishlist and add some wishes and 
        optionally URLs. You will be automatically assigned your own unique 
        URL and you can use this to return to your wishlist at any time. 
-       Anyone else with the link will also be able to view and update it."]
+       Anyone else with the link will also be able to view and update it."])
+
+(def info-text-p2
   [:p "The site was built by " 
        [:a {:href "http://variadic.me"} "Erik Kronberg"] " and " 
        [:a {:href "http://stinaq.se"} "Stina Qvarnström"] ", using a 
        combination of open source technologies. To see the actual source code, " 
-       [:a {:href "https://github.com/eakron/wishlistd"} "click here"] "."]])
+       [:a {:href "https://github.com/eakron/wishlistd"} "click here"] "."])
 
 ; HTML PARTIALS
 
@@ -64,7 +66,7 @@
   [:div 
    [:div#info-box
     [:div#info-close]
-    [:div#info-text infotext]]
+    [:div#info-text info-text-p1 info-text-p2]]
    [:div#info-container]])
 
 ; GETTING AND SETTING
