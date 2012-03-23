@@ -1,7 +1,7 @@
 (ns wishlistd.client.main
   (:require [crate.core :as crate]
             [fetch.remotes :as remotes])
-  (:use [jayq.core :only [$ remove append empty find val delegate data]])
+  (:use [jayq.core :only [$ remove append empty find val data on]])
   (:use-macros [crate.macros :only [defpartial]]
                [fetch.macros :only [letrem]]))
 
@@ -164,12 +164,12 @@
 
 ; DELEGATES
 
-(delegate $body "#create-wishlist" :click
+(on $body :click "#create-wishlist" nil
   (fn [e]
     (create-wishlist-rem)))
 
 ; When wishlist title is changed and not empty, update the title on remote.
-(delegate $header wishlist-title :change
+(on $header :change wishlist-title nil
   (fn [e]
     (this-as me
       (when-not (empty? (val ($ me)))
@@ -179,7 +179,7 @@
 ; object), check whether or not this is the last wish on the page and
 ; update or create accordingly. Also remove wishes with empty descriptions
 ; unless they are children of a li.last. 
-(delegate $content ".description" :change
+(on $content :change ".description" nil
   (fn [e]
     (this-as me
       (let [$me ($ me)
@@ -194,7 +194,7 @@
               (update-wish-rem parent))))))))
 
 ; URL is simpler, we just check whether or not it is changed, and update.
-(delegate $content ".url" :change
+(on $content :change ".url" nil
   (fn [e]
     (this-as me
       (let [$parent (.parent ($ me))]
@@ -202,7 +202,7 @@
           (update-wish-rem $parent))))))
 
 ; Only delete if the wish is not "last".
-(delegate $content ".delete" :click
+(on $content :click ".delete" nil
   (fn [e]
     (this-as me
       (let [$parent (.parent ($ me))]
@@ -210,17 +210,17 @@
           (remove $parent)
           (delete-wish-rem $parent))))))
 
-(delegate $body "#icon-about" :click
+(on $body :click "#icon-about" nil
   (fn [e]
     (when (empty? ($ info-box))
       (show-info!))))
 
-(delegate $body "#info-close,#info-container" :click
+(on $body :click "#info-close,#info-container" nil
   (fn [e]
     (hide-info!)))
 
 ; Don't allow refresh unless a wishlist is chosen.
-(delegate $body "#icon-refresh" :click
+(on $body :click "#icon-refresh" nil
   (fn [e]
     (let [code (get-path)]
       (when-not (empty? code)
