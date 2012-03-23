@@ -12,6 +12,26 @@
 (def $header  ($ "#title-box"))
 (def $body    ($ "body"))
 
+; TEXT VARS
+
+(def startinfo-text
+  "Create your wishlist by clicking the icon above. Add wishes and URLs to 
+   your wishlist. Save the unique link in your browser address field to 
+   return to and update the wishlist. Share it with your friends so that 
+   they can get you all the things you wish for!")
+
+(def info-text
+  [[:p "Wishlisted.org gives you a single place for all your wishlists, no 
+       signup required. Simply create a wishlist and add some wishes and 
+       optionally URLs. You will be automatically assigned your own unique 
+       URL and you can use this to return to your wishlist at any time. 
+       Anyone else with the link will also be able to view and update it."]
+  [:p "The site was built by " 
+       [:a {:href "http://variadic.me"} "Erik Kronberg"] " and " 
+       [:a {:href "http://stinaq.se"} "Stina Qvarnström"] ", using a 
+       combination of open source technologies. To see the actual source code, " 
+       [:a {:href "https://github.com/eakron/wishlistd"} "click here"] "."]])
+
 ; HTML PARTIALS
 
 (defpartial wish-li [{:keys [id description url]}]
@@ -38,16 +58,13 @@
 (defpartial arrow []
   [:div#startinfo-container
    [:div#startinfo-text
-    [:p "Create your wishlist by clicking the icon above. Add wishes and URLs to your wishlist. Save the unique link in your 
-         browser address field to return to and update the wishlist. Share it with your friends so that they can get you all the things
-         you wish for!"]]])
+    [:p startinfo-text]]])
 
 (defpartial info-box []
   [:div 
    [:div#info-box
     [:div#info-close]
-    [:div#info-text [:p "Wishlisted.org gives you a single place for all your wishlists, no signup required. Simply create a wishlist and add some wishes and optionally URLs. You will be automatically assigned your own unique URL and you can use this to return to your wishlist at any time. Anyone else with the link will also be able to view and update it."]
-                    [:p "The site was built by " [:a {:href "http://variadic.me"} "Erik Kronberg"] " and " [:a {:href "http://stinaq.se"} "Stina Qvarnström"] ", using a combination of open source technologies. To see the actual source code, " [:a {:href "https://github.com/eakron/wishlistd"} "click here"] "."]]]
+    [:div#info-text infotext]]
    [:div#info-container]])
 
 ; GETTING AND SETTING
@@ -96,14 +113,16 @@
    :wishlist_code (get-path)})
 
 (defn update-last! [wish $elem]
-  "Adds the id attribute to the formerly last wish and appends a new last wish to list."
+  "Adds the id attribute to the formerly last wish and appends a new last wish 
+   to list."
   (.attr $elem "id" (:id wish))
   (.removeClass $elem "last")
   (append ($ wish-ul) (wish-li-last)))
 
 (defn value-changed?! [$this]
-  "Keeps track of changes. Returns true if the key :old-val in the JQuery data object on the element
-  has changed and updates :old-val. Otherwise returns false."
+  "Keeps track of changes. Returns true if the key :old-val in the JQuery data 
+   object on the element has changed and updates :old-val. Otherwise returns 
+   false."
   (if (= (data $this :old-val) (val $this))
     false
     (do
@@ -218,4 +237,3 @@
 (set! js/window.onpopstate
   (fn [e]
     (start-up)))
-

@@ -22,7 +22,8 @@
       [:created_at :timestamp "NOT NULL" "DEFAULT CURRENT_TIMESTAMP"]
       [:url :varchar]
       [:wishlist_code :varchar]
-      ["constraint fk_wish_wishlist foreign key(wishlist_code) references wishlist(code) on delete cascade"])))
+      ["constraint fk_wish_wishlist foreign key(wishlist_code) 
+        references wishlist(code) on delete cascade"])))
 
 (defn drop-tables []
   (sql/with-connection db

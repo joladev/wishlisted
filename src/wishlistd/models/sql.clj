@@ -68,15 +68,17 @@
 ;; WISH
 
 (defn create-wish [w]
-  "Creates a wish using map from client. Map assumed to have keys [:description :url :wishlist_code]."
+  "Creates a wish using map from client. 
+   Map assumed to have keys [:description :url :wishlist_code]."
   (insert wish
     (values w)))
 
 ; No use for read-wish
 
 (defn update-wish [{:keys [id] :as w}]
-  "Updates a wish using map from client. Removes :wishlist_code and :id as these will never be modified.
-  Fetch library incorrectly gives us a string, rather than int for id, so we parse it."
+  "Updates a wish using map from client. Removes :wishlist_code and :id as 
+   these will never be modified. Fetch library incorrectly gives us a string, 
+   rather than int for id, so we parse it."
   (update wish
     (set-fields (dissoc w :wishlist_code :id))
     (where {:id (Integer/parseInt id)})))
