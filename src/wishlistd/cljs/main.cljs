@@ -45,8 +45,8 @@
 (defpartial wish-li-last []
   [:li.wish.last
    [:div.delete]
-   [:input {:type "text" :class "description"}]
-   [:input {:type "text" :class "url"}]])
+   [:input {:type "text" :class "description" :placeholder "Description"}]
+   [:input {:type "text" :class "url" :placeholder "URL"}]])
 
 (defpartial wish-ul [wishes]
   [:ul.wishes
@@ -119,6 +119,7 @@
    to list."
   (.attr $elem "id" (:id wish))
   (.removeClass $elem "last")
+  (.attr (find $elem ".url") "placeholder" "")
   (append ($ wish-ul) (wish-li-last)))
 
 (defn value-changed?! [$this]
