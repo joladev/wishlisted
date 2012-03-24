@@ -117,6 +117,10 @@ li.dropdown-menu {
   .label a {
     color: #b58900; }
 
+/*the noscript part*/
+.noscript {
+  color: #d33682; }
+
 /* wishes */
 ul.wishes {
   background: transparent;

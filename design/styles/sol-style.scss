@@ -27,6 +27,8 @@ $wishes-input-border  :     #93a1a1;
 $wish-color           :     #d33682;
 $url-color            :     #93a1a1;
 
+$noscript-color       :     #d33682;
+
 $code-link-color      :     #eee8d5;
 $code-color           :     #eee8d5;
 $label-text           :     #b58900;
@@ -196,6 +198,12 @@ li.dropdown-menu{
     color: $label-text;
   }
 }
+
+/*the noscript part*/
+.noscript{
+  color:$noscript-color;
+}
+
 
 
 /* wishes */
