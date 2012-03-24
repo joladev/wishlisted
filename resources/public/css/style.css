@@ -14,6 +14,9 @@ a {
   margin: 0px;
   width: 100%; }
 
+.navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 100%; }
+
 /*logo/brand*/
 .navbar .brand {
   margin-left: -7px;
