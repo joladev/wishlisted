@@ -5,10 +5,14 @@
 
 ;;;; DB
 
-(defdb prod 
-  (postgres {:db "cwl"
-             :username "cwl"
-             :password "wish"}))
+(defdb prod
+  {:subprotocol "postgresql"
+   :user "cwl"
+   :password "wish"
+   :subname "//localhost:5432/cwl"
+   :classname "org.postgresql.Driver"})
+
+
 
 ;;;; ENTITIES
 
