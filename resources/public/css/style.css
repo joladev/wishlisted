@@ -68,6 +68,9 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
     font-size: 90%;
     margin: 7px 5px 0px 0px; }
 
+.label {
+  text-shadow: none; }
+
 /* main box */
 #box {
   width: 670px;
@@ -95,6 +98,10 @@ input.description {
 
 input.url {
   width: 275px; }
+
+/*no rounded corners on wish input*/
+.wishes input {
+  border-radius: 0px; }
 
 /* delete bullet */
 .delete {
