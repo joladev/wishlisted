@@ -232,6 +232,11 @@ input.url{
   color:$url-color;
 }
 
+input:focus, input:active {
+  border-color:#586e75;
+}
+
+
 /* delete x */
 .delete{
   background: url(../images/x.png);

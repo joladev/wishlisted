@@ -139,6 +139,9 @@ input.description {
 input.url {
   color: #93a1a1; }
 
+input:focus, input:active {
+  border-color: #586e75; }
+
 /* delete x */
 .delete {
   background: url(../images/x.png); }
