@@ -27,6 +27,8 @@ $wishes-input-border  :     #93a1a1;
 $wish-color           :     #d33682;
 $url-color            :     #93a1a1;
 
+$noscript-color       :     #d33682;
+
 $code-link-color      :     #eee8d5;
 $code-color           :     #eee8d5;
 $label-text           :     #b58900;
@@ -67,6 +69,9 @@ p{
 
 /* banner bar */
 .container{
+  background-color: $banner-background;
+}
+#banner{
   background-color: $banner-background;
 }
 
@@ -194,6 +199,12 @@ li.dropdown-menu{
   }
 }
 
+/*the noscript part*/
+.noscript{
+  color:$noscript-color;
+}
+
+
 
 /* wishes */
 ul.wishes{
@@ -220,6 +231,11 @@ input.description{
 input.url{
   color:$url-color;
 }
+
+input:focus, input:active {
+  border-color:#586e75;
+}
+
 
 /* delete x */
 .delete{

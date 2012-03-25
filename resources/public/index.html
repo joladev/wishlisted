@@ -2,7 +2,7 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title>wishlisted</title>
-	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
 	<link rel="stylesheet" href="/css/core.css" type="text/css" media="screen" charset="utf-8">
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" charset="utf-8">
   <link rel="stylesheet" href="/css/sol-style.css" type="text/css" media="screen" charset="utf-8">
@@ -15,9 +15,9 @@
 <body>  
   
     <!-- start navbar -->  
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top" id="banner">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container"> 
 
           <!-- logo -->
           <a href="/" class="brand">
@@ -79,16 +79,16 @@
           <!-- end code box-->
           
         </div>
-      </div>
+       </div>
     </div>
     <!-- end navbar -->
     
     <!-- main content -->
     <div id="box">
-      
-      <h2>Y U NO HAVE JAVASCRIPT?</h2>
-      <h4>This application only works with JavaScript. Turn it on!</h4>
-
+      <noscript>
+        <h2 class="noscript">Y U NO HAVE JAVASCRIPT?</h2>
+        <h4 class="noscript">This application only works with JavaScript. Turn it on!</h4>
+      </noscript>
     </div>
     <!-- end main -->
 
