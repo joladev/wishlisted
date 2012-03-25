@@ -31,7 +31,10 @@
     (sql/drop-table :wishlist)))
 
 (defn -main [cmd]
-  (when (= cmd "drop" (drop-tables))) ; optionally drop tables before creating
-  (create-wishlist)
-  (create-wish)
+  (try
+    (when (= cmd "drop" (drop-tables))) ; optionally drop tables before creating
+    (create-wishlist)
+    (create-wish)
+    (catch Exception e
+      (sql/print-sql-exception e)))
   (println "Done!"))

@@ -12,8 +12,6 @@
    :subname "//localhost:5432/cwl"
    :classname "org.postgresql.Driver"})
 
-
-
 ;;;; ENTITIES
 
 (defentity wish)
