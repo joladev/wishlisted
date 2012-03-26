@@ -165,7 +165,7 @@
     (letrem [neu (delete-wish id)]
       (fn [e] nil))))
 
-; DELEGATES
+; EVENT LISTENERS
 
 (on $body :click "#create-wishlist" nil
   (fn [e]
